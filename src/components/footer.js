@@ -38,7 +38,7 @@ class Footer extends React.Component {
         return protein;
     }
 
-    sum = (array, property) => {
+    sumn = (array, property) => {
         let sum = 0;
         if (array && array.length > 0) {
             for (let i = 0; i < array.length; i += 1) {

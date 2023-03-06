@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import Searcher from "./searcher";
 import CarouselDay from "./carouselDay";
-import HomePage from "./homePage";
 import Contact from "./contact";
 import NavBar from "./navBar";
 import {
