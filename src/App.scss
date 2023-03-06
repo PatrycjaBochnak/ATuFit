@@ -1,0 +1,78 @@
+@font-face {
+  font-family: america-t;
+  src: url(fonts/american-type.ttf);
+}
+
+.App {
+  text-align: center;
+  background-color: slategray;
+  height: 100%;
+  width: 100%;
+}
+.carousel {
+  height: 79vh;
+  width: 50%;
+  background-color: lightslategray;
+}
+.carousel-root {
+  width: 50%
+}
+.appContainer {
+  display: flex;
+}
+
+.searcher {
+  width: 50%;
+}
+.searchField {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 10px;
+}
+
+.navBar { 
+  background-color: white;
+}
+
+.carousel-status {
+  display: none;
+}
+
+img {
+  width: 30%;
+}
+
+.buttons {
+  font-family: america-t, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-style: inherit;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.clicker { 
+  height: 30%;
+}
+
+.results {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.contactButtons {
+  font-family: america-t, sans-serif;
+  background-color: black;
+}
