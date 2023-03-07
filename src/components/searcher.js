@@ -31,7 +31,7 @@ class Searcher extends React.Component {
             <div className={'searcher'}>
                 <div className={'searchField'}>
                     <input type="text" placeholder="Search.." name="search" onChange={this.onInputchange}/>
-                    <button classname="clicker" type="submit" onClick={() => this.view()}>Click!<i className="fa fa-search"></i></button>
+                    <button className="clicker" type="submit" onClick={() => this.view()}>Click!<i className="fa fa-search"></i></button>
                 </div>
                 {this.state.recipes ? (
                     <div className="searchResults">
