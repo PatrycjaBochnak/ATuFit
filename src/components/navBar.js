@@ -6,6 +6,8 @@ function NavBar ({children}) {
         <div className="navBar">
             <div className="buttons">
                 <Link to="/">HomePage</Link>
+                <Link to="/caloriesCounter">Calories Counter</Link>
+                <Link to="/calculator">Calculator</Link>
                 <Link to="/contact">Contact</Link>
             </div>
         </div>
