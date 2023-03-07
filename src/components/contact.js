@@ -6,8 +6,8 @@ function Contact () {
             <h1>Contact</h1>
             
             <div className="contactButtons p-1">
-                <a href="https://facebook.com/" target="_blank"><Button className="btn mx-2">Facebook</Button></a>
-                <a href="https://linkedin.com/" target="_blank"><Button className="btn mx-2">LinkedIn</Button></a>
+                <a href="/" target="_blank"><Button className="btn mx-2">CV</Button></a>
+                <a href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/" target="_blank"><Button className="btn mx-2">LinkedIn</Button></a>
                 <a href="https://github.com/PatrycjaBochnak" target="_blank"><Button className="btn mx-2">GitHub</Button></a>
             </div>
         </Container>
