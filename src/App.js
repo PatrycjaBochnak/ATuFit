@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import HomePage from './components/homePage';
 import NavBar from './components/navBar';
-import Contact from "./src/components/contact";
+import Contact from "./components/contact";
 import {
     Routes, Route, Outlet
 } from "react-router-dom";
@@ -23,10 +23,11 @@ class App extends React.Component {
     render() {
         return (
             <Routes>
-                <Route element={ <Layout /> } />
-                <Route path="/" element={ < HomePage /> } />
-                <Route path="/contact" element={ < Contact /> } />
-                <Route path="*" element={<div><h1>ERROR 404</h1><h2>Taka strona nie istnieje</h2> </div> } /> 
+                <Route element={ <Layout /> } >
+                    <Route path="/" element={ < HomePage /> } />
+                    <Route path="/contact" element={ < Contact /> } />
+                    <Route path="*" element={<div><h1>ERROR 404</h1><h2>Taka strona nie istnieje</h2> </div> } /> 
+                </Route>
             </Routes>
         );
     }
