@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Searcher from "./components/searcher";
-import CarouselDay from "./components/carouselDay";
-import Contact from "./components/contact";
-import NavBar from "./components/navBar";
+import Searcher from "./src/components/searcher";
+import CarouselDay from "./src/components/carouselDay";
+import Contact from "./src/components/contact";
+import NavBar from "./src/components/navBar";
 import {
     Routes, Route, Outlet
 } from "react-router-dom";
