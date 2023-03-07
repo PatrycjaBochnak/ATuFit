@@ -29,7 +29,7 @@ class Footer extends React.Component {
         return carbs;
     }
 
-    countFat = () => {
+    countProtein = () => {
         let protein = 0;
         protein += this.sum(this.props.products.breakfast);
         protein += this.sum(this.props.products.secondBreakfast);

@@ -23,7 +23,7 @@ class Searcher extends React.Component {
 
     onInputchange(event) {
         this.setState({products: event.target.value});
-        this.props.dataFromApi(event.target.value);
+        this.props.setCurrentProduct(event.target.value);
     }
 
 

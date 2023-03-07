@@ -1,19 +1,19 @@
 import React from "react";
 import Searcher from "./searcher";
-// import CarouselDay from "./carouselDay";
+import CarouselDay from "./carouselDay";
 import { useState } from 'react';
 
 
 
 function CaloriesCounter () {
     const [state, setState] = useState(null)
-    const dataFromApi = (data) => {
+    const setCurrentProduct = (data) => {
         setState(data);
         }
     return ( 
         <>
-    <Searcher props={dataFromApi} />
-    {/* <CarouselDay product={this.state.product} />  */}
+    <Searcher setCurrentProduct={setCurrentProduct} />
+    <CarouselDay product={state} /> 
         </>
 )
 }
