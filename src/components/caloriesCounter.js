@@ -12,8 +12,8 @@ function CaloriesCounter () {
         }
     return ( 
         <>
-    <Searcher setCurrentProduct={setCurrentProduct} />
-    <CarouselDay product={state} /> 
+            <Searcher setCurrentProduct={setCurrentProduct} />
+            <CarouselDay product={state} /> 
         </>
 )
 }

@@ -2,7 +2,7 @@ import { Button, Container } from "react-bootstrap";
 
 function Contact () { 
     return (
-        <Container fluid className="m-0 p-0 w-100">
+        <>        <Container fluid className="m-0 p-0 w-100">
             <h1>Contact</h1>
             
             <div className="contactButtons p-1">
@@ -11,6 +11,14 @@ function Contact () {
                 <a href="https://github.com/PatrycjaBochnak" target="_blank"><Button className="btn mx-2">GitHub</Button></a>
             </div>
         </Container>
+
+        <div className="email-message">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email id" required />
+            <textarea placeholder="Message" required />
+            <button>Send</button>
+        </div>
+        </>
     );
 }
 
