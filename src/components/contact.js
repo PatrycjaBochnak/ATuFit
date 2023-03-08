@@ -16,7 +16,7 @@ function Contact () {
             <input type="text" placeholder="Name" required />
             <input type="email" placeholder="Email" required />
             <textarea placeholder="Your message" required />
-            <button>Send</button>
+            <button>Send message</button>
         </div>
         </>
     );
