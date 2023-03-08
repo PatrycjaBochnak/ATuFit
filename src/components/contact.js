@@ -13,9 +13,9 @@ function Contact () {
         </Container>
 
         <div className="email-message">
-            <input type="text" placeholder="Full Name" required />
-            <input type="email" placeholder="Email id" required />
-            <textarea placeholder="Message" required />
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Your message" required />
             <button>Send</button>
         </div>
         </>
