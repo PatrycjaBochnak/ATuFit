@@ -53,6 +53,7 @@ class CarouselDay extends React.Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps !== this.props) {
             console.log(this.props.product);
+            console.log(this.props.product.partOfDay);
             const day = this.getDay(this.state.activeIndex);
             console.log(day);
             const productsOfPartOfDay = this.state[day][this.props.product.partOfDay];
