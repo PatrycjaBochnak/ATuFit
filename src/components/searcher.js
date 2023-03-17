@@ -23,7 +23,6 @@ class Searcher extends React.Component {
 
     onInputchange(event) {
         this.setState({products: event.target.value});
-        this.props.setCurrentProduct(event.target.value);
     }
 
 
@@ -31,7 +30,7 @@ class Searcher extends React.Component {
         return (
             <div className={'searcher'}>
                 <div className={'searchField'}>
-                    <input type="text" placeholder="Search.." name="search" onChange={this.onInputchange}/>
+                    <input type="text" placeholder="Search..." name="search" onChange={this.onInputchange}/>
                     <button className="clicker" type="submit" onClick={() => this.view()}>Click!<i className="fa fa-search"></i></button>
                 </div>
                 {this.state.recipes ? (
