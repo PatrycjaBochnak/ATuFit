@@ -4,7 +4,7 @@ import CaloriesCounter from './components/caloriesCounter';
 import NavBar from './components/navBar';
 import Contact from "./components/contact";
 import HomePage from "./components/homePage"
-import Calculator from './components/calculator';
+import Calculator from './components/calculatorBMR';
 import {
     Routes, Route, Outlet
 } from "react-router-dom";
