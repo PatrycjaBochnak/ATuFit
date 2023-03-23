@@ -3,8 +3,7 @@ import React from "react";
 function HomePage() {
   return (
     <>
-      <div className="headings-homePage">
-        <img alt="pic" src="../images/logo" />
+      <div className="homePage">
         <div className="heading-1">
           <h3>
             <span>Welcome to A Tu Fit website</span>

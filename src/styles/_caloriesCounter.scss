@@ -6,8 +6,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
+  color: black;
+  background-color: lightslategray;
   text-align: center;
 }
 .searcher {
@@ -21,9 +21,9 @@
 .carousel {
   height: 79vh;
   width: 50%;
-  background-color: lightslategray;
 }
 .carousel-root {
+  display: flex;
   width: 50%;
 }
 .carousel-status {

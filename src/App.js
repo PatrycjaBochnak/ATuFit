@@ -1,5 +1,10 @@
 import React from "react";
-import "./styles/App.scss";
+import "./styles/_app.scss";
+import "./styles/_contact.scss";
+import "./styles/_calculatorBMR.scss"
+import "./styles/_caloriesCounter.scss"
+import "./styles/_homePage.scss"
+import "./styles/_navBar.scss"
 import CaloriesCounter from "./components/caloriesCounter";
 import NavBar from "./components/navBar";
 import Contact from "./components/contact";
