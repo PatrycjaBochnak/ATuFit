@@ -190,13 +190,13 @@ class CalculatorBMR extends Component {
                 >
                   <option value="">Select your Activity</option>
                   <option value="1.2">
-                    Sedentary (Very little or no exercise, and desk job)
+                    No exercise
                   </option>
                   <option value="1.375">
-                    Lightly Active (Light exercise 1 to 3 days per week)
+                    Light (1-3 times a week)
                   </option>
                   <option value="1.55">
-                    Moderately Active (Moderate exercise 3 to 5 days per week)
+                    Moderately (3-5 times a week)
                   </option>
                   <option value="1.725">
                     Very Active (Heavy exercise 6 to 7 days per week)

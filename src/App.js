@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./styles/App.scss";
 import CaloriesCounter from "./components/caloriesCounter";
 import NavBar from "./components/navBar";
 import Contact from "./components/contact";
