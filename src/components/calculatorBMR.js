@@ -1,222 +1,222 @@
-import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { calculateMacrosAmount } from "../../../utils/calculators";
-import LinkItem from "../../molecules/LinkItem/LinkItem";
-import { 
-    Form,
-    Button,
-    Select,
-    FormContainer,
-    Input,
-    StyledSpan,
-    Container, 
-  } from "./BMRCalculatorStyles";
-  import { useSelector, useDispatch } from "react-redux";
-  import { updateProfile } from "../../../store/auth";
-  import { currentCategoryRemoved } from "../../../store/helpers";
-  import Item from "../../molecules/Item/Item";
-  import Items from "../../molecules/Items/Items";
-  
+import React, { Component } from "react";
 
-class calculatorBMR extends React.Component {
-    render () {
-        return
-  
-const BMRCalculator = ({
-  editMode,
-  noMarginTop,
-  alternateView,
-  marginLeft,
-}) => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  const dispatch = useDispatch();
-
-  const currentUser = useSelector((state) =>
-    state.user.authData.currentUser ? state.user.authData.currentUser : ""
-  );
-
-  useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("profile")));
-  }, [user?.credential, currentUser]);
-
-  let { bmr, tdee, gender, activity } = useSelector((state) =>
-    state.user.authData.currentUser?.profile.bmr
-      ? state.user.authData.currentUser.profile
-      : { bmr: null, tdee: 0, gender: "male" }
-  );
-
-  const { protein, carbs, fat, height, weight, age } = useSelector((state) =>
-    state.user.authData.currentUser?.profile
-      ? state.user.authData.currentUser.profile.demandPercentage
-      : {
-          protein: 0,
-          carbs: 0,
-          fat: 0,
-          activity: 0,
-          height: 0,
-          weight: 0,
-          age: 0,
-        }
-  );
-
-  const {
-    register: registerBMR,
-    handleSubmit: handleSubmitBMR,
-    // formState: { errors },
-  } = useForm({
-    defaultValues: {
-      height,
-      weight,
-      age,
-      gender,
-      activity,
-    },
-  });
-
-  const calculateBMR = async ({ height, weight, age, gender, activity }) => {
-    const genderModifier = gender === "male" ? 5 : -161;
-
-    const bmr = parseInt(
-      10 * weight + 6.25 * height - 5 * age + genderModifier
-    );
-
-    const tdee = parseInt(bmr * activity);
-
-    const demandPercentage = { protein, carbs, fat };
-    const demandAmount = calculateMacrosAmount(tdee, protein, carbs, fat);
-
-    const data = {
-      weight,
-      height,
-      gender,
-      age,
-      activity,
-      bmr,
-      tdee,
-      demandPercentage,
-      demandAmount,
+class CalculatorBMR extends Component {
+  constructor() {
+    super();
+    this.state = {
+      gender: "",
+      weight: "",
+      age: "",
+      height: "",
+      activity: "",
+      bmr: "",
+      error: "",
+      flag: false,
+      system: "",
     };
-
-    dispatch(updateProfile({ id: user.clientId, profile: data }));
-
-    editMode && dispatch(currentCategoryRemoved());
+  }
+  handleAgeChange = (event) => {
+    this.setState({ age: event.target.value });
+  };
+  handleWeightChange = (event) => {
+    this.setState({ weight: event.target.value });
+  };
+  handleHeightChange = (event) => {
+    this.setState({ height: event.target.value });
+  };
+  handleGenderChange = (event) => {
+    this.setState({ gender: event.target.value });
+  };
+  handleActivityChange = (event) => {
+    this.setState({ activity: event.target.value });
+  };
+  handleSystemChange = (event) => {
+    this.setState({ system: event.target.value });
   };
 
-  return (
-    <FormContainer
-      noMarginTop={noMarginTop}
-      alternateView={alternateView}
-      marginLeft={marginLeft}
-    >
-      {alternateView && (
-        <Items nowrap nogap>
-          <Item
-            primary={currentUser?.profile?.bmr || 0}
-            secondary={"BMR"}
-            margin={"1rem 0.5rem"}
-            smMargin={"0.5rem 1rem"}
-          />
-          <Item
-            primary={currentUser?.profile?.tdee || 0}
-            secondary={"TDEE"}
-            margin={"1rem 0.5rem"}
-            smMargin={"0.5rem 1rem"}
-          />
-        </Items>
-      )}
-      {!user?.credential && (
-        <Container>
-          <LinkItem
-            hash={1}
-            add={1}
-            smooth={1}
-            color={"white"}
-            padding={"0.8rem"}
-            margin={"6.5rem 0"}
-            radius={"10px"}
-            to={"/auth#top"}
-            children={"Calculate BMR / TDEE"}
-            size={"0.8rem"}
-          />
-        </Container>
-      )}
-      {((user?.credential && !bmr) || editMode) && (
-        <Form onSubmit={handleSubmitBMR(calculateBMR)}>
-          {!alternateView && (
-            <StyledSpan>
-              BMR: {bmr} / TDEE: {tdee}
-            </StyledSpan>
-          )}
-          <Input
-            type="number"
-            placeholder={"Height(cm)"}
-            {...registerBMR("height", {
-              valueAsNumber: true,
-              max: 250,
-              min: 1,
-              required: true,
-              maxLength: 3,
-              pattern: /\d+/,
-            })}
-          />
-          <Input
-            type="number"
-            placeholder={"Weight(kg)"}
-            {...registerBMR("weight", {
-              valueAsNumber: true,
-              max: 500,
-              min: 1,
-              required: true,
-              maxLength: 3,
-              pattern: /\d+/,
-            })}
-          />
-          <Input
-            type="number"
-            placeholder={"Age"}
-            {...registerBMR("age", {
-              valueAsNumber: true,
-              max: 110,
-              min: 1,
-              required: true,
-              maxLength: 3,
-              pattern: /\d+/,
-            })}
-          />
-          <Select
-            {...registerBMR("gender", {
-              required: true,
-            })}
-          >
-            <option value={"male"}>Male</option>
-            <option value={"female"}>Female</option>
-          </Select>
-          <Select
-            {...registerBMR("activity", {
-              valueAsNumber: true,
-              required: true,
-            })}
-          >
-            <option value={1.2}>No exercise</option>
-            <option value={1.375}>Light: 1-3 times per week</option>
-            <option value={1.55}>Moderate: 3-5 times per week</option>
-            <option value={1.725}>Heavy: 5-6 times per week</option>
-            <option value={1.9}>Very heavy: 6-7 times per week</option>
-          </Select>
-          <Button type="submit">{editMode ? "Update" : "Calculate"}</Button>
-        </Form>
-      )}
-      {bmr && !editMode && (
-        <Container>
-          <StyledSpan>
-            BMR: {bmr} / TDEE: {tdee}
-          </StyledSpan>
-        </Container>
-      )}
-    </FormContainer>
-  );
-};
-    }
-}; 
+  calculateBMR() {
+    let age = this.state.age;
+    let weight = this.state.weight;
+    let height = this.state.height; 
+    let gender = this.state.gender;
 
-export default calculatorBMR; 
+    if (this.state.system == 1) {
+      if (age == "" || weight == "" || gender == "" || height == "") {
+        this.setState({ error: "All fields are required" });
+        return;
+      }
+    } else if (this.state.system == 2) {
+      if (age == "" || weight == "" || gender == "" || height == "") {
+        this.setState({ error: "All fields are required" });
+        return;
+      }
+    }
+
+    var bmrCalc = "";
+    {
+      if (gender == 1) {
+        //Female
+        bmrCalc = 655 + 9.563 * weight + 1.85 * height - 4.676 * age;
+      } else if (gender == 2) {
+        //Male
+        bmrCalc = 66.5 + 13.75 * weight + 5.003 * height - 6.755 * age;
+      }
+    }
+
+    this.setState({ bmr: bmrCalc });
+    this.setState({ flag: true });
+    this.setState({ error: "" });
+  }
+
+  calculateAct() {
+    let ActCalc;
+
+    if (this.state.activity == "1.2") {
+      ActCalc = this.state.bmr * 1.2;
+    } else if (this.state.activity == "1.375") {
+      ActCalc = this.state.bmr * 1.375;
+    } else if (this.state.activity == "1.55") {
+      ActCalc = this.state.bmr * 1.55;
+    } else if (this.state.activity == "1.725") {
+      ActCalc = this.state.bmr * 1.725;
+    } else if (this.state.activity == "1.9") {
+      ActCalc = this.state.bmr * 1.9;
+    }
+    this.setState({ activity: ActCalc });
+  }
+
+  render() {
+    let error;
+    if (this.state.error) {
+      error = <div className="error">{this.state.error} </div>;
+    }
+    let result;
+    if (this.state.bmr) {
+      result = <div className="result">{this.state.bmr}</div>;
+    }
+
+    let resultAct;
+    if (this.state.bmr) {
+      resultAct = <div className="result">{this.state.activity}</div>;
+    }
+
+    if (this.state.flag == true) {
+      var a = true;
+    }
+    var b = true;
+    if (this.state.system == 2) {
+      var b = false;
+    }
+    return (
+      <div id="bmrcalc">
+        <div className="form">
+          <h2>BMI and BMR Calculator</h2>
+          {error}
+          <div className="inputwrap">
+            <label className="label">Gender</label>
+            <label>
+              <input
+                type="radio"
+                checked={this.state.gender === "1"}
+                onChange={this.handleGenderChange}
+                className="genderF"
+                name="gender"
+                value="1"
+              />
+              Female
+            </label>
+            <label>
+              <input
+                type="radio"
+                checked={this.state.gender === "2"}
+                onChange={this.handleGenderChange}
+                className="genderM"
+                name="gender"
+                value="2"
+              />
+              Male
+            </label>
+          </div>
+          <div className="inputwrap">
+            <label className="label">Weight (Kg)</label>
+            <input
+              type="number"
+              value={this.state.weight}
+              onChange={this.handleWeightChange}
+              name="weight"
+              className="weight"
+              min="0"
+              max="999"
+            />
+          </div>
+          <div className="inputwrap">
+            <label className="label">Height (Cm)</label>
+            <input
+              type="number"
+              value={this.state.height}
+              onChange={this.handleHeightChange}
+              name="height"
+              className="height"
+              min="0"
+              max="8"
+            />
+          </div>
+          <div className="inputwrap">
+            <label className="label">Age</label>
+            <input
+              type="number"
+              value={this.state.age}
+              onChange={this.handleAgeChange}
+              className="age"
+              name="age"
+              min="0"
+              max="120"
+            />
+          </div>
+          <button type="button" onClick={() => this.calculateBMR()}>
+            Calculate BMR
+          </button>
+          {result}
+
+          {a == true && (
+            <div className="workout">
+              <div className="inputwrap">
+                <label className="label">Workout in a Week</label>
+                <select
+                  className="activity"
+                  value={this.state.activity}
+                  onChange={this.handleActivityChange}
+                  name="activity"
+                >
+                  <option value="">Select your Activity</option>
+                  <option value="1.2">
+                    Sedentary (Very little or no exercise, and desk job)
+                  </option>
+                  <option value="1.375">
+                    Lightly Active (Light exercise 1 to 3 days per week)
+                  </option>
+                  <option value="1.55">
+                    Moderately Active (Moderate exercise 3 to 5 days per week)
+                  </option>
+                  <option value="1.725">
+                    Very Active (Heavy exercise 6 to 7 days per week)
+                  </option>
+                  <option value="1.9">
+                    Extremely Active (Very intense exercise, and physical job,
+                    exercise multiple times per day)
+                  </option>
+                </select>
+              </div>
+              <button type="button" onClick={() => this.calculateAct()}>
+                Calculate Calories
+              </button>
+              {resultAct}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default CalculatorBMR;
