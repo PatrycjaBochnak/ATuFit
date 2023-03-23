@@ -13,6 +13,7 @@ function NavBar({ children }) {
           <Link to="/calculator">Calculator</Link>
           <Link to="/contact">Contact</Link>
         </div>
+        <div className="firstWave"/>
       </div>
       <div>{children}</div>
     </>

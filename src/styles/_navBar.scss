@@ -1,6 +1,9 @@
 .buttons {
+  text-decoration: none;
+  align-items: center;
+  width: 1400px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
   font-size: 20px;
   font-style: inherit;
   text-decoration: none;
@@ -9,4 +12,12 @@
 .logo {
   display: flex;
   justify-content: flex-start;
+}
+.firstWave{
+  display: flex;
+  --size: 20px;
+  width: 100%;
+  align-content: flex-end;
+  mask: radial-gradient(var(--size) at 50% 0%, #0000 99%, red 101%) 
+    50% var(--size)/calc(4 * var(--size)) 100% repeat-x;
 }
