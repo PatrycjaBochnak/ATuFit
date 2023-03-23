@@ -1,0 +1,41 @@
+.caloriesCounter {
+  background-color: palevioletred;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.searcher {
+  width: 50%;
+}
+.searchField {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 10px;
+}
+.carousel {
+  height: 79vh;
+  width: 50%;
+  background-color: lightslategray;
+}
+.carousel-root {
+  width: 50%;
+}
+.carousel-status {
+  display: none;
+}
+.results {
+  display: flex;
+  flex-flow: column;
+}
+.clicker {
+  height: 30%;
+}
+.calculator {
+  background-color: pink;
+}
