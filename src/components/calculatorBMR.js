@@ -37,7 +37,7 @@ class CalculatorBMR extends Component {
   calculateBMR() {
     let age = this.state.age;
     let weight = this.state.weight;
-    let height = this.state.height; 
+    let height = this.state.height;
     let gender = this.state.gender;
 
     if (this.state.system == 1) {

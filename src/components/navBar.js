@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-function NavBar ({children}) {
-    return (<>
-        <div className="navBar">
-            <div className="buttons">
-                <Link to="/">HomePage</Link>
-                <Link to="/caloriesCounter">Calories Counter</Link>
-                <Link to="/calculator">Calculator</Link>
-                <Link to="/contact">Contact</Link>
-            </div>
+function NavBar({ children }) {
+  return (
+    <>
+      <div className="navBar">
+        <div className="buttons">
+          <Link to="/">HomePage</Link>
+          <Link to="/caloriesCounter">Calories Counter</Link>
+          <Link to="/calculator">Calculator</Link>
+          <Link to="/contact">Contact</Link>
         </div>
-        <div>
-            {children}
-        </div>
-    </>);
+      </div>
+      <div>{children}</div>
+    </>
+  );
 }
 
 export default NavBar;
-
