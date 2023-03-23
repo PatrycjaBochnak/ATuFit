@@ -6,7 +6,7 @@ function NavBar({ children }) {
   return (
     <>
       <div className="navBar">
-        <img src={logo} alt="logo" width="100" height="100"/>
+        <img className="logo" src={logo} alt="logo" width="100" height="100"/>
         <div className="buttons">
           <Link to="/">HomePage</Link>
           <Link to="/caloriesCounter">Calories Counter</Link>
