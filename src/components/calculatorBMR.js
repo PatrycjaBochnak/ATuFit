@@ -108,6 +108,7 @@ class CalculatorBMR extends Component {
       var b = false;
     }
     return (
+      <div className="calculatorBMR">
       <div id="bmrcalc">
         <div className="form">
           <h2>BMI and BMR Calculator</h2>
@@ -213,6 +214,7 @@ class CalculatorBMR extends Component {
               {resultAct}
             </div>
           )}
+        </div>
         </div>
       </div>
     );

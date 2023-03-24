@@ -1,5 +1,5 @@
 .caloriesCounter {
-  background-color: palevioletred;
+  background-color: #e1eec7;
 }
 .footer {
   position: fixed;
@@ -7,20 +7,22 @@
   bottom: 0;
   width: 100%;
   color: black;
-  background-color: lightslategray;
+  background-color: white;
   text-align: center;
 }
 .searcher {
   width: 50%;
+  background-color: #e1eec7;
 }
 .searchField {
   display: flex !important;
   justify-content: center !important;
-  margin: 10px;
+  background-color: #e1eec7;
 }
 .carousel {
   height: 79vh;
   width: 50%;
+  background-color: #e1eec7;
 }
 .carousel-root {
   display: flex;
