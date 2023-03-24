@@ -5,18 +5,18 @@ function Contact() {
     <>
       {" "}
       <Container fluid className="m-0 p-0 w-100">
-        <div className="contactButtons p-1">
+        <div className="contactButtons">
           <a href="/" target="_blank">
-            <Button className="btn mx-2">CV</Button>
+            <Button className="btnCV">CV</Button>
           </a>
           <a
             href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
             target="_blank"
           >
-            <Button className="btn mx-2">LinkedIn</Button>
+            <Button className="btnLI">LinkedIn</Button>
           </a>
           <a href="https://github.com/PatrycjaBochnak" target="_blank">
-            <Button className="btn mx-2">GitHub</Button>
+            <Button className="btnGH">GitHub</Button>
           </a>
         </div>
       </Container>
