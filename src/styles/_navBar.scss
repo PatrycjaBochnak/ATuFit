@@ -2,6 +2,7 @@
   text-decoration: none;
   align-items: center;
   width: 1400px;
+  height: 100px;
   display: flex;
   justify-content: space-evenly !important;
   font-size: 20px;
@@ -10,14 +11,25 @@
   color: black;
 }
 .logo {
-  display: flex;
-  justify-content: flex-start;
+  padding: 10px;
+  height: 120px;
 }
-.firstWave{
-  display: flex;
-  --size: 20px;
+.custom-shape-divider-bottom-1679679246 {
+  position: absolute;
+  top: 65px;
+  left: 0;
   width: 100%;
-  align-content: flex-end;
-  mask: radial-gradient(var(--size) at 50% 0%, #0000 99%, red 101%) 
-    50% var(--size)/calc(4 * var(--size)) 100% repeat-x;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1679679246 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 99px;
+  transform: rotateY(180deg);
+}
+.custom-shape-divider-bottom-1679679246 .shape-fill {
+  fill: #e1eec7;
 }
