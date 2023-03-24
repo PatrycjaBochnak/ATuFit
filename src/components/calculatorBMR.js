@@ -194,17 +194,16 @@ class CalculatorBMR extends Component {
                     No exercise
                   </option>
                   <option value="1.375">
-                    Light (1-3 times a week)
+                    Light (1-3 times per week)
                   </option>
                   <option value="1.55">
-                    Moderately (3-5 times a week)
+                    Moderately (3-5 times per week)
                   </option>
                   <option value="1.725">
-                    Very Active (Heavy exercise 6 to 7 days per week)
+                    Heavy (6-7 times per week)
                   </option>
                   <option value="1.9">
-                    Extremely Active (Very intense exercise, and physical job,
-                    exercise multiple times per day)
+                    Very Heavy (6-7 times per week)
                   </option>
                 </select>
               </div>
