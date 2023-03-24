@@ -111,7 +111,6 @@ class CalculatorBMR extends Component {
       <div className="calculatorBMR">
       <div id="bmrcalc">
         <div className="form">
-          <h2>BMI and BMR Calculator</h2>
           {error}
           <div className="inputwrap">
             <label className="label">Gender</label>
