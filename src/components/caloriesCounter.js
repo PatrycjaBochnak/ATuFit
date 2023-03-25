@@ -9,10 +9,10 @@ function CaloriesCounter() {
     setState(data);
   };
   return (
-    <>
+    <div className="counter">
       <Searcher setCurrentProduct={setCurrentProduct} />
       <CarouselDay product={state} />
-    </>
+    </div>
   );
 }
 
