@@ -101,11 +101,11 @@ class CalculatorBMR extends Component {
     }
 
     if (this.state.flag == true) {
-      let a = true;
+      var a = true;
     }
-      let b = true;
+      var b = true;
     if (this.state.system == 2) {
-      let b = false;
+      var b = false;
     }
     return (
       <div className="calculatorBMR">
