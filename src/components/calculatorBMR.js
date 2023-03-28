@@ -52,7 +52,7 @@ class CalculatorBMR extends Component {
       }
     }
 
-    var bmrCalc = "";
+    let bmrCalc = "";
     {
       if (gender == 1) {
         //Female
@@ -101,11 +101,11 @@ class CalculatorBMR extends Component {
     }
 
     if (this.state.flag == true) {
-      var a = true;
+      let a = true;
     }
-    var b = true;
+      let b = true;
     if (this.state.system == 2) {
-      var b = false;
+      let b = false;
     }
     return (
       <div className="calculatorBMR">
