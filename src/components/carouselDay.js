@@ -3,6 +3,7 @@ import ListResult from "./listResult";
 import React from "react";
 import Footer from "./footer";
 import Calendar from "react-calendar";
+import { Button } from "react-bootstrap";
 
 class CarouselDay extends React.Component {
   state = {
@@ -92,6 +93,7 @@ class CarouselDay extends React.Component {
           style={{ width: "50%" }}
         >
           <div>
+            <Button className="btnCal">Select day.</Button>
             <Calendar className="calendar"></Calendar>
             <h3>Monday</h3>
             <ListResult list={this.state["Monday"]} />

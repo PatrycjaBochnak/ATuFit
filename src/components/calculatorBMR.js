@@ -178,7 +178,7 @@ class CalculatorBMR extends Component {
           </button>
           {result}
 
-          {a == true && (
+         {a == true && (
             <div className="workout">
               <div className="inputwrap">
                 <label className="label">Workout in a Week</label>
