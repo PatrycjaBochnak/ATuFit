@@ -13,6 +13,7 @@ class CalculatorBMR extends Component {
       error: "",
       flag: false,
       system: "",
+      finalResult: "",
     };
   }
   handleAgeChange = (event) => {
@@ -68,7 +69,7 @@ class CalculatorBMR extends Component {
     this.setState({ error: "" });
   }
 
-  calculateAct() {
+  calculateFinalResult() {
     let ActCalc;
 
     if (this.state.activity == "1.2") {
@@ -82,7 +83,7 @@ class CalculatorBMR extends Component {
     } else if (this.state.activity == "1.9") {
       ActCalc = this.state.bmr * 1.9;
     }
-    this.setState({ activity: ActCalc });
+    this.setState({ finalResult: ActCalc });
   }
 
   render() {
@@ -97,7 +98,7 @@ class CalculatorBMR extends Component {
 
     let resultAct;
     if (this.state.bmr) {
-      resultAct = <div className="result">{this.state.activity}</div>;
+      resultAct = <div className="result">{this.state.finalResult}</div>;
     }
 
     if (this.state.flag == true) {
@@ -206,7 +207,7 @@ class CalculatorBMR extends Component {
                   </option>
                 </select>
               </div>
-              <button type="button" onClick={() => this.calculateAct()}>
+              <button type="button" onClick={() => this.calculateFinalResult()}>
                 Calculate Calories
               </button>
               {resultAct}
