@@ -3,86 +3,51 @@ import React from "react";
 class Footer extends React.Component {
   countCalories = () => {
     let calories = 0;
-    calories += this.sum(this.props.products.breakfast);
-    calories += this.sum(this.props.products.secondBreakfast);
-    calories += this.sum(this.props.products.dinner);
-    calories += this.sum(this.props.products.supper);
+    calories += this.sum(this.props.products.breakfast, 'calories');
+    calories += this.sum(this.props.products.secondBreakfast, 'calories');
+    calories += this.sum(this.props.products.dinner, 'calories');
+    calories += this.sum(this.props.products.supper, 'calories');
     return calories;
   };
 
   countFat = () => {
     let fat = 0;
-    fat += this.sum(this.props.products.breakfast);
-    fat += this.sum(this.props.products.secondBreakfast);
-    fat += this.sum(this.props.products.dinner);
-    fat += this.sum(this.props.products.supper);
+    fat += this.sum(this.props.products.breakfast, 'fat');
+    fat += this.sum(this.props.products.secondBreakfast, 'fat');
+    fat += this.sum(this.props.products.dinner, 'fat');
+    fat += this.sum(this.props.products.supper, 'fat');
     return fat;
   };
 
   countCarbs = () => {
     let carbs = 0;
-    carbs += this.sum(this.props.products.breakfast);
-    carbs += this.sum(this.props.products.secondBreakfast);
-    carbs += this.sum(this.props.products.dinner);
-    carbs += this.sum(this.props.products.supper);
+    carbs += this.sum(this.props.products.breakfast, "carbs");
+    carbs += this.sum(this.props.products.secondBreakfast, "carbs");
+    carbs += this.sum(this.props.products.dinner, "carbs");
+    carbs += this.sum(this.props.products.supper, "carbs");
     return carbs;
   };
 
   countProtein = () => {
     let protein = 0;
-    protein += this.sum(this.props.products.breakfast);
-    protein += this.sum(this.props.products.secondBreakfast);
-    protein += this.sum(this.props.products.dinner);
-    protein += this.sum(this.props.products.supper);
+    protein += this.sum(this.props.products.breakfast, "protein");
+    protein += this.sum(this.props.products.secondBreakfast, "protein");
+    protein += this.sum(this.props.products.dinner, "protein");
+    protein += this.sum(this.props.products.supper, "protein");
     return protein;
   };
 
-  sumn = (array, property) => {
-    let sum = 0;
-    if (array && array.length > 0) {
-      for (let i = 0; i < array.length; i += 1) {
-        const element = array[i]["nutrition"]["fat"];
-        if (element) {
-          sum += Number(element.replace("g", ""));
-        }
-      }
-    }
-    return sum;
-  };
-
   sum = (array, property) => {
     let sum = 0;
     if (array && array.length > 0) {
       for (let i = 0; i < array.length; i += 1) {
-        const element = array[i]["nutrition"]["calories"];
+        const element = array[i]["nutrition"][property];
         if (element) {
-          sum += Number(element.replace("g", ""));
-        }
-      }
-    }
-    return sum;
-  };
-
-  sum = (array, property) => {
-    let sum = 0;
-    if (array && array.length > 0) {
-      for (let i = 0; i < array.length; i += 1) {
-        const element = array[i]["nutrition"]["carbs"];
-        if (element) {
-          sum += Number(element.replace("g", ""));
-        }
-      }
-    }
-    return sum;
-  };
-
-  sum = (array, property) => {
-    let sum = 0;
-    if (array && array.length > 0) {
-      for (let i = 0; i < array.length; i += 1) {
-        const element = array[i]["nutrition"]["protein"];
-        if (element) {
-          sum += Number(element.replace("g", ""));
+          if (typeof element === 'string' || element instanceof String) {
+          sum += Number(element.replace("g", " "));
+          } else {
+            sum += element;
+          }
         }
       }
     }

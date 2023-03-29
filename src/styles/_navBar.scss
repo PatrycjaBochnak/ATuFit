@@ -1,5 +1,6 @@
 .buttons {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: black;
   align-items: center;
   width: 1400px;
   height: 100px;
@@ -32,4 +33,8 @@
 }
 .custom-shape-divider-bottom-1679679246 .shape-fill {
   fill: #e1eec7;
+}
+a { 
+  color: black !important;
+  text-decoration: none !important;
 }
