@@ -4,7 +4,7 @@ function Contact() {
   return (
     <>
       {" "}
-      <Container fluid className="m-0 p-0 w-100">
+      <Container fluid className="cont">
         <div className="contactButtons">
           <a href="/" target="_blank">
             <Button className="btnCV">CV</Button>
