@@ -1,4 +1,5 @@
 import React from "react";
+import EndingDescription from "react";
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
           </h2>
         </div>
       </div>
+      <EndingDescription />
     </>
   );
 }
