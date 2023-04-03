@@ -7,16 +7,16 @@ function Contact() {
       <Container fluid className="cont">
         <div className="contactButtons">
           <a href="/" target="_blank">
-            <Button className="btnCV">CV</Button>
+            <Button className="buttonCV">CV</Button>
           </a>
           <a
             href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
             target="_blank"
           >
-            <Button className="btnLI">LinkedIn</Button>
+            <Button className="buttonLI">LinkedIn</Button>
           </a>
           <a href="https://github.com/PatrycjaBochnak" target="_blank">
-            <Button className="btnGH">GitHub</Button>
+            <Button className="buttonGH">GitHub</Button>
           </a>
         </div>
       </Container>
