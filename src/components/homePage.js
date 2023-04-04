@@ -19,7 +19,6 @@ function HomePage() {
           </h2>
         </div>
       </div>
-      <EndingDescription />
     </>
   );
 }

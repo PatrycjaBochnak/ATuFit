@@ -40,9 +40,9 @@ class App extends React.Component {
           <Route
             path="*"
             element={
-              <div>
+              <div className="error404">
                 <h1>ERROR 404</h1>
-                <h2>Taka strona nie istnieje</h2>{" "}
+                <h2>Stay calm! Site is under construction</h2>{" "}
               </div>
             }
           />

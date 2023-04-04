@@ -13,6 +13,10 @@ function NavBar({ children }) {
           <Link to="/calculator">Calculator</Link>
           <Link to="/contact">Contact</Link>
         </div>
+        <div className="loginButtons">
+          <Link to="/login">Sign in</Link>
+          <Link to="/register">Register</Link>
+        </div>
         <div class="custom-shape-divider-bottom-1679679246">
           <svg
             data-name="Layer 1"

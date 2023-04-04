@@ -3,6 +3,9 @@ import { Button, Container } from "react-bootstrap";
 function Contact() {
   return (
     <>
+    <div className="simpleTextAboutMe">
+    <span>I would be appreciate if you check my CV and social media accounts below!</span>
+    </div>
       {" "}
       <Container fluid className="cont">
         <div className="contactButtons">
