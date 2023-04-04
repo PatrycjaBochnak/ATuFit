@@ -71,10 +71,10 @@ class Footer extends React.Component {
           </svg>
         </div>
         {this.props.products ? (<div className="footer">
-          <span>{"Calories: " + this.countCalories()}</span>
-          <span>{"Fat: " + this.countFat()}</span>
-          <span>{"Carbs: " + this.countCarbs()}</span>
-          <span>{"Protein: " + this.countProtein()}</span></div>) : ""}
+          <span>{"Calories: " + this.countCalories() + " "}</span>
+          <span>{"Fat: " + this.countFat() + " "}</span>
+          <span>{"Carbs: " + this.countCarbs() + " "}</span>
+          <span>{"Protein: " + this.countProtein() + " "}</span></div>) : ""}
       </>
     );
   }
