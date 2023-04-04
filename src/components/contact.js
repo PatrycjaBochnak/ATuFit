@@ -15,7 +15,7 @@ function Contact() {
     }
 
   return (
-    <>
+    <div className="contact">
     <div className="simpleTextAboutMe">
     <span>I would be appreciate if you check my CV and social media accounts below!</span>
     </div>
@@ -45,7 +45,7 @@ function Contact() {
         <textarea placeholder="Your message"  value={inputValue} required onChange={handleInputChange} />
         <button onClick={handleButtonClick}>Send message</button>
       </div>
-    </>
+      </div>
   );
 }
 

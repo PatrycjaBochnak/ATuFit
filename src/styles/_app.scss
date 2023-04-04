@@ -29,8 +29,19 @@
 .error404 {
   display: flex;
   justify-content: center;
-  align-items: center;
   background-image: url(../images/underConstruction.jpg);
   background-repeat: no-repeat;
   background-color: #e1eec7;
+  height: 740px;
+}
+.errorError {
+  display: flex;
+  align-items: flex-start;
+}
+.errorText {
+  display: flex;
+  align-items: flex-start;
+}
+.contact {
+  width: 100%;
 }

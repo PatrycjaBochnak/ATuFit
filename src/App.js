@@ -41,8 +41,8 @@ class App extends React.Component {
             path="*"
             element={
               <div className="error404">
-                <h1>ERROR 404</h1>
-                <h2>Stay calm! Site is under construction</h2>{" "}
+                <h1 className="errorError">ERROR 404</h1>
+                <h2 className="errorText">Stay calm! Site is under construction</h2>{" "}
               </div>
             }
           />
