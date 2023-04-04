@@ -2,13 +2,13 @@
   display: flex;
 }
 .heading1 {
+  padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-flow: column;
+  align-items: center;
   font-size: 30px;
 }
 .heading2 {
   display: flex;
-  align-items: flex-end;
   font-size: 15px;
 }
