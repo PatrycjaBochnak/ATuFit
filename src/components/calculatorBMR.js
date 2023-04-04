@@ -104,116 +104,111 @@ class CalculatorBMR extends Component {
     if (this.state.flag == true) {
       var a = true;
     }
-      var b = true;
+    var b = true;
     if (this.state.system == 2) {
       var b = false;
     }
     return (
       <div className="calculatorBMR">
-      <div id="bmrcalc">
-        <div className="form">
-          {error}
-          <div className="inputwrap">
-            <label className="label">Gender</label>
-            <label>
-              <input
-                type="radio"
-                checked={this.state.gender === "1"}
-                onChange={this.handleGenderChange}
-                className="genderF"
-                name="gender"
-                value="1"
-              />
-              Female
-            </label>
-            <label>
-              <input
-                type="radio"
-                checked={this.state.gender === "2"}
-                onChange={this.handleGenderChange}
-                className="genderM"
-                name="gender"
-                value="2"
-              />
-              Male
-            </label>
-          </div>
-          <div className="inputwrap">
-            <label className="label">Weight (Kg)</label>
-            <input
-              type="number"
-              value={this.state.weight}
-              onChange={this.handleWeightChange}
-              name="weight"
-              className="weight"
-              min="0"
-              max="999"
-            />
-          </div>
-          <div className="inputwrap">
-            <label className="label">Height (Cm)</label>
-            <input
-              type="number"
-              value={this.state.height}
-              onChange={this.handleHeightChange}
-              name="height"
-              className="height"
-              min="0"
-              max="8"
-            />
-          </div>
-          <div className="inputwrap">
-            <label className="label">Age</label>
-            <input
-              type="number"
-              value={this.state.age}
-              onChange={this.handleAgeChange}
-              className="age"
-              name="age"
-              min="0"
-              max="120"
-            />
-          </div>
-          <button type="button" onClick={() => this.calculateBMR()}>
-            Calculate BMR
-          </button>
-          {result}
-
-         {a == true && (
-            <div className="workout">
-              <div className="inputwrap">
-                <label className="label">Workout in a Week</label>
-                <select
-                  className="activity"
-                  value={this.state.activity}
-                  onChange={this.handleActivityChange}
-                  name="activity"
-                >
-                  <option value="">Select your Activity</option>
-                  <option value="1.2">
-                    No exercise
-                  </option>
-                  <option value="1.375">
-                    Light (1-3 times per week)
-                  </option>
-                  <option value="1.55">
-                    Moderately (3-5 times per week)
-                  </option>
-                  <option value="1.725">
-                    Heavy (6-7 times per week)
-                  </option>
-                  <option value="1.9">
-                    Very Heavy (6-7 times per week)
-                  </option>
-                </select>
-              </div>
-              <button type="button" onClick={() => this.calculateFinalResult()}>
-                Calculate Calories
-              </button>
-              {resultAct}
+        <div id="bmrcalc">
+          <div className="form">
+            {error}
+            <div className="inputGender">
+              <label className="label">Gender</label>
+              <label>
+                <input
+                  type="radio"
+                  checked={this.state.gender === "1"}
+                  onChange={this.handleGenderChange}
+                  className="genderF"
+                  name="gender"
+                  value="1"
+                />
+                Female
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  checked={this.state.gender === "2"}
+                  onChange={this.handleGenderChange}
+                  className="genderM"
+                  name="gender"
+                  value="2"
+                />
+                Male
+              </label>
             </div>
-          )}
-        </div>
+            <div className="inpuWeight">
+              <label className="label">Weight (Kg)</label>
+              <input
+                type="number"
+                value={this.state.weight}
+                onChange={this.handleWeightChange}
+                name="weight"
+                className="weight"
+                min="0"
+                max="999"
+              />
+            </div>
+            <div className="inputHeight">
+              <label className="label">Height (Cm)</label>
+              <input
+                type="number"
+                value={this.state.height}
+                onChange={this.handleHeightChange}
+                name="height"
+                className="height"
+                min="0"
+                max="8"
+              />
+            </div>
+            <div className="inputAge">
+              <label className="label">Age</label>
+              <input
+                type="number"
+                value={this.state.age}
+                onChange={this.handleAgeChange}
+                className="age"
+                name="age"
+                min="0"
+                max="120"
+              />
+            </div>
+            <button type="button" onClick={() => this.calculateBMR()}>
+              Calculate BMR
+            </button>
+            {result}
+
+            {a == true && (
+              <div className="workout">
+                <div className="inputWorkout">
+                  <label className="label">Workout in a Week</label>
+                  <select
+                    className="activity"
+                    value={this.state.activity}
+                    onChange={this.handleActivityChange}
+                    name="activity"
+                  >
+                    <option value="">Select your Activity</option>
+                    <option value="1.2">No exercise</option>
+                    <option value="1.375">Light (1-3 times per week)</option>
+                    <option value="1.55">
+                      Moderately (3-5 times per week)
+                    </option>
+                    <option value="1.725">Heavy (6-7 times per week)</option>
+                    <option value="1.9">Very Heavy (6-7 times per week)</option>
+                  </select>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => this.calculateFinalResult()}
+                >
+                  Calculate Calories
+                </button>
+                {resultAct}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     );

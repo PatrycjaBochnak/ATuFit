@@ -1,3 +1,14 @@
 .homePage {
   display: flex;
 }
+.heading1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 30px;
+}
+.heading2 {
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
+}

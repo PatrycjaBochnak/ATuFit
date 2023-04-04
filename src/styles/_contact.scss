@@ -1,9 +1,20 @@
-.email-message {
-  background-color: #e1eec7;
-}
-.contactButtons {
+.emailMessage, .contactButtons, .simpleTextAboutMe, .emailText{
   background-color: #e1eec7;
 }
 .simpleTextAboutMe {
-  background-color: #e1eec7;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  // font-family:
+  font-size: 20px;
+}
+.contactButtons {
+  display: flex;
+  justify-content: center;
+}
+.emailText {
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px;
+  font-size: 20px;
 }
