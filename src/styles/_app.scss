@@ -29,6 +29,8 @@
   flex: 1 1 auto;
 }
 .error404 {
+  flex: 1 1 auto;
+  background-color: #e1eec7;
   display: flex;
   flex-flow: column;
 }
@@ -44,6 +46,8 @@
   align-items: center;
 }
 .contact {
+  display: flex;
+  flex-flow: column;
   flex: 1 1 auto;
   background-color: #e1eec7;
   width: 100%;

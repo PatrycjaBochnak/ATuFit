@@ -2,7 +2,6 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-  // font-family:
   font-size: 20px;
 }
 .contactButtons {
@@ -11,13 +10,21 @@
 }
 .emailText {
   display: flex;
+  flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   font-size: 20px;
+  padding: 20px;
 }
 .emailMessage {
   display: flex;
   flex-flow: column;
   width: 100% auto;
   align-items: center;
+}
+.CvButton, .LiButton, .GhButton {
+  padding: 10px;
+}
+.emailButton {
+  margin: 15px;
 }

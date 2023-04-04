@@ -10,6 +10,7 @@ import NavBar from "./components/navBar";
 import Contact from "./components/contact";
 import HomePage from "./components/homePage";
 import Calculator from "./components/calculatorBMR";
+import Footer from "./components/footer"
 import { Routes, Route, Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -44,6 +45,7 @@ class App extends React.Component {
                 <h1 className="errorError">ERROR 404</h1>
                 <h2 className="errorText">Stay calm! Site is under construction</h2>{" "}
                 <img className="errorImage" src={require('./images/underConstruction.jpg')} />
+                <Footer />
               </div>
             }
           />

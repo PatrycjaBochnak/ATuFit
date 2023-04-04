@@ -22,17 +22,18 @@ function Contact() {
       {" "}
       <Container fluid className="cont">
         <div className="contactButtons">
-          <a href="/" target="_blank">
-            <Button className="buttonCV">CV</Button>
+          <a className="CvButton" href="/" target="_blank">
+            <Button>CV</Button>
           </a>
-          <a
+          <a className="LiButton"
             href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
             target="_blank"
           >
-            <Button className="buttonLI">LinkedIn</Button>
+            <Button>LinkedIn</Button>
           </a>
-          <a href="https://github.com/PatrycjaBochnak" target="_blank">
-            <Button className="buttonGH">GitHub</Button>
+          <a className="GhButton"
+            href="https://github.com/PatrycjaBochnak" target="_blank">
+            <Button>GitHub</Button>
           </a>
         </div>
       </Container>
@@ -43,7 +44,7 @@ function Contact() {
         <input type="text" placeholder="Name" value={inputValue} required onChange={(e) => setInputValue(e.target.value) }/>
         <input type="email" placeholder="Email" value={inputValue2} required onChange={(e) => setInputValue2(e.target.value) } />
         <textarea placeholder="Your message"  value={inputValue3} required onChange={(e) => setInputValue3(e.target.value)} />
-        <button onClick={handleButtonClick}>Send message</button>
+        <button className="emailButton" onClick={handleButtonClick}>Send message</button>
       </div>
       <Footer />
       </div>
