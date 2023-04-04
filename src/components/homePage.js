@@ -3,8 +3,7 @@ import EndingDescription from "react";
 
 function HomePage() {
   return (
-    <>
-      <div className="homePage">
+    <div className="homePage">
         <div className="headings">
           <h3>
             <span>Welcome to A Tu Fit website</span>
@@ -19,7 +18,6 @@ function HomePage() {
           </h2>
         </div>
       </div>
-    </>
   );
 }
 
