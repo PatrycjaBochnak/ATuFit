@@ -80,6 +80,4 @@ class Footer extends React.Component {
   }
 }
 
-// jeśli propscalories istnieje to wyświetlaj a jak nie istnieje to nie wyświetlaj sam obrazek
-
 export default Footer;
