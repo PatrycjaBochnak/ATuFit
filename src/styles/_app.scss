@@ -25,8 +25,11 @@
   background-size: contain;
 }
 .calculatorBMR {
+  display: flex;
+  flex-flow: column;
   background-color: #e1eec7;
   flex: 1 1 auto;
+  align-items: center;
 }
 .error404 {
   flex: 1 1 auto;
@@ -71,10 +74,4 @@ body, #root{
 #root {
   display: flex;
   flex-flow: column;
-}
-.calculatorBMR {
-  flex: 1 1 auto;
-  background-color: #e1eec7;
-  display: flex;
-  justify-content: center;
 }
