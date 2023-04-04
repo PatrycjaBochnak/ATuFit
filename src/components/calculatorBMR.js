@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "./footer"
 
 class CalculatorBMR extends Component {
   constructor() {
@@ -109,6 +110,10 @@ class CalculatorBMR extends Component {
       var b = false;
     }
     return (
+      <>
+      <div className="jakisTekst">
+        <span>Dupa</span>
+      </div>
       <div className="calculatorBMR">
         <div id="bmrcalc">
           <div className="form">
@@ -211,6 +216,8 @@ class CalculatorBMR extends Component {
           </div>
         </div>
       </div>
+      <Footer />
+      </>
     );
   }
 }

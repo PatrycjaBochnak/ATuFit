@@ -8,10 +8,10 @@ function NavBar({ children }) {
       <div className="navBar">
         <img className="logo" src={logo} alt="logo"/>
         <div className="buttons">
-          <Link to="/">HomePage</Link>
-          <Link to="/caloriesCounter">Calories Counter</Link>
-          <Link to="/calculator">Calculator</Link>
-          <Link to="/contact">Contact</Link>
+          <Link className="link" to="/">HomePage</Link>
+          <Link className="link" to="/caloriesCounter">Calories Counter</Link>
+          <Link className="link" to="/calculator">Calculator</Link>
+          <Link className="link" to="/contact">Contact</Link>
         </div>
         <div className="loginButtons">
           <Link to="/login">Sign in</Link>
@@ -31,7 +31,7 @@ function NavBar({ children }) {
           </svg>
         </div>
       </div>
-      <div>{children}</div>
+      {children}
     </>
   );
 }

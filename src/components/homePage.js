@@ -1,7 +1,9 @@
 import React from "react";
+import Footer from "./footer";
 
 function HomePage() {
   return (
+    <>
     <div className="homePage">
         <div className="heading1">
             <span>Welcome to A Tu Fit website</span>
@@ -15,6 +17,8 @@ function HomePage() {
           </div>
         </div>
       </div>
+      <Footer />
+      </>
   );
 }
 

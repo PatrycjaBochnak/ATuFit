@@ -20,28 +20,47 @@
   width: 100%;
 }
 .homePage {
+  flex: 1 1 auto;
   background-color: #e1eec7;
   background-size: contain;
 }
 .calculatorBMR {
   background-color: #e1eec7;
+  flex: 1 1 auto;
 }
 .error404 {
   display: flex;
-  justify-content: center;
-  background-image: url(../images/underConstruction.jpg);
-  background-repeat: no-repeat;
-  background-color: #e1eec7;
-  height: 740px;
+  flex-flow: column;
 }
 .errorError {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
 }
 .errorText {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .contact {
+  flex: 1 1 auto;
+  background-color: #e1eec7;
   width: 100%;
+}
+.errorImage {
+  width: 300px;
+  height: auto;
+}
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+body, #root{
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+#root {
+  display: flex;
+  flex-flow: column;
 }

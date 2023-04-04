@@ -1,17 +1,17 @@
 import { Button, Container } from "react-bootstrap";
 import React, { useState } from "react"
+import Footer from "./footer"
 
 function Contact() {
     const [inputValue, setInputValue] = useState('');
+    const [inputValue2, setInputValue2] = useState('');
+    const [inputValue3, setInputValue3] = useState('');
   
     const handleButtonClick = () => {
       // Zresetuj wartość pola tekstowego do pustej wartości
       setInputValue('');
-    }
-  
-    const handleInputChange = (event) => {
-      // Zaktualizuj wartość pola tekstowego przy każdej zmianie
-      setInputValue(event.target.value);
+      setInputValue2('');
+      setInputValue3('');
     }
 
   return (
@@ -40,11 +40,12 @@ function Contact() {
         <span>Questions? Text me!</span>
       </div>
       <div className="emailMessage">
-        <input type="text" placeholder="Name" value={inputValue} required onChange={handleInputChange}/>
-        <input type="email" placeholder="Email" value={inputValue} required onChange={handleInputChange} />
-        <textarea placeholder="Your message"  value={inputValue} required onChange={handleInputChange} />
+        <input type="text" placeholder="Name" value={inputValue} required onChange={(e) => setInputValue(e.target.value) }/>
+        <input type="email" placeholder="Email" value={inputValue2} required onChange={(e) => setInputValue2(e.target.value) } />
+        <textarea placeholder="Your message"  value={inputValue3} required onChange={(e) => setInputValue3(e.target.value)} />
         <button onClick={handleButtonClick}>Send message</button>
       </div>
+      <Footer />
       </div>
   );
 }

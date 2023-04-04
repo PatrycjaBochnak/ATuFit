@@ -15,7 +15,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <NavBar>
-      <Outlet />
+      <Outlet /> 
     </NavBar>
   );
 };
@@ -43,6 +43,7 @@ class App extends React.Component {
               <div className="error404">
                 <h1 className="errorError">ERROR 404</h1>
                 <h2 className="errorText">Stay calm! Site is under construction</h2>{" "}
+                <img className="errorImage" src={require('./images/underConstruction.jpg')} />
               </div>
             }
           />
