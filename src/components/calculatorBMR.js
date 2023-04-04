@@ -111,10 +111,10 @@ class CalculatorBMR extends Component {
     }
     return (
       <>
-      <div className="jakisTekst">
-        <span>Dupa</span>
-      </div>
       <div className="calculatorBMR">
+        <div className="calculatorText">
+      <span>Insert your details to check Your BMR and Total Metabolism</span>
+      </div>
         <div id="bmrcalc">
           <div className="form">
             {error}

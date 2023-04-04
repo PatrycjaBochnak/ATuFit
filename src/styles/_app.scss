@@ -33,6 +33,8 @@
   flex-flow: column;
 }
 .errorError {
+  flex: 1 1 auto;
+  background-color: #e1eec7;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -63,4 +65,10 @@ body, #root{
 #root {
   display: flex;
   flex-flow: column;
+}
+.calculatorBMR {
+  flex: 1 1 auto;
+  background-color: #e1eec7;
+  display: flex;
+  justify-content: center;
 }

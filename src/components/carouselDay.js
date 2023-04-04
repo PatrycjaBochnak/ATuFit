@@ -93,7 +93,6 @@ class CarouselDay extends React.Component {
           style={{ width: "50%" }}
         >
           <div>
-            <Button className="btnCal">Select day.</Button>
             <Calendar className="calendar"></Calendar>
             <h3>Monday</h3>
             <ListResult list={this.state["Monday"]} />
