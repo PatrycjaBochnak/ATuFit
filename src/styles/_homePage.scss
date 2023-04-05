@@ -2,10 +2,9 @@
   display: flex;
 }
 .heading1 {
-  padding: 20px;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 30px;
 }
 .heading2 {
