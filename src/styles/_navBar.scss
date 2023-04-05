@@ -67,10 +67,20 @@
 .link {
   font-family: "montserratBold", sans-serif;
   color: black !important;
-  text-decoration: none !important;
+  text-decoration: none;
+  background-image: linear-gradient(to right, green 0%, green 100%);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
 }
 .link:hover { 
-  color: green !important
+  color: green !important;
+  font-size: 21px;
+  background-size: 100% 2px;
+}
+link:hover::before {
+  width: 100%;
 }
 .companyName { 
   height: 90px;
