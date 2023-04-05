@@ -10,16 +10,16 @@ function NavBar({ children }) {
         <span className="companyName">ATUFIT</span>
         <div className="buttons">
           <Link className="link" to="/">
-            HomePage
+            HOME
           </Link>
           <Link className="link" to="/caloriesCounter">
-            Calories Counter
+            CALORIES COUNTER
           </Link>
           <Link className="link" to="/calculator">
-            Calculator
+            CALCULATOR
           </Link>
           <Link className="link" to="/contact">
-            Contact
+            CONTACT
           </Link>
         </div>
         <div className="loginButtons">
