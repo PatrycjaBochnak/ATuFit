@@ -1,8 +1,11 @@
-    // @font-face {
-    //     font-family: montserratBold;
-    //     src: url(../fonts/Montserrat-SemiBold.ttf);
-    // }
-    // @font-face {
-    //     font-family: montserrat;
-    //     src: url(../fonts/Montserrat-Light.ttf);
-    // }
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Light.ttf) format("tff");
+}
+
+@font-face {
+  font-family: "MontserratBold";
+  src: url(../fonts/Montserrat-SemiBold.ttf) format("tff");
+}
+
+@export Montserrat; 

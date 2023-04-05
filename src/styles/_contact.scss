@@ -9,7 +9,6 @@
   justify-content: center;
 }
 .emailText {
-  margin-top: 50px;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -28,4 +27,8 @@
 }
 .emailButton {
   margin: 15px;
+}
+.logo {
+  height: 90px;
+  width: auto;
 }
