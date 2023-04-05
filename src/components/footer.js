@@ -74,7 +74,7 @@ class Footer extends React.Component {
           <span>{"Calories: " + this.countCalories() + " "}</span>
           <span>{"Fat: " + this.countFat() + " "}</span>
           <span>{"Carbs: " + this.countCarbs() + " "}</span>
-          <span>{"Protein: " + this.countProtein() + " "}</span></div>) : ""}
+          <span>{"Protein: " + this.countProtein() + " "}</span></div>) : <div className="secondFooter"><span>ATUFIT</span></div>}
       </>
     );
   }
