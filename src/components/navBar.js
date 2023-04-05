@@ -1,21 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.jpg";
+import broccoli from "../images/broccoli.jpg";
 
 function NavBar({ children }) {
   return (
     <>
       <div className="navBar">
-        <img className="logo" src={logo} alt="logo"/>
+        <img className="broccoli" src={broccoli} alt="broccoli" />
+        <span className="companyName">ATUFIT</span>
         <div className="buttons">
-          <Link className="link" to="/">HomePage</Link>
-          <Link className="link" to="/caloriesCounter">Calories Counter</Link>
-          <Link className="link" to="/calculator">Calculator</Link>
-          <Link className="link" to="/contact">Contact</Link>
+          <Link className="link" to="/">
+            HomePage
+          </Link>
+          <Link className="link" to="/caloriesCounter">
+            Calories Counter
+          </Link>
+          <Link className="link" to="/calculator">
+            Calculator
+          </Link>
+          <Link className="link" to="/contact">
+            Contact
+          </Link>
         </div>
         <div className="loginButtons">
-          <Link to="/login">Sign in</Link>
-          <Link to="/register">Register</Link>
+          <Link className="registerButton" to="/register">
+            Register
+          </Link>
+          <Link className="loginButton" to="/login">
+            Sign in
+          </Link>
         </div>
         <div class="custom-shape-divider-bottom-1679679246">
           <svg

@@ -76,3 +76,13 @@ body, #root{
   display: flex;
   flex-flow: column;
 }
+.footer {
+  position: fixed;
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
