@@ -58,25 +58,6 @@
   transition: transform 0.2s ease-in-out ;
   transform: scale(1.2);
 }
-.custom-shape-divider-bottom-1680785097 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-.custom-shape-divider-bottom-1680785097 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 49px;
-  transform: rotateY(180deg);
-}
-.custom-shape-divider-bottom-1680785097 .shape-fill {
-  fill: black;
-}
 .link {
   font-family: "montserrat", sans-serif;
   font-weight: 600;
