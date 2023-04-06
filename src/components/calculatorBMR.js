@@ -102,12 +102,11 @@ class CalculatorBMR extends Component {
       resultAct = <div className="result">{this.state.finalResult}</div>;
     }
 
-    if (this.state.flag == true) {
-      var a = true;
-    }
-    var b = true;
+    let a = this.state.flag === true ? true : false;
+
+    let b = true;
     if (this.state.system == 2) {
-      var b = false;
+      let b = false;
     }
     return (
       <>
