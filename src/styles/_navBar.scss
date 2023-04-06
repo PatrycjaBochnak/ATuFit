@@ -52,11 +52,20 @@
 .broccoli {
   margin-top: 5px;
   height: 80px;
+  transform-style: preserve-3d;
+  animation: spin 10s linear infinite;
+  perspective: 1000px;
 }
-.broccoli:hover { 
-  transition: transform 2s ease-in-out ;
-  transform: scale(1.2);
-  transform: rotate(360deg);
+// .broccoli:hover { 
+//   animation: spin 0.5s linear infinite;
+// }
+@keyframes spin {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
 }
 .link {
   font-family: "montserrat", sans-serif;
@@ -78,9 +87,14 @@
 .companyName { 
   height: 100px;
   margin-right: 20px;
-  font-family: "montserrat", sans-serif;
+  font-family: "lato";
   font-weight: 900;
   font-size: 25px;
   display: flex;
   align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.companyName:hover { 
+  font-size: 26px;
 }
