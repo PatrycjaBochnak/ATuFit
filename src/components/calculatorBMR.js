@@ -207,7 +207,7 @@ class CalculatorBMR extends Component {
                   type="button"
                   onClick={() => this.calculateFinalResult()}
                 >
-                  Calculate Calories
+                  Calculate TDEE
                 </button>
                 {resultAct}
               </div>
