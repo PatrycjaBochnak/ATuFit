@@ -1,15 +1,15 @@
 .buttons {
-  font-family: "Montserrat", sans-serif;
   display: flex;
   width: 70%;
+  margin-left: 160px;
   align-items: center;
-  justify-content: space-evenly !important;
+  justify-content: space-between !important;
   height: 100px;
   margin-right: 200px;
   font-style: inherit;
   font-family: sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   overflow: visible;
   font-family: montserrat, sans-serif;
 }
@@ -107,7 +107,7 @@
 }
 .link:hover { 
   color: green !important;
-  font-size: 21px;
+  font-size: 16px;
   background-size: 100% 2px;
 }
 .companyName { 
