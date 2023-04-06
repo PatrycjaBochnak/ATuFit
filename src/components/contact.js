@@ -45,7 +45,6 @@ function Contact() {
         <input type="email" placeholder="Email" value={inputValue2} required onChange={(e) => setInputValue2(e.target.value) } />
         <textarea placeholder="Your message"  value={inputValue3} required onChange={(e) => setInputValue3(e.target.value)} />
         <button className="emailButton" onClick={handleButtonClick}>Send message</button>
-        <img className="logo" src={require('../images/logo.jpg')} />
       </div>
       <Footer />
       </div>

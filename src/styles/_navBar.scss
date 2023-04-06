@@ -23,7 +23,8 @@
   font-size: 20px;
   font-style: inherit;
   display: flex;
-  font-family: montserrat, sans-serif;
+  font-family: "montserratBold", sans-serif;
+  font-weight: 600;
 }
 .loginButton {
   color: black;
@@ -52,27 +53,48 @@
   margin: 0;
   height: 90px;
 }
-.custom-shape-divider-bottom-1679679246 {
+// .custom-shape-divider-bottom-1679679246 {
+//   position: absolute;
+//   top: 65px;
+//   left: 0;
+//   width: 100%;
+//   overflow: hidden;
+//   line-height: 0;
+//   transform: rotate(180deg);
+// }
+// .custom-shape-divider-bottom-1679679246 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(100% + 1.3px);
+//   height: 99px;
+//   transform: rotateY(180deg);
+// }
+// .custom-shape-divider-bottom-1679679246 .shape-fill {
+//   fill: #e1eec7;
+// }
+.custom-shape-divider-bottom-1680785097 {
   position: absolute;
-  top: 65px;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
 }
-.custom-shape-divider-bottom-1679679246 svg {
+
+.custom-shape-divider-bottom-1680785097 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 99px;
+  height: 49px;
   transform: rotateY(180deg);
 }
-.custom-shape-divider-bottom-1679679246 .shape-fill {
-  fill: #e1eec7;
+
+.custom-shape-divider-bottom-1680785097 .shape-fill {
+  fill: black;
 }
 .link {
-  font-family: "montserratBold", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-weight: 600;
   margin-right: 15px;
   color: black !important;
@@ -91,8 +113,8 @@
 .companyName { 
   height: 100px;
   margin-right: 20px;
-  font-family: montserrat, sans-serif;
-  font-weight: 600;
+  font-family: "montserratBold", sans-serif;
+  font-weight: 900;
   font-size: 20px;
   display: flex;
   align-items: center;

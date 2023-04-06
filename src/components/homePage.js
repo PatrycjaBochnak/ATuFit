@@ -15,6 +15,12 @@ function HomePage() {
             <div className="homePageIcon1">
             <img className="salad1" src={salad1} alt="salad1" />
             </div>
+            <div className="heading3">
+              <span>Text text text</span>
+            </div>
+            <div className="homePageIcon2">
+              
+            </div>
           </div>
         </div>
       </div>
