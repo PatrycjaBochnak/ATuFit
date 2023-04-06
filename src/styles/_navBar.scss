@@ -55,8 +55,9 @@
 }
 .broccoli:hover { 
   height: 81px;
-  transition: transform 0.2s ease-in-out ;
+  transition: transform 2s ease-in-out ;
   transform: scale(1.2);
+  transform: rotate(360deg);
 }
 .link {
   font-family: "montserrat", sans-serif;
