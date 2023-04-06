@@ -28,10 +28,10 @@ function NavBar({ children }) {
         </div>
         <div className="loginButtons">
           <Link className="registerButton" to="/register">
-            Register
+            SIGN UP
           </Link>
           <Link className="loginButton" to="/login">
-            Sign in
+            SIGN IN
           </Link>
         </div>
         {/* <div class="custom-shape-divider-bottom-1679679246">
