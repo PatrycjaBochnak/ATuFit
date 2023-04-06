@@ -56,9 +56,6 @@
   animation: spin 10s linear infinite;
   perspective: 1000px;
 }
-// .broccoli:hover { 
-//   animation: spin 0.5s linear infinite;
-// }
 @keyframes spin {
   0% {
     transform: rotateX(0) rotateY(0) rotateZ(0);
@@ -85,7 +82,7 @@
   background-size: 100% 2px;
 }
 .companyName { 
-  height: 100px;
+  height: 90px;
   margin-right: 20px;
   font-family: "lato";
   font-weight: 900;

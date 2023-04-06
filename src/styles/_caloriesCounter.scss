@@ -40,8 +40,10 @@
   display: flex;
 }
 .custom-shape-divider-bottom-1680550907 {
-  position: absolute;
-  bottom: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 120px;
+  opacity: 0.8;
   left: 0;
   width: 100%;
   overflow: hidden;
