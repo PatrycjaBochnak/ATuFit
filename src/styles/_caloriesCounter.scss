@@ -1,17 +1,21 @@
 .caloriesCounter {
+  flex: 1 1 auto;
   background-color: #e1eec7;
 }
 .searcher {
+  flex: 1 1 auto;
   padding: 20px;
   width: 50%;
   background-color: #e1eec7;
 }
 .searchField {
+  flex: 1 1 auto;
   display: flex !important;
   justify-content: center !important;
   background-color: #e1eec7;
 }
 .carousel {
+  flex: 1 1 auto;
   height: 79vh;
   padding: 20px;
   width: 50%;
@@ -19,24 +23,26 @@
   background-color: #e1eec7;
 }
 .carousel-root {
+  display: flex;
+  flex: 1 1 auto;
   margin-top: 10px;
   display: flex;
   width: 50%;
 }
 .carousel-status {
+  flex: 1 1 auto;
   display: none;
 }
 .results {
+  flex: 1 1 auto;
   display: flex;
   flex-flow: column;
 }
 .clicker {
   height: 30%;
 }
-.calculator {
-  background-color: pink;
-}
 .counter {
+  flex: 1 1 auto;
   display: flex;
 }
 .custom-shape-divider-bottom-1680550907 {
