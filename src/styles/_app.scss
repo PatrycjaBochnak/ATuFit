@@ -16,7 +16,7 @@
 .navBar {
   background-color: white;
   display: flex;
-  height: 100px;
+  height: 85px;
   width: 100%;
 }
 .homePage {
@@ -90,6 +90,7 @@ body, #root{
   position: absolute;
   background-color: white;
   height: 30px;
+  width: 100%;
   align-items: flex-end;
   align-content: flex-end;
   bottom: 0;
