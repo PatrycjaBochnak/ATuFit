@@ -78,11 +78,15 @@ body, #root{
 }
 .footer {
   position: fixed;
-  height: 30px;
+  height: 100px;
   left: 0;
   bottom: 0;
   width: 100%;
   color: black;
   background-color: white;
   text-align: center;
+}
+.secondFooter {
+  background-color: white;
+  height: 30px;
 }
