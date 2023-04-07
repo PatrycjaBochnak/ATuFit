@@ -89,6 +89,7 @@ body, #root{
   opacity: 0.8;
 }
 .secondFooter {
+  display: flex;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -100,6 +101,21 @@ body, #root{
   align-content: flex-end;
   bottom: 0;
   justify-content: flex-end;
+}
+.headingFooter {
+  display: flex;
+  flex-flow: column;
+}
+.listFooter {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+.logoFooter {
+  display: flex;
+  flex-flow: column;
+  height: 30px;
+  width: auto;
 }
 .caloriesCounter {
   display: flex;
