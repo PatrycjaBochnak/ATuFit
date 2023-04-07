@@ -1,5 +1,5 @@
 import React from "react";
-import { logo } from "../images/logo.jpg";
+import logo from "../images/logo.jpg";
 
 class Footer extends React.Component {
   countCalories = () => {
@@ -87,24 +87,34 @@ class Footer extends React.Component {
               <span>Thank you for using and making our community A Tu Fit</span>
               </div>
             <div className="listFooter">
-              <span>Why A Tu Fit?</span>
+              <span>WHY A TU FIT?</span>
               <ul>
                 <li>
-                  <span>Easy to use</span>
+                  <span>EASY TO USE</span>
                 </li>
                 <li>
-                  <span>Accessible</span>
+                  <span>ACCESSIABLE</span>
                 </li>
                 <li>
-                  <span>Customizable</span>
+                  <span>CUSTOMIZABLE</span>
                 </li>
                 <li>
-                  <span>Free to use</span>
+                  <span>FREE TO USE</span>
                 </li>
               </ul>
             </div>
+            <div className="2listFooter">
+              <ul>
+                <li> 100+ USERS REGISTERED</li>
+                <li> 150+ PRODUCTS AVAILABLE</li>
+                <li> 320+ DIARIES CREATES</li>
+                <li> 100% SATISFACTION RATE</li>
+              </ul>
+            </div>
             <div className="logoFooter">
-              <img src="../images/logo.jpg"></img>
+            <img className="logo" src={logo} alt="logo" />
+            <span>Copyright © 2023</span>
+            <span>All rights reserved.</span>
             </div>
           </div>
         )}
