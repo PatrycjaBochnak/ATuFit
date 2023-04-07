@@ -1,11 +1,9 @@
 .buttons {
+  margin: 0 20px 0 20px;
   display: flex;
   width: 70%;
-  margin-left: 170px;
   align-items: center;
-  justify-content: space-between !important;
-  height: 100px;
-  margin-right: 100px;
+  justify-content: space-around !important;
   font-style: inherit;
   font-family: sans-serif;
   font-weight: 500;
@@ -37,6 +35,10 @@
 .loginButton::before { 
   content: "🔒";
 }
+.loginButton:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
+}
 .registerButton {
   color: white;
   background-color: gray;
@@ -53,6 +55,10 @@
 }
 .registerButton::before {
   content: "👤";
+}
+.registerButton:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
 }
 .broccoli {
   margin-top: 5px;
