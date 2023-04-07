@@ -34,6 +34,9 @@
   background-color: gray;
   color: white;
 }
+.loginButton::before { 
+  content: "🔒";
+}
 .registerButton {
   color: white;
   background-color: gray;
@@ -47,6 +50,9 @@
 .registerButton:hover {
   color: black;
   background-color: white;
+}
+.registerButton::before {
+  content: "👤";
 }
 .broccoli {
   margin-top: 5px;
