@@ -1,4 +1,5 @@
 import React from "react";
+import { logo } from "../images/logo.jpg";
 
 class Footer extends React.Component {
   countCalories = () => {
@@ -70,11 +71,43 @@ class Footer extends React.Component {
             ></path>
           </svg>
         </div>
-        {this.props.products ? (<div className="footer">
-          <span>{"Calories: " + this.countCalories() + " "}</span>
-          <span>{"Fat: " + this.countFat() + " "}</span>
-          <span>{"Carbs: " + this.countCarbs() + " "}</span>
-          <span>{"Protein: " + this.countProtein() + " "}</span></div>) : <div className="secondFooter"><span>ATUFIT</span></div>}
+        {this.props.products ? (
+          <div className="footer">
+            <span>{"Calories: " + this.countCalories() + " "}</span>
+            <span>{"Fat: " + this.countFat() + " "}</span>
+            <span>{"Carbs: " + this.countCarbs() + " "}</span>
+            <span>{"Protein: " + this.countProtein() + " "}</span>
+          </div>
+        ) : (
+          <div className="secondFooter">
+            <div className="headingFooter">
+              <span>THE MOST IMPORTANT FOR US IS</span>
+              <span>User satisfaction</span>
+              <span>The current satisfaction rate with our application is over 100%</span>
+              <span>Thank you for using and making our community A Tu Fit</span>
+              </div>
+            <div className="listFooter">
+              <span>Why A Tu Fit?</span>
+              <ul>
+                <li>
+                  <span>Easy to use</span>
+                </li>
+                <li>
+                  <span>Accessible</span>
+                </li>
+                <li>
+                  <span>Customizable</span>
+                </li>
+                <li>
+                  <span>Free to use</span>
+                </li>
+              </ul>
+            </div>
+            <div className="logoFooter">
+              <img src="../images/logo.jpg"></img>
+            </div>
+          </div>
+        )}
       </>
     );
   }
