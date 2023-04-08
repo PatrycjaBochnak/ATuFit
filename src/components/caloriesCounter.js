@@ -1,6 +1,6 @@
 import React from "react";
 import Searcher from "./searcher";
-import CarouselDay from "./carouselDay";
+import CarouselDay from "./calendar";
 import { useState } from "react";
 
 function CaloriesCounter() {
