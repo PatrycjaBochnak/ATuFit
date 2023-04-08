@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import broccoli from "../images/broccoli.jpg";
-import { AiFillHome } from 'react-icons/ai';
-import { FaCalculator } from 'react-icons/fa';
-import { FaPhoneAlt } from 'react-icons/fa';
-import { GiAppleCore } from 'react-icons/gi';
 
 function NavBar({ children }) {
   return (
@@ -13,16 +9,16 @@ function NavBar({ children }) {
         <img className="broccoli" src={broccoli} alt="broccoli" />
         <span className="companyName">ATUFIT</span>
         <div className="buttons">
-          <AiFillHome/><Link className="link" to="/">
+          <Link className="link" to="/">
             HOME
           </Link>
-          <GiAppleCore/><Link className="link" to="/caloriesCounter">
+          <Link className="link" to="/caloriesCounter">
             CALORIES COUNTER
           </Link>
-          <FaCalculator/><Link className="link" to="/calculator">
+          <Link className="link" to="/calculator">
             CALCULATOR
           </Link>
-          <FaPhoneAlt/><Link className="link" to="/contact">
+          <Link className="link" to="/contact">
             CONTACT
           </Link>
         </div>

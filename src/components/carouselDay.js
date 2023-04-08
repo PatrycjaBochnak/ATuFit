@@ -1,130 +1,58 @@
-import { Carousel } from "react-responsive-carousel";
 import ListResult from "./listResult";
 import React from "react";
 import Footer from "./footer";
 import Calendar from "react-calendar";
-import { Button } from "react-bootstrap";
 
 class CarouselDay extends React.Component {
   state = {
-    Monday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Tuesday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Wednesday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Thursday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Friday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Saturday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    Sunday: {
-      breakfast: [],
-      secondBreakfast: [],
-      dinner: [],
-      supper: [],
-    },
-    activeIndex: 0,
+    calendarValue: new Date().toLocaleDateString()
   };
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
-      console.log(this.props.product);
+        console.log(this.state[this.state.calendarValue])
+      if (!this.state[this.state.calendarValue]) {
+        console.log("dupa")
+        this.setState ({...this.state,[this.state.calendarValue] : { 
+        breakfast: [],
+        secondBreakfast: [],
+        dinner: [],
+        supper: [],
+        }}, () => this.updateProducts());
+      } else { 
+        this.updateProducts();
+      }
+    }
+  }
+  updateProducts() {
+    console.log(this.props.product);  console.log(this.state);
       console.log(this.props.product.partOfDay);
-      const day = this.getDay(this.state.activeIndex);
-      console.log(day);
-      const productsOfPartOfDay = this.state[day][this.props.product.partOfDay];
+      const productsOfPartOfDay = this.state[this.state.calendarValue][this.props.product.partOfDay];
       productsOfPartOfDay.push(this.props.product);
       this.setState({
         ...this.state,
-        [day]: {
-          ...this.state[day],
+        [this.state.calendarValue]: {
+          ...this.state[this.state.calendarValue],
           [this.props.product.partOfDay]: productsOfPartOfDay,
         },
       });
       console.log(this.state);
-    }
+  }
+  calendarValueOnChange = (value) => { 
+    this.setState ( { 
+      ...this.state, calendarValue: value.toLocaleDateString()
+    })
   }
 
-  getDay(activeIndex) {
-    if (activeIndex === 0) return "Monday";
-    if (activeIndex === 1) return "Tuesday";
-    if (activeIndex === 2) return "Wednesday";
-    if (activeIndex === 3) return "Thursday";
-    if (activeIndex === 4) return "Friday";
-    if (activeIndex === 5) return "Saturday";
-    if (activeIndex === 6) return "Sunday";
-  }
-
-  render() {
+  render() { 
     return (
       <>
-        <Carousel
-          autoPlay={false}
-          showThumbs={false}
-          onChange={(activeIndex) =>
-            this.setState({ ...this.state, activeIndex: activeIndex })
-          }
-          style={{ width: "50%" }}
-        >
           <div>
-            <Calendar className="calendar"></Calendar>
-            <h3>Monday</h3>
-            <ListResult list={this.state["Monday"]} />
+          <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
+            <h3>Day:{this.state.calendarValue}</h3>
+            <ListResult list={this.state[this.state.calendarValue]} />
           </div>
-          <div>
-            <h3>Tuesday</h3>
-            <ListResult list={this.state["Tuesday"]} />
-          </div>
-          <div>
-            <h3>Wednesday</h3>
-            <ListResult list={this.state["Wednesday"]} />
-          </div>
-          <div>
-            <h3>Thursday</h3>
-            <ListResult list={this.state["Thursday"]} />
-          </div>
-          <div>
-            <h3>Friday</h3>
-            <ListResult list={this.state["Friday"]} />
-          </div>
-          <div>
-            <h3>Saturday</h3>
-
-            <ListResult list={this.state["Saturday"]} />
-          </div>
-          <div>
-            <h3>Sunday</h3>
-
-            <ListResult list={this.state["Sunday"]} />
-          </div>
-        </Carousel>
-        <Footer products={this.state[this.getDay(this.state.activeIndex)]} />
+        <Footer products={this.state[this.state.calendarValue]} />
       </>
     );
   }

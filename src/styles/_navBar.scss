@@ -1,6 +1,7 @@
 .buttons {
   display: flex;
-  width: 70%;
+  width: 60%;
+  margin: 0 50px 0 50px;
   align-items: center;
   justify-content: space-around !important;
   font-style: inherit;
@@ -89,6 +90,18 @@
   color: green !important;
   font-size: 16px;
   background-size: 100% 2px;
+}
+.link:first-child::before {
+  content: "🏠";
+}
+.link:nth-child(2)::before {
+  content: "🍎";
+}
+.link:nth-child(3)::before {
+  content: "💻";
+}
+.link:last-child::before {
+  content: "📲";
 }
 .companyName { 
   height: 90px;
