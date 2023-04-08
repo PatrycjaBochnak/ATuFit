@@ -102,12 +102,12 @@ class CalculatorBMR extends Component {
     }
     let result;
     if (this.state.bmr) {
-      result = <div className="result">{this.state.bmr}</div>;
+      result = <div className="resultBMR">{this.state.bmr}</div>;
     }
 
     let resultAct;
     if (this.state.bmr) {
-      resultAct = <div className="result">{this.state.finalResult}</div>;
+      resultAct = <div className="resultTDEE">{this.state.finalResult}</div>;
     }
     
 
@@ -187,7 +187,7 @@ class CalculatorBMR extends Component {
                 max="120"
               />
             </div>
-            <button type="button" onClick={() => this.calculateBMR()}>
+            <button type="button" className="buttonBMR" onClick={() => this.calculateBMR()}>
               Calculate BMR
             </button>
             {result}
@@ -213,7 +213,7 @@ class CalculatorBMR extends Component {
                   </select>
                 </div>
                 <button
-                  type="button"
+                  type="button" className="buttonTDEE"
                   onClick={() => this.calculateFinalResult()}
                 >
                   Calculate TDEE
