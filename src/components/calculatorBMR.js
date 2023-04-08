@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Footer from "./footer"
+import Footer from "./footer";
+import Cookies from 'js-cookie';
 
 class CalculatorBMR extends Component {
   constructor() {
@@ -85,6 +86,13 @@ class CalculatorBMR extends Component {
       ActCalc = this.state.bmr * 1.9;
     }
     this.setState({ finalResult: ActCalc });
+    this.ActCalc = ActCalc;
+    console.log(ActCalc);
+    this.setCookie();
+  }
+
+  setCookie = () => { 
+    Cookies.set('finalResult', this.ActCalc, { expires: 7 });
   }
 
   render() {
@@ -101,6 +109,7 @@ class CalculatorBMR extends Component {
     if (this.state.bmr) {
       resultAct = <div className="result">{this.state.finalResult}</div>;
     }
+    
 
     let a = this.state.flag === true ? true : false;
 

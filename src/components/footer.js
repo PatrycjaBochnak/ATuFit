@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import React from "react";
 import logo from "../images/logo.jpg";
 
@@ -73,7 +74,7 @@ class Footer extends React.Component {
         </div>
         {this.props.products ? (
           <div className="footer">
-            <span>{"Calories: " + this.countCalories() + " "}</span>
+            <span>{"Calories: " + this.countCalories() + "  /  " + Cookies.get('finalResult')}</span>
             <span>{"Fat: " + this.countFat() + " "}</span>
             <span>{"Carbs: " + this.countCarbs() + " "}</span>
             <span>{"Protein: " + this.countProtein() + " "}</span>

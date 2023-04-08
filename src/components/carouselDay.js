@@ -12,7 +12,6 @@ class CarouselDay extends React.Component {
     if (prevProps !== this.props) {
         console.log(this.state[this.state.calendarValue])
       if (!this.state[this.state.calendarValue]) {
-        console.log("dupa")
         this.setState ({...this.state,[this.state.calendarValue] : { 
         breakfast: [],
         secondBreakfast: [],
