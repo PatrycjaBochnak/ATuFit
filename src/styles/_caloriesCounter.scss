@@ -70,5 +70,15 @@
 .calendarCalories { 
   display: flex;
   flex: 1 1 auto;
+  width: 50%;
+  flex-flow: column;
   background-color: #e1eec7;
+}
+.calendarDay {
+  display: flex;
+  flex-flow: column;
+}
+.react-calendar_navigation {
+  display: flex;
+  align-items: center;
 }

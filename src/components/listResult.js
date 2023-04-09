@@ -2,8 +2,7 @@ import React from "react";
 
 function ListResult(props) {
   return (
-    <div className="results">
-      <div className="results">
+      <div className="breakfastResults">
         <span>Breakfast</span>
         {props.list && props.list.breakfast && props.list.breakfast.length > 0
           ? props.list.breakfast.map((product) => {
@@ -18,8 +17,7 @@ function ListResult(props) {
               );
             })
           : ""}
-      </div>
-      <div className="results">
+      <div>
         <span>Second Breakfast</span>
         {props.list && props.list.secondBreakfast && props.list.secondBreakfast.length > 0
           ? props.list.secondBreakfast.map((product) => {
@@ -35,7 +33,7 @@ function ListResult(props) {
             })
           : ""}
       </div>
-      <div className="results">
+      <div>
         <span>Dinner</span>
         {props.list && props.list.dinner && props.list.dinner.length > 0
           ? props.list.dinner.map((product) => {
@@ -51,7 +49,7 @@ function ListResult(props) {
             })
           : ""}
       </div>
-      <div className="results">
+      <div>
         <span>Supper</span>
         {props.list && props.list.supper && props.list.supper.length > 0
           ? props.list.supper.map((product) => {

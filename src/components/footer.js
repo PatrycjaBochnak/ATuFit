@@ -59,7 +59,7 @@ class Footer extends React.Component {
   render() {
     return (
       <>
-        <div class="custom-shape-divider-bottom-1680550907">
+        <div className="custom-shape-divider-bottom-1680550907">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
