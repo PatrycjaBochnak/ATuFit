@@ -1,4 +1,5 @@
 .caloriesCounter {
+  display: flex;
   flex: 1 1 auto;
   background-color: #e1eec7;
 }
@@ -65,4 +66,9 @@
 }
 .custom-shape-divider-bottom-1680550907 .shape-fill {
   fill: #FFFFFF;
+}
+.calendarCalories { 
+  display: flex;
+  flex: 1 1 auto;
+  background-color: #e1eec7;
 }

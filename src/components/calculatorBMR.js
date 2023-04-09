@@ -151,7 +151,7 @@ class CalculatorBMR extends Component {
                 Male
               </label>
             </div>
-            <div className="inpuWeight">
+            <div className="inputWeight">
               <label className="label">Weight (Kg)</label>
               <input
                 type="number"
