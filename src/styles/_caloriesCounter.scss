@@ -76,9 +76,15 @@
 }
 .calendarDay {
   display: flex;
+  align-items: center;
   flex-flow: column;
 }
 .react-calendar_navigation {
   display: flex;
+  align-items: center;
+}
+.breakfastResults {
+  display: flex;
+  flex-flow: column;
   align-items: center;
 }
