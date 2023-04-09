@@ -3,6 +3,9 @@
     font-size: 20px;
 }
 .form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     font-size: 15px;
 }
 .inputGender, .inputWeight, .inputHeight, .inputAge {
@@ -16,12 +19,16 @@
     font-size: 30px;
 }
 .workout {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     font-size: 30px;
 }
 .inputWorkout {
     font-size: 20px
 }
 .buttonTDEE {
+    margin-top: 10px;
     font-size: 20px;
 }
 .resultTDEE {
