@@ -20,10 +20,10 @@
   width: 100%;
 }
 .homePage {
-  flex: 1 1 auto;
+  display: flex;
   flex-flow: column;
+  flex: 1 1 auto;
   background-color: #e1eec7;
-  background-size: contain;
 }
 .carouselDay {
   background-color: #e1eec7;

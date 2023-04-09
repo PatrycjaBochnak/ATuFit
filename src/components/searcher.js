@@ -45,7 +45,7 @@ class Searcher extends React.Component {
         </div>
         {this.state.recipes ? (
           <div className="searchResults">
-            <div className="row">
+            <div className="calMacroNames">
               <div className="col-md-6">Name</div>
               <div className="col-md-1">Calories</div>
               <div className="col-md-1">Fats</div>

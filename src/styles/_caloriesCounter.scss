@@ -13,7 +13,6 @@
   flex: 1 1 auto;
   display: flex !important;
   justify-content: center !important;
-  background-color: #e1eec7;
 }
 .carousel {
   flex: 1 1 auto;
@@ -87,4 +86,8 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+.calMacroNames {
+  font-size: 10px;
+  display: flex;
 }
