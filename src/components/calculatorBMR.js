@@ -102,12 +102,12 @@ class CalculatorBMR extends Component {
     }
     let result;
     if (this.state.bmr) {
-      result = <div className="resultBMR">{this.state.bmr}</div>;
+      result = <div className="resultBMR">Your basic metabolism is: {this.state.bmr} calories</div>;
     }
 
     let resultAct;
     if (this.state.bmr) {
-      resultAct = <div className="resultTDEE">{this.state.finalResult}</div>;
+      resultAct = <div className="resultTDEE">Your total metabolism is {this.state.finalResult} calories</div>;
     }
     
 
