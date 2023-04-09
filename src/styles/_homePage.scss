@@ -1,17 +1,20 @@
 .salad1 { 
     float: right;
-    margin-top: -100px;
-    width: 40%;
+    width: 30%;
 }
 .heading1, .heading2 {
     width: 50%;
+    clear: left;
     display: flex;
-    justify-content: center;
+}
+.heading1 {
+    margin-top: 100px;
+    justify-content: flex-start;
 }
 .vegetables { 
     float: left;
     margin-top: -100px;
-    width: 40%;
+    width: 30%;
 }
 .heading3 {
     width: 50%;
