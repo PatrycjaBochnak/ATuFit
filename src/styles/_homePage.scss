@@ -1,10 +1,20 @@
-.firstSlide {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+.salad1 { 
+    float: right;
+    margin-top: -100px;
+    width: 40%;
 }
-.secondSlide {
-  display: flex;
-  align-items: flex-end;
+.heading1, .heading2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.vegetables { 
+    float: left;
+    margin-top: -100px;
+    width: 40%;
+}
+.heading3 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
