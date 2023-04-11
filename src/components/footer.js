@@ -114,8 +114,8 @@ class Footer extends React.Component {
             </div>
             <div className="logoFooter">
             <img className="logo" src={logo} alt="logo" />
-            <span>Copyright © 2023</span>
-            <span>All rights reserved.</span>
+            <span className="logoText">Copyright © 2023</span>
+            <span className="logoText2">All rights reserved.</span>
             </div>
           </div>
         )}

@@ -120,6 +120,13 @@ body, #root{
 .logo {
   height: 90px;
   width: auto;
+  margin-bottom: -50px;
+}
+.logoText { 
+  margin-bottom: -50px;
+}
+.logoText2 { 
+  margin-bottom: none;
 }
 .caloriesCounter {
   display: flex;
