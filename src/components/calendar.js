@@ -49,6 +49,7 @@ class CarouselDay extends React.Component {
           <div className="calendarCalories">
           <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
             <h3 className="calendarDay">Day: {this.state.calendarValue}</h3>
+            <hr className="separator" />
             <ListResult list={this.state[this.state.calendarValue]} />
           </div>
         <Footer products={this.state[this.state.calendarValue]} />

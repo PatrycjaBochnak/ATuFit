@@ -57,6 +57,7 @@ class Searcher extends React.Component {
               return (
                 <>
                   <div className="row">
+                  <hr className="separator" />
                     <div className="col-md-6">
                       {this.state.recipes[key].title}
                     </div>

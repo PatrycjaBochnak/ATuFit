@@ -65,28 +65,24 @@
 }
 .breakfastResults {
   padding: 10px;
-  border: 2px solid black;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .secondBreakfastResults {
   padding: 10px;
-  border: 2px solid black;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .dinnerResults {
   padding: 10px;
-  border: 2px solid black;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .supperResults {
   padding: 10px;
-  border: 2px solid black;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -94,4 +90,11 @@
 .calMacroNames {
   font-size: 10px;
   display: flex;
+}
+.separator {
+  content: "_";
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0 10px;
 }

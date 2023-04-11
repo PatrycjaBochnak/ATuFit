@@ -18,6 +18,7 @@ function ListResult(props) {
               );
             })
           : ""}
+            <hr className="separator" />
       </div>
       <div className="secondBreakfastResults">
         <span>Second Breakfast</span>
@@ -34,6 +35,7 @@ function ListResult(props) {
               );
             })
           : ""}
+            <hr className="separator" />
       </div>
       <div className="dinnerResults">
         <span>Dinner</span>
@@ -50,6 +52,7 @@ function ListResult(props) {
               );
             })
           : ""}
+            <hr className="separator" />
       </div>
       <div className="supperResults">
         <span>Supper</span>
@@ -66,6 +69,7 @@ function ListResult(props) {
               );
             })
           : ""}
+            <hr className="separator" />
       </div>
       </>
   );
