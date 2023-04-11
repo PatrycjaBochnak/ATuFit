@@ -14,6 +14,10 @@
   display: flex !important;
   justify-content: center !important;
 }
+.searchResults {
+  font-family: montserrat;
+  font-weight: 100;
+}
 .results {
   flex: 1 1 auto;
   display: flex;
@@ -55,6 +59,8 @@
   background-color: #e1eec7;
 }
 .calendarDay {
+  margin: 15px 0 15px 0;
+  font-family: montserrat;
   display: flex;
   align-items: center;
   flex-flow: column;
@@ -64,24 +70,28 @@
   align-items: center;
 }
 .breakfastResults {
+  font-family: lato;
   padding: 10px;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .secondBreakfastResults {
+  font-family: lato;
   padding: 10px;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .dinnerResults {
+  font-family: lato;
   padding: 10px;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .supperResults {
+  font-family: lato;
   padding: 10px;
   display: flex;
   flex-flow: column;

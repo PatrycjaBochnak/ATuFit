@@ -1,6 +1,7 @@
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import React, { useState } from "react"
 import Footer from "./footer"
+import { Button } from "@mui/material"
 
 function Contact() {
     const [inputValue, setInputValue] = useState('');
@@ -22,18 +23,18 @@ function Contact() {
       {" "}
       <Container fluid className="cont">
         <div className="contactButtons">
-          <a className="CvButton" href="/" target="_blank">
-            <Button>CV</Button>
+          <a className="CvButton">
+            <Button variant="outlined" disabled>CV</Button>
           </a>
           <a className="LiButton"
             href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
             target="_blank"
           >
-            <Button>LinkedIn</Button>
+            <Button variant="outlined">LinkedIn</Button>
           </a>
           <a className="GhButton"
             href="https://github.com/PatrycjaBochnak" target="_blank">
-            <Button>GitHub</Button>
+           <Button variant="outlined">GitHub</Button>
           </a>
         </div>
       </Container>

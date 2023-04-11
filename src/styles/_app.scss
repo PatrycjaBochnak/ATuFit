@@ -80,8 +80,9 @@ body, #root{
   flex-flow: column;
 }
 .footer {
+  font-family: montserrat;
   font-size: 20px;
-  position: fixed;
+  position: absolute;
   height: 100px;
   left: 0;
   bottom: 0;
@@ -92,6 +93,7 @@ body, #root{
   opacity: 0.8;
 }
 .secondFooter {
+  font-family: montserrat;
   display: flex;
   position: fixed;
   left: 0;

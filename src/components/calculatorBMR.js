@@ -19,23 +19,17 @@ class CalculatorBMR extends Component {
     };
   }
   handleAgeChange = (event) => {
-    this.setState({ age: event.target.value });
-  };
+    this.setState({ age: event.target.value });};
   handleWeightChange = (event) => {
-    this.setState({ weight: event.target.value });
-  };
+    this.setState({ weight: event.target.value });};
   handleHeightChange = (event) => {
-    this.setState({ height: event.target.value });
-  };
+    this.setState({ height: event.target.value });};
   handleGenderChange = (event) => {
-    this.setState({ gender: event.target.value });
-  };
+    this.setState({ gender: event.target.value });};
   handleActivityChange = (event) => {
-    this.setState({ activity: event.target.value });
-  };
+    this.setState({ activity: event.target.value });};
   handleSystemChange = (event) => {
-    this.setState({ system: event.target.value });
-  };
+    this.setState({ system: event.target.value });};
 
   calculateBMR() {
     let age = this.state.age;

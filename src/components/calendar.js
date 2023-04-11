@@ -1,5 +1,5 @@
 import ListResult from "./listResult";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./footer";
 import Calendar from "react-calendar";
 
@@ -46,7 +46,7 @@ class CarouselDay extends React.Component {
   render() { 
     return (
       <>
-          <div className="calendarCalories">
+           <div className="calendarCalories">
           <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
             <h3 className="calendarDay">Day: {this.state.calendarValue}</h3>
             <hr className="separator" />
