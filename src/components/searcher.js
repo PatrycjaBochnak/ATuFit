@@ -57,7 +57,7 @@ class Searcher extends React.Component {
               return (
                 <>
                   <div className="row">
-                  <hr className="separator" />
+                    <hr className="separator" />
                     <div className="col-md-6">
                       {this.state.recipes[key].title}
                     </div>
@@ -85,8 +85,7 @@ class Searcher extends React.Component {
                           });
                         }}
                         style={{ width: "90%" }}
-                      > 
-                      
+                      >
                         <option value={"choose part of day"}>Choose</option>
                         <option value={"breakfast"}>Breakfast</option>
                         <option value={"secondBreakfast"}>
@@ -95,8 +94,8 @@ class Searcher extends React.Component {
                         <option value={"dinner"}>Dinner</option>
                         <option value={"supper"}>Supper</option>
                       </select>
-                      </div>
                     </div>
+                  </div>
                 </>
               );
             })}

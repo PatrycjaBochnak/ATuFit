@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 .buttons {
   display: flex;
   width: 60%;
@@ -33,7 +33,7 @@
   background-color: gray;
   color: white;
 }
-.loginButton::before { 
+.loginButton::before {
   content: "🔒 ";
 }
 .loginButton:active {
@@ -88,7 +88,7 @@
   background-size: 0% 2px;
   transition: background-size 0.3s;
 }
-.link:hover { 
+.link:hover {
   color: green !important;
   background-size: 100% 2px;
 }
@@ -107,7 +107,7 @@
 .link:last-child::before {
   content: "📲";
 }
-.companyName { 
+.companyName {
   height: 90px;
   margin-right: 20px;
   font-family: "lato";

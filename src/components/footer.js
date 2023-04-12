@@ -74,7 +74,12 @@ class Footer extends React.Component {
         </div>
         {this.props.products ? (
           <div className="footer">
-            <span>{"Calories: " + this.countCalories() + "  /  " + Cookies.get('finalResult')}</span>
+            <span>
+              {"Calories: " +
+                this.countCalories() +
+                "  /  " +
+                Cookies.get("finalResult")}
+            </span>
             <span>{"Fat: " + this.countFat() + " "}</span>
             <span>{"Carbs: " + this.countCarbs() + " "}</span>
             <span>{"Protein: " + this.countProtein() + " "}</span>
@@ -84,9 +89,11 @@ class Footer extends React.Component {
             <div className="headingFooter">
               <span>THE MOST IMPORTANT FOR US IS</span>
               <span>User satisfaction</span>
-              <span>The current satisfaction rate with our application is over 100%</span>
+              <span>
+                The current satisfaction rate with our application is over 100%
+              </span>
               <span>Thank you for using and making our community A Tu Fit</span>
-              </div>
+            </div>
             <div className="listFooter">
               <span>WHY A TU FIT?</span>
               <ul>
@@ -101,16 +108,8 @@ class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className="2listFooter">
-              <ul>
-                <li> 100+ USERS REGISTERED</li>
-                <li> 150+ PRODUCTS AVAILABLE</li>
-                <li> 320+ DIARIES CREATES</li>
-                <li> 100% SATISFACTION RATE</li>
-              </ul>
-            </div>
             <div className="logoFooter">
-            <img className="logo" src={logo} alt="logo" />
+              <img className="logo" src={logo} alt="logo" />
             </div>
           </div>
         )}

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import broccoli from "../images/broccoli.jpg";
 
-
 function NavBar({ children }) {
   return (
     <>

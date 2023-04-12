@@ -1,40 +1,43 @@
-@import 'variables';
+@import "variables";
 .calculatorText {
-    font-family: montserrat;
-    padding: 20px;
-    font-size: 20px;
+  font-family: montserrat;
+  padding: 20px;
+  font-size: 20px;
 }
 .form {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    font-size: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 15px;
 }
-.inputGender, .inputWeight, .inputHeight, .inputAge {
-    margin-top: 10px;
+.inputGender,
+.inputWeight,
+.inputHeight,
+.inputAge {
+  margin-top: 10px;
 }
 .buttonBMR {
-    margin-top: 10px;
-    font-size: 18px;
+  margin-top: 10px;
+  font-size: 18px;
 }
-.resultBMR { 
-    font-family: montserrat;
-    font-size: 30px;
+.resultBMR {
+  font-family: montserrat;
+  font-size: 30px;
 }
 .workout {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    font-size: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 30px;
 }
 .inputWorkout {
-    font-size: 20px
+  font-size: 20px;
 }
 .buttonTDEE {
-    margin-top: 10px;
-    font-size: 20px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 .resultTDEE {
-    font-family: montserrat;
-    font-size: 30px;
+  font-family: montserrat;
+  font-size: 30px;
 }

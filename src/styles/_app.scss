@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .App {
   text-align: center;
@@ -66,14 +66,15 @@
   display: flex;
   width: 500px;
   height: auto;
-  margin-left: 485px
+  margin-left: 485px;
 }
 html {
   margin: 0px;
   height: 100%;
   width: 100%;
 }
-body, #root{
+body,
+#root {
   margin: 0px;
   height: 100%;
   width: 100%;

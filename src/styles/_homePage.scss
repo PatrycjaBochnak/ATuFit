@@ -1,31 +1,32 @@
-@import 'variables';
+@import "variables";
 
-.salad1 { 
-    float: right;
-    width: 25%;
-    margin-right: 200px;
-    margin-top: 30px;
+.salad1 {
+  float: right;
+  width: 25%;
+  margin-right: 200px;
+  margin-top: 30px;
 }
-.heading1, .heading2 {
-    width: 50%;
-    margin-left: 150px;
-    clear: left;
-    display: flex;
+.heading1,
+.heading2 {
+  width: 50%;
+  margin-left: 150px;
+  clear: left;
+  display: flex;
 }
 .heading1 {
-    @include homePageHeadingFont;
-    margin-top: 100px;
-    justify-content: flex-start;
+  @include homePageHeadingFont;
+  margin-top: 100px;
+  justify-content: flex-start;
 }
 .heading2 {
-    @include homePageFont;
-    margin-top: 20px;
+  @include homePageFont;
+  margin-top: 20px;
 }
-.vegetables { 
-    float: left;
-    margin-left: 100px;
-    width: 25%;
+.vegetables {
+  float: left;
+  margin-left: 100px;
+  width: 25%;
 }
 .heading3 {
-    @include homePageFont;
+  @include homePageFont;
 }

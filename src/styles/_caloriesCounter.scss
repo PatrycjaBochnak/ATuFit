@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 .caloriesCounter {
   display: flex;
   flex: 1 1 auto;
@@ -50,9 +50,9 @@
   transform: rotateY(180deg);
 }
 .custom-shape-divider-bottom-1680550907 .shape-fill {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
-.calendarCalories { 
+.calendarCalories {
   display: flex;
   flex: 1 1 auto;
   width: 50%;

@@ -5,53 +5,66 @@ import Calendar from "react-calendar";
 
 class CarouselDay extends React.Component {
   state = {
-    calendarValue: new Date().toLocaleDateString()
+    calendarValue: new Date().toLocaleDateString(),
   };
 
   componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
-        console.log(this.state[this.state.calendarValue])
+      console.log(this.state[this.state.calendarValue]);
       if (!this.state[this.state.calendarValue]) {
-        this.setState ({...this.state,[this.state.calendarValue] : { 
-        breakfast: [],
-        secondBreakfast: [],
-        dinner: [],
-        supper: [],
-        }}, () => this.updateProducts());
-      } else { 
+        this.setState(
+          {
+            ...this.state,
+            [this.state.calendarValue]: {
+              breakfast: [],
+              secondBreakfast: [],
+              dinner: [],
+              supper: [],
+            },
+          },
+          () => this.updateProducts()
+        );
+      } else {
         this.updateProducts();
       }
     }
   }
   updateProducts() {
-    console.log(this.props.product);  console.log(this.state);
-      console.log(this.props.product.partOfDay);
-      const productsOfPartOfDay = this.state[this.state.calendarValue][this.props.product.partOfDay];
-      productsOfPartOfDay.push(this.props.product);
-      this.setState({
-        ...this.state,
-        [this.state.calendarValue]: {
-          ...this.state[this.state.calendarValue],
-          [this.props.product.partOfDay]: productsOfPartOfDay,
-        },
-      });
-      console.log(this.state);
+    console.log(this.props.product);
+    console.log(this.state);
+    console.log(this.props.product.partOfDay);
+    const productsOfPartOfDay =
+      this.state[this.state.calendarValue][this.props.product.partOfDay];
+    productsOfPartOfDay.push(this.props.product);
+    this.setState({
+      ...this.state,
+      [this.state.calendarValue]: {
+        ...this.state[this.state.calendarValue],
+        [this.props.product.partOfDay]: productsOfPartOfDay,
+      },
+    });
+    console.log(this.state);
   }
-  calendarValueOnChange = (value) => { 
-    this.setState ( { 
-      ...this.state, calendarValue: value.toLocaleDateString()
-    })
-  }
+  calendarValueOnChange = (value) => {
+    this.setState({
+      ...this.state,
+      calendarValue: value.toLocaleDateString(),
+    });
+  };
 
-  render() { 
+  render() {
     return (
       <>
-           <div className="calendarCalories">
-          <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
-            <h3 className="calendarDay">Day: {this.state.calendarValue}</h3>
-            <hr className="separator" />
-            <ListResult list={this.state[this.state.calendarValue]} />
-          </div>
+        <div className="calendarCalories">
+          <Calendar
+            className="calendar"
+            onChange={this.calendarValueOnChange}
+            value={this.state.calendarValue}
+          />
+          <h3 className="calendarDay">Day: {this.state.calendarValue}</h3>
+          <hr className="separator" />
+          <ListResult list={this.state[this.state.calendarValue]} />
+        </div>
         <Footer products={this.state[this.state.calendarValue]} />
       </>
     );

@@ -18,11 +18,13 @@ function ListResult(props) {
               );
             })
           : ""}
-            <hr className="separator" />
+        <hr className="separator" />
       </div>
       <div className="secondBreakfastResults">
         <span>Second Breakfast</span>
-        {props.list && props.list.secondBreakfast && props.list.secondBreakfast.length > 0
+        {props.list &&
+        props.list.secondBreakfast &&
+        props.list.secondBreakfast.length > 0
           ? props.list.secondBreakfast.map((product) => {
               return (
                 <>
@@ -35,7 +37,7 @@ function ListResult(props) {
               );
             })
           : ""}
-            <hr className="separator" />
+        <hr className="separator" />
       </div>
       <div className="dinnerResults">
         <span>Dinner</span>
@@ -52,7 +54,7 @@ function ListResult(props) {
               );
             })
           : ""}
-            <hr className="separator" />
+        <hr className="separator" />
       </div>
       <div className="supperResults">
         <span>Supper</span>
@@ -69,9 +71,9 @@ function ListResult(props) {
               );
             })
           : ""}
-            <hr className="separator" />
+        <hr className="separator" />
       </div>
-      </>
+    </>
   );
 }
 

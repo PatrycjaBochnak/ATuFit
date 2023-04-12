@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .simpleTextAboutMe {
   @include mainText;
@@ -24,7 +24,9 @@
   width: 100% auto;
   align-items: center;
 }
-.CvButton, .LiButton, .GhButton {
+.CvButton,
+.LiButton,
+.GhButton {
   padding: 10px;
 }
 .contactButton {
