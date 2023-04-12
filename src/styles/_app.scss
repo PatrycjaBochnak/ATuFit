@@ -5,37 +5,8 @@
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 1280px) {
-  .App {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-}
 .appContainer {
   display: flex;
-}
-.navBar {
-  background-color: white;
-  display: flex;
-  height: 85px;
-  width: 100%;
-}
-.homePage {
-  display: flex;
-  flex-flow: column;
-  flex: 1 1 auto;
-  background-color: #e1eec7;
-}
-.carouselDay {
-  background-color: #e1eec7;
-}
-.calculatorBMR {
-  display: flex;
-  flex-flow: column;
-  background-color: #e1eec7;
-  flex: 1 1 auto;
-  align-items: center;
 }
 .error404 {
   @include homePageHeadingFont;
@@ -54,13 +25,6 @@
 .errorText {
   display: flex;
   justify-content: center;
-}
-.contact {
-  display: flex;
-  flex-flow: column;
-  flex: 1 1 auto;
-  background-color: #e1eec7;
-  width: 100%;
 }
 .errorImage {
   display: flex;
@@ -82,10 +46,6 @@ body,
 #root {
   display: flex;
   flex-flow: column;
-}
-.caloriesCounter {
-  display: flex;
-  flex: 1 1 auto;
 }
 .footer {
   @include homePageHeadingFont;

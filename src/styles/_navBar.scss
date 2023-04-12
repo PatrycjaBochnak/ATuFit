@@ -1,4 +1,10 @@
 @import "variables";
+.navBar {
+  background-color: white;
+  display: flex;
+  height: 85px;
+  width: 100%;
+}
 .buttons {
   display: flex;
   width: 60%;

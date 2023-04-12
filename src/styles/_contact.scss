@@ -1,5 +1,11 @@
 @import "variables";
-
+.contact {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  background-color: #e1eec7;
+  width: 100%;
+}
 .simpleTextAboutMe {
   @include mainText;
   padding: 20px;

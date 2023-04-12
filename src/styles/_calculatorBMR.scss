@@ -1,4 +1,12 @@
 @import "variables";
+
+.calculatorBMR {
+    display: flex;
+    flex-flow: column;
+    background-color: #e1eec7;
+    flex: 1 1 auto;
+    align-items: center;
+  }
 .calculatorText {
   font-family: montserrat;
   padding: 20px;
