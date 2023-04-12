@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import React, { useState } from "react"
 import Footer from "./footer"
-import { Button } from "@mui/material"
+import { Button, TextField } from "@mui/material"
 
 function Contact() {
     const [inputValue, setInputValue] = useState('');
@@ -42,10 +42,12 @@ function Contact() {
         <span>Questions? Text me!</span>
       </div>
       <div className="emailMessage">
-        <input type="text" placeholder="Name" value={inputValue} required onChange={(e) => setInputValue(e.target.value) }/>
-        <input type="email" placeholder="Email" value={inputValue2} required onChange={(e) => setInputValue2(e.target.value) } />
-        <textarea placeholder="Your message"  value={inputValue3} required onChange={(e) => setInputValue3(e.target.value)} />
-        <button className="emailButton" onClick={handleButtonClick}>Send message</button>
+        <TextField id="demo-helper-text-misaligned-no-helper" label="Name" value={inputValue} required onChange={(e) => setInputValue(e.target.value) }/>
+        <TextField id="demo-helper-text-misaligned-no-helper" label="E-mail" value={inputValue2} required onChange={(e) => setInputValue2(e.target.value) }/>
+        <TextField id="demo-helper-text-misaligned-no-helper" label="Your message" value={inputValue3} required onChange={(e) => setInputValue3(e.target.value) }/>
+        <div className="contactButton">
+        <Button variant="contained" className="contactButton" onClick={handleButtonClick}>Send message</Button>
+        </div>
       </div>
       <Footer />
       </div>

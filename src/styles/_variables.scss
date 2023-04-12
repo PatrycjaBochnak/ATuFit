@@ -1,9 +1,19 @@
-// $colors: (
-//     background: #e1eec7
-// )
-
-// .background {background-color: #e1eec7; flex: 1 1 auto}
-
-$main-color: red;
-$accent-color: yellow;
+$main-color: black;
+$accent-color: gray;
 $background-color: #e1eec7;
+
+@mixin homePageFont() {
+    font-family: lato, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+@mixin homePageHeadingFont() {
+    font-family: montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+@mixin mainText() {
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}

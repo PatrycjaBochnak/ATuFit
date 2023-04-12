@@ -1,3 +1,5 @@
+@import 'variables';
+
 .App {
   text-align: center;
   height: 100%;
@@ -36,6 +38,7 @@
   align-items: center;
 }
 .error404 {
+  @include homePageHeadingFont;
   flex: 1 1 auto;
   background-color: #e1eec7;
   display: flex;
@@ -79,9 +82,12 @@ body, #root{
   display: flex;
   flex-flow: column;
 }
+.caloriesCounter {
+  display: flex;
+  flex: 1 1 auto;
+}
 .footer {
-  font-family: montserrat;
-  font-size: 20px;
+  @include homePageHeadingFont;
   position: absolute;
   height: 100px;
   left: 0;
@@ -93,7 +99,7 @@ body, #root{
   opacity: 0.8;
 }
 .secondFooter {
-  font-family: montserrat;
+  @include homePageHeadingFont;
   display: flex;
   position: fixed;
   left: 0;
@@ -123,14 +129,4 @@ body, #root{
   height: 90px;
   width: auto;
   margin-bottom: -50px;
-}
-.logoText { 
-  margin-bottom: -50px;
-}
-.logoText2 { 
-  margin-bottom: none;
-}
-.caloriesCounter {
-  display: flex;
-  flex: 1 1 auto;
 }

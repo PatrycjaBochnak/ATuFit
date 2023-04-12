@@ -1,33 +1,31 @@
+@import 'variables';
+
 .salad1 { 
     float: right;
-    width: 30%;
-    margin-right: 150px;
+    width: 25%;
+    margin-right: 200px;
+    margin-top: 30px;
 }
 .heading1, .heading2 {
     width: 50%;
-    margin-left: 90px;
+    margin-left: 150px;
     clear: left;
     display: flex;
 }
 .heading1 {
-    font-size: 15px;
-    font-family: montserrat;
+    @include homePageHeadingFont;
     margin-top: 100px;
     justify-content: flex-start;
 }
 .heading2 {
-    font-family: lato;
+    @include homePageFont;
     margin-top: 20px;
-    font-size: 20px;
 }
 .vegetables { 
     float: left;
-    margin-left: 40px;
+    margin-left: 100px;
     width: 25%;
 }
 .heading3 {
-    font-size: 20px;
-    font-family: lato;
-    width: 40%;
-    display: flex;
+    @include homePageFont;
 }

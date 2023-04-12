@@ -97,10 +97,7 @@ class Footer extends React.Component {
                   <span>ACCESSIABLE</span>
                 </li>
                 <li>
-                  <span>CUSTOMIZABLE</span>
-                </li>
-                <li>
-                  <span>FREE TO USE</span>
+                  <span>FREE</span>
                 </li>
               </ul>
             </div>
@@ -114,8 +111,6 @@ class Footer extends React.Component {
             </div>
             <div className="logoFooter">
             <img className="logo" src={logo} alt="logo" />
-            <span className="logoText">Copyright © 2023</span>
-            <span className="logoText2">All rights reserved.</span>
             </div>
           </div>
         )}
