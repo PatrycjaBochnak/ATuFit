@@ -1,6 +1,9 @@
 import React from "react";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
+import broccoli from "../images/broccoli.jpg";
+import salad1 from "../images/salad1.jpg";
+import vegetables from "../images/vegetables.jpg";
 
 function HomePage() {
   return (
@@ -12,8 +15,9 @@ function HomePage() {
               <div class="col-lg-6">
                 <div class="row g-3">
                   <div class="col-6 text-start"></div>
+                  <img className="salad1" src={salad1} alt="salad" />
                   <div class="col-6 text-start"></div>
-                  <div class="col-6 text-end"></div>
+                  <img className="vegetables" src={vegetables} alt="vegetables" />
                   <div class="col-6 text-end"></div>
                 </div>
               </div>
@@ -31,7 +35,9 @@ function HomePage() {
                   and proven products.
                 </p>
                 <div class="row g-4 mb-4">
+                  
                   <div class="col-sm-6">
+                  <img className="broccoli" src={broccoli} alt="broccoli" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
@@ -40,12 +46,13 @@ function HomePage() {
                         150+
                       </h1>
                       <div class="ps-4">
-                        <p class="mb-0">Producs</p>
+                        <p class="mb-0">Products</p>
                         <h6 class="text-uppercase mb-0">Available</h6>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6">
+                  <img className="broccoli" src={broccoli} alt="broccoli" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
