@@ -19,6 +19,9 @@ function HomePage() {
                   <div class="col-6 text-start"></div>
                   <img className="vegetables" src={vegetables} alt="vegetables" />
                   <div class="col-6 text-end"></div>
+                  <img className="vegetables" src={vegetables} alt="vegetables" />
+                  <div class="col-6 text-end"></div>
+                  <img className="vegetables" src={vegetables} alt="vegetables" />
                 </div>
               </div>
               <div class="col-lg-6">
@@ -35,7 +38,6 @@ function HomePage() {
                   and proven products.
                 </p>
                 <div class="row g-4 mb-4">
-                  
                   <div class="col-sm-6">
                   <img className="broccoli" src={broccoli} alt="broccoli" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">

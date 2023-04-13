@@ -6,7 +6,8 @@ class Searcher extends React.Component {
   constructor() {
     super();
     this.onInputchange = this.onInputchange.bind(this);
-  }
+  };
+  
 
   view() {
     axios
