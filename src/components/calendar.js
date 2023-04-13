@@ -5,7 +5,7 @@ import Calendar from "react-calendar";
 
 class CarouselDay extends React.Component {
   state = {
-    calendarValue: new Date().toLocaleDateString()
+    calendarValue: new Date()
   };
 
   componentDidUpdate(prevProps) {
@@ -39,7 +39,7 @@ class CarouselDay extends React.Component {
   }
   calendarValueOnChange = (value) => { 
     this.setState ( { 
-      ...this.state, calendarValue: value.toLocaleDateString()
+      ...this.state, calendarValue: value.toLocaleDateString
     })
   }
 
@@ -48,11 +48,11 @@ class CarouselDay extends React.Component {
       <>
            <div className="calendarCalories">
           <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
-            <h3 className="calendarDay">Day: {this.state.calendarValue}</h3>
+            <h3 className="calendarDay">Day: {this.state.calendarValue.toLocaleDateString()}</h3>
             <hr className="separator" />
-            <ListResult list={this.state[this.state.calendarValue]} />
+            <ListResult list={this.state[this.state.calendarValue.toLocaleDateString()]} />
           </div>
-        <Footer products={this.state[this.state.calendarValue]} />
+        <Footer products={this.state[this.state.calendarValue.toLocaleDateString()]} />
       </>
     );
   }

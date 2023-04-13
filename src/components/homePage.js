@@ -12,15 +12,15 @@ function HomePage() {
         <div class="container-xxl py-5">
           <div class="container">
             <div class="row g-5 align-items-center">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div class="row g-3">
-                  <div class="col-6 text-start"></div>
+                  <div class="col-3 text-start"></div>
                   <img className="salad1" src={salad1} alt="salad" />
-                  <div class="col-6 text-start"></div>
+                  <div class="col-3 text-start"></div>
                   <img className="vegetables" src={vegetables} alt="vegetables" />
-                  <div class="col-6 text-end"></div>
+                  <div class="col-3 text-end"></div>
                   <img className="vegetables" src={vegetables} alt="vegetables" />
-                  <div class="col-6 text-end"></div>
+                  <div class="col-3 text-end"></div>
                   <img className="vegetables" src={vegetables} alt="vegetables" />
                 </div>
               </div>
