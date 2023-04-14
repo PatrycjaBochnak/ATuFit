@@ -17,7 +17,6 @@ class CalculatorBMR extends Component {
       flag: false,
       system: "",
       finalResult: "",
-      result: "",
     };
   }
   handleAgeChange = (event) => {
@@ -102,6 +101,7 @@ class CalculatorBMR extends Component {
     if (this.state.error) {
       error = <div className="error">{this.state.error} </div>;
     }
+    console.log(typeof BMR);
 
     let result;
     if (this.state.bmr) {
@@ -118,7 +118,7 @@ class CalculatorBMR extends Component {
     if (this.state.bmr) {
       resultAct = (
         <div className="resultTDEE">
-          Your total metabolism is {fixedResultNumber} calories
+          Your total metabolism is: {fixedResultNumber} calories
         </div>
       );
     }
@@ -243,7 +243,7 @@ class CalculatorBMR extends Component {
                 </div>
               )}
               <Link
-                class="btn btn-primary py-3 px-5 mt-2"
+                class="btn btn-light py-3 px-5 mt-2"
                 to="/caloriesCounter"
               >
                 Click here to check your calories

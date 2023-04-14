@@ -22,7 +22,7 @@ function HomePage() {
                 </div>
               </div>
               <div class="col-lg-6">
-                <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                <h5 class="section-title ff-secondary text-start text-muted fw-normal">
                   ATUFIT
                 </h5>
                 <h1 class="mb-4">
@@ -37,9 +37,9 @@ function HomePage() {
                 <div class="row g-4 mb-4">
                   <div class="col-sm-6">
                   <img className="ok" width="26%" src={ok} alt="satisfaction" />
-                    <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                    <div class="d-flex align-items-center border-start border-5 border-dark px-3">
                       <h1
-                        class="flex-shrink-0 display-5 text-primary mb-0"
+                        class="flex-shrink-0 display-5 text-dark mb-0"
                         data-toggle="counter-up"
                       >
                         150+
@@ -52,9 +52,9 @@ function HomePage() {
                   </div>
                   <div class="col-sm-6">
                   <img className="customer" width="25%" src={customer} alt="customer" />
-                    <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                    <div class="d-flex align-items-center border-start border-5 border-dark px-3">
                       <h1
-                        class="flex-shrink-0 display-5 text-primary mb-0"
+                        class="flex-shrink-0 display-5 text-dark mb-0"
                         data-toggle="counter-up"
                       >
                         100%
@@ -66,7 +66,7 @@ function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Link class="btn btn-primary py-3 px-5 mt-2" to="/calculator">
+                <Link class="btn btn-light py-3 px-5 mt-2" to="/calculator">
                   Let's start
                 </Link>
               </div>

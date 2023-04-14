@@ -75,6 +75,7 @@ function Contact() {
           <Button
             variant="contained"
             className="contactButton"
+            class="btn btn-light"
             onClick={handleButtonClick}
           >
             Send message
