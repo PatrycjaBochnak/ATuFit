@@ -78,7 +78,7 @@ class Footer extends React.Component {
               {"Calories: " +
                 this.countCalories() +
                 "  /  " +
-                Cookies.get("finalResult")}
+                Cookies.get("fixedResultNumber")}
             </span>
             <span>{"Fat: " + this.countFat() + " "}</span>
             <span>{"Carbs: " + this.countCarbs() + " "}</span>

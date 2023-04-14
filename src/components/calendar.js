@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "./footer";
 import Calendar from "react-calendar";
 
-class Calendar extends React.Component {
+class CarouselDay extends React.Component {
   state = {
     calendarValue: new Date(),
   };
@@ -72,4 +72,4 @@ class Calendar extends React.Component {
   }
 }
 
-export default Calendar;
+export default CarouselDay;
