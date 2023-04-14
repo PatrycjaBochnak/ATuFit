@@ -88,7 +88,6 @@ class CalculatorBMR extends Component {
     }
     this.setState({ finalResult: ActCalc });
     this.ActCalc = ActCalc;
-    console.log(ActCalc);
     this.setCookie();
   }
 
@@ -101,13 +100,15 @@ class CalculatorBMR extends Component {
     if (this.state.error) {
       error = <div className="error">{this.state.error} </div>;
     }
-    console.log(typeof BMR);
+
+    const finalResultBMR = parseFloat(this.state.bmr);
+    const fixedResultBMR = finalResultBMR.toFixed(0)
 
     let result;
     if (this.state.bmr) {
       result = (
         <div className="resultBMR">
-          Your basic metabolism is: {this.state.bmr} calories
+          Your basic metabolism is: {fixedResultBMR} calories
         </div>
       );
     }
@@ -243,7 +244,7 @@ class CalculatorBMR extends Component {
                 </div>
               )}
               <Link
-                class="btn btn-light py-3 px-5 mt-2"
+                class="btn btn-outline-success font-weight-bold py-3 px-5 mt-2"
                 to="/caloriesCounter"
               >
                 Click here to check your calories
