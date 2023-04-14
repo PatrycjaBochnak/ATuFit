@@ -5,7 +5,9 @@ function ListResult(props) {
     <>
       <div className="breakfastResults">
         <span>Breakfast</span>
-        {props.list && props.list.breakfast && props.list.breakfast.length > 0
+        {props.list &&
+        props.list.breakfast && 
+        props.list.breakfast.length > 0
           ? props.list.breakfast.map((product) => {
               return (
                 <>
@@ -41,7 +43,9 @@ function ListResult(props) {
       </div>
       <div className="dinnerResults">
         <span>Dinner</span>
-        {props.list && props.list.dinner && props.list.dinner.length > 0
+        {props.list && 
+        props.list.dinner && 
+        props.list.dinner.length > 0
           ? props.list.dinner.map((product) => {
               return (
                 <>
@@ -58,7 +62,9 @@ function ListResult(props) {
       </div>
       <div className="supperResults">
         <span>Supper</span>
-        {props.list && props.list.supper && props.list.supper.length > 0
+        {props.list && 
+        props.list.supper && 
+        props.list.supper.length > 0
           ? props.list.supper.map((product) => {
               return (
                 <>
