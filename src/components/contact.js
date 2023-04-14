@@ -75,7 +75,7 @@ function Contact() {
           <Button
             variant="contained"
             className="contactButton"
-            class="btn btn-outline-success font-weight-bold"
+            class="btn btn-outline-success  py-3 px-5 mt-2 font-weight-bold"
             onClick={handleButtonClick}
           >
             Send message

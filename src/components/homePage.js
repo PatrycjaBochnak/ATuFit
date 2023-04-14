@@ -70,7 +70,7 @@ function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Link class="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold" to="/calculator">
+                <Link class="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center" to="/calculator">
                   Let's start
                 </Link>
               </div>
