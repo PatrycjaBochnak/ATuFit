@@ -36,7 +36,7 @@ function HomePage() {
                 </p>
                 <div class="row g-4 mb-4">
                   <div class="col-sm-6">
-                  <img className="ok" width="30%" src={ok} alt="satisfaction" />
+                  <img className="ok" width="26%" src={ok} alt="satisfaction" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
