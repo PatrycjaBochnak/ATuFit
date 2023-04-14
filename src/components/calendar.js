@@ -49,9 +49,9 @@ class CarouselDay extends React.Component {
           <Calendar className="calendar" onChange={this.calendarValueOnChange} value={this.state.calendarValue} />
             <h3 className="calendarDay">Day: {this.state.calendarValue.toLocaleDateString()}</h3>
             <hr className="separator" />
-            <ListResult list={this.state[this.state.calendarValue.toLocaleDateString()]} />
+          <ListResult list={this.state[this.state.calendarValue]} />
           </div>
-        <Footer products={this.state[this.state.calendarValue.toLocaleDateString()]} />
+          <Footer products={this.state[this.state.calendarValue]} />
       </>
     );
   }
