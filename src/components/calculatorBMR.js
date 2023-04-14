@@ -17,6 +17,7 @@ class CalculatorBMR extends Component {
       flag: false,
       system: "",
       finalResult: "",
+      result: "",
     };
   }
   handleAgeChange = (event) => {
@@ -101,6 +102,7 @@ class CalculatorBMR extends Component {
     if (this.state.error) {
       error = <div className="error">{this.state.error} </div>;
     }
+
     let result;
     if (this.state.bmr) {
       result = (
@@ -109,12 +111,14 @@ class CalculatorBMR extends Component {
         </div>
       );
     }
+    const finalResultNumber = parseFloat(this.state.finalResult);
+    const fixedResultNumber = finalResultNumber.toFixed(0);
 
     let resultAct;
     if (this.state.bmr) {
       resultAct = (
         <div className="resultTDEE">
-          Your total metabolism is {this.state.finalResult} calories
+          Your total metabolism is {fixedResultNumber} calories
         </div>
       );
     }
