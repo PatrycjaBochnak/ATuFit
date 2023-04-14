@@ -1,10 +1,10 @@
 import React from "react";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
-import broccoli from "../images/broccoli.jpg";
 import salad1 from "../images/salad1.jpg";
 import vegetables from "../images/vegetables.jpg";
 import customer from "../images/customer.jpg"
+import ok from "../images/ok.jpg"
 
 function HomePage() {
   return (
@@ -36,7 +36,7 @@ function HomePage() {
                 </p>
                 <div class="row g-4 mb-4">
                   <div class="col-sm-6">
-                  <img className="customer" src={customer} alt="customer" />
+                  <img className="ok" width="30%" src={ok} alt="satisfaction" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
@@ -51,7 +51,7 @@ function HomePage() {
                     </div>
                   </div>
                   <div class="col-sm-6">
-                  <img className="customer" src={customer} alt="customer" />
+                  <img className="customer" width="25%" src={customer} alt="customer" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
