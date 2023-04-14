@@ -19,6 +19,10 @@ function HomePage() {
                   <img className="salad1" src={salad1} alt="salad" />
                   <div class="col-3 text-end"></div>
                   <img className="vegetables" src={vegetables} alt="vegetables" />
+                  <div class="col-3 text-start"></div>
+                  <img className="salad1" src={salad1} alt="salad" />
+                  <div class="col-3 text-end"></div>
+                  <img className="vegetables" src={vegetables} alt="vegetables" />
                 </div>
               </div>
               <div class="col-lg-6">

@@ -35,14 +35,14 @@ function Contact() {
             href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
             target="_blank"
           >
-            <Button variant="outlined">LinkedIn</Button>
+            <Button class="btn btn-outline-success">LinkedIn</Button>
           </a>
           <a
             className="GhButton"
             href="https://github.com/PatrycjaBochnak"
             target="_blank"
           >
-            <Button variant="outlined">GitHub</Button>
+            <Button class="btn btn-outline-success">GitHub</Button>
           </a>
         </div>
       </Container>
