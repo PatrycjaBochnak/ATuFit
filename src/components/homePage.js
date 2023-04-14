@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import broccoli from "../images/broccoli.jpg";
 import salad1 from "../images/salad1.jpg";
 import vegetables from "../images/vegetables.jpg";
+import customer from "../images/customer.jpg"
 
 function HomePage() {
   return (
     <>
       <div className="homePage">
         <div class="container-xxl py-5">
-          <div class="container">
             <div class="row g-1 align-items-center">
+            <div class="d-flex justify-content-center">
               <div class="col-lg-3">
                 <div class="row g-6">
                   <div class="col-3 text-start"></div>
@@ -35,7 +36,7 @@ function HomePage() {
                 </p>
                 <div class="row g-4 mb-4">
                   <div class="col-sm-6">
-                  <img className="broccoli" src={broccoli} alt="broccoli" />
+                  <img className="customer" src={customer} alt="customer" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
@@ -50,7 +51,7 @@ function HomePage() {
                     </div>
                   </div>
                   <div class="col-sm-6">
-                  <img className="broccoli" src={broccoli} alt="broccoli" />
+                  <img className="customer" src={customer} alt="customer" />
                     <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                       <h1
                         class="flex-shrink-0 display-5 text-primary mb-0"
@@ -69,10 +70,10 @@ function HomePage() {
                   Let's start
                 </Link>
               </div>
+              </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
       <Footer />
     </>
   );
