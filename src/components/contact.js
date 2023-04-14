@@ -9,7 +9,6 @@ function Contact() {
   const [inputValue3, setInputValue3] = useState("");
 
   const handleButtonClick = () => {
-    // Zresetuj wartość pola tekstowego do pustej wartości
     setInputValue("");
     setInputValue2("");
     setInputValue3("");

@@ -102,7 +102,7 @@ class CalculatorBMR extends Component {
     }
 
     const finalResultBMR = parseFloat(this.state.bmr);
-    const fixedResultBMR = finalResultBMR.toFixed(0)
+    const fixedResultBMR = finalResultBMR.toFixed(0);
 
     let result;
     if (this.state.bmr) {
@@ -110,17 +110,17 @@ class CalculatorBMR extends Component {
         <div className="resultBMR">
           Your basic metabolism is: {fixedResultBMR} calories
         </div>
-      );
+      ); 
     }
     const finalResultNumber = parseFloat(this.state.finalResult);
     const fixedResultNumber = finalResultNumber.toFixed(0);
 
     let resultAct;
-    if (this.state.bmr) {
+    if (this.state.bmr && this.state.step === 2) {
       resultAct = (
         <div className="resultTDEE">
           Your total metabolism is: {fixedResultNumber} calories
-        </div>
+        </div> 
       );
     }
 
@@ -135,7 +135,8 @@ class CalculatorBMR extends Component {
         <div className="calculatorBMR">
           <div className="calculatorText">
             <span>
-              Firstly, insert your details to check Your BMR and Total Metabolism
+              Firstly, insert your details to check Your BMR and Total
+              Metabolism
             </span>
           </div>
           <div id="bmrcalc">

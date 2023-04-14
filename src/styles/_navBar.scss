@@ -7,19 +7,16 @@
   width: 100%;
 }
 .buttons {
+  @include navText;
   display: flex;
   width: 60%;
   margin: 0 50px 0 50px;
   align-items: center;
   justify-content: space-around !important;
-  font-style: inherit;
-  font-family: sans-serif;
-  font-weight: 500;
-  font-size: 15px;
   overflow: visible;
-  font-family: "montserrat", sans-serif;
 }
 .loginButtons {
+  @include navText;
   width: 20%;
   margin-right: 30px;
   display: flex;

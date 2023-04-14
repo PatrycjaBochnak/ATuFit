@@ -5,11 +5,11 @@ class Searcher extends React.Component {
   state = {};
   constructor() {
     super();
-    this.state = { 
+    this.state = {
       products: "",
-    }
+    };
     this.onInputchange = this.onInputchange.bind(this);
-  };
+  }
 
   view() {
     axios
@@ -55,10 +55,10 @@ class Searcher extends React.Component {
               <div className="col-md-1">Carbs</div>
               <div className="col-md-1">Proteins</div>
             </div>
-              
+
             {Object.keys(this.state.recipes).map((key) => {
               return (
-                   <React.Fragment key={key}>
+                <React.Fragment key={key}>
                   <div className="row">
                     <hr className="separator" />
                     <div className="col-md-6">
@@ -99,7 +99,7 @@ class Searcher extends React.Component {
                       </select>
                     </div>
                   </div>
-                  </React.Fragment>
+                </React.Fragment>
               );
             })}
           </div>
