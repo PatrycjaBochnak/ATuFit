@@ -1,6 +1,6 @@
 import React from "react";
 import Searcher from "./searcher";
-import CarouselDay from "./calendar";
+import Calendar from "./calendar";
 import { useState } from "react";
 
 function CaloriesCounter() {
@@ -11,7 +11,7 @@ function CaloriesCounter() {
   return (
     <div className="counter">
       <Searcher setCurrentProduct={setCurrentProduct} />
-      <CarouselDay product={state} />
+      <Calendar product={state} />
     </div>
   );
 }
