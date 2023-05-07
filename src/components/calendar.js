@@ -72,4 +72,5 @@ class CarouselDay extends React.Component {
   }
 }
 
+
 export default CarouselDay;
