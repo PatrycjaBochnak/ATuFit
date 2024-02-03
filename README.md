@@ -22,4 +22,3 @@ An application inspired by Fitatu where you can count calories and check your en
 ## Deployment 🚀
 
 You can find a live demo of this project here
-
