@@ -1,24 +1,24 @@
-# ATuFit
+<h1 align="center"> A Tu Fit 🍎
+</h1>
 
-## Running the app
 
-Open project in any program which is using JavaScript IDE
+An application inspired by Fitatu where you can count calories and check your energy needs
 
-- Build the app
-- Run the app by "npm start"
+## How to start 🚀
 
-## About the app
+1. Install dependiences with `npm install`
+2. Run `npm start` to start developing
 
-Fitness application that's used to keep track of the calories and nutrition.
+## 📝 Project requirements 
 
-App is targeted to people of any age: 
-- Who wants to have track of daily calories
-- Change food habits to gain or lose body weight
+- User can add their data to check BMR and type their activity level to know their own CPM.
+- Then CPM is provided to footer by cookies.
+- You can search products and add chosen to part of the day and date
+- Every product is downloaded by API with indegrements
+- Parts of the day you can use: 'breakfast', '2nd breakfast', 'dinner', 'supper'
 
-## Features
+## Used tools
+  
+## Deployment 🚀
 
-## Application Uses
-
-## Functionalities app consists
-
-## Screenshots
+You can find a live demo of this project here
