@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import React, { useState } from "react";
-import Footer from "../../layouts/Footerr
 import { Button, TextField } from "@mui/material";
 
 function Contact() {
@@ -81,7 +80,6 @@ function Contact() {
           </Button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Footer from "./components/footer";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 
@@ -253,7 +252,6 @@ class CalculatorBMR extends Component {
             </div>
           </div>
         </div>
-        <Footer />
       </>
     );
   }

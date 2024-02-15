@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./footer";
 import { Link } from "react-router-dom";
 import salad1 from "../images/salad1.jpg";
 import vegetables from "../images/vegetables.jpg";
@@ -91,7 +90,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

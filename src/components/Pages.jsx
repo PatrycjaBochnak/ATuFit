@@ -5,7 +5,7 @@ import CaloriesCounter from "./CaloriesCounter";
 import Contact from "./Contact";
 import HomePage from "./HomePage";
 
-const Pages = ({ sr }) => {
+const Pages = () => {
   return (
     <>
       <HomePage />
@@ -16,3 +16,5 @@ const Pages = ({ sr }) => {
     </>
   );
 };
+
+export default Pages;

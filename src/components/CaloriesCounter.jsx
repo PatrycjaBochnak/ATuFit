@@ -1,5 +1,5 @@
 import React from "react";
-import Searcher from "./components/searcher";
+import Searcher from "./Searcher";
 import CarouselDay from "./Calendar";
 import { useState } from "react";
 

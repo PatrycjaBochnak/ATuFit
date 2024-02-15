@@ -1,6 +1,5 @@
-import ListResult from "./listResult";
+import ListResult from "./ListResult";
 import React from "react";
-import Footer from "./components/footer";
 import Calendar from "react-calendar";
 
 class CarouselDay extends React.Component {
@@ -66,7 +65,6 @@ class CarouselDay extends React.Component {
           <hr className="separator" />
           <ListResult list={this.state[this.state.calendarValue]} />
         </div>
-        <Footer products={this.state[this.state.calendarValue]} />
       </>
     );
   }
