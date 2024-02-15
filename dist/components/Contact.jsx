@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import React, { useState } from "react";
-import Footer from "./footer";
+import Footer from "../../layouts/Footerr
 import { Button, TextField } from "@mui/material";
 
 function Contact() {

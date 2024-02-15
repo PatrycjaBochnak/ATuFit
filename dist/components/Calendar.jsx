@@ -1,6 +1,6 @@
 import ListResult from "./listResult";
 import React from "react";
-import Footer from "./footer";
+import Footer from "./components/footer";
 import Calendar from "react-calendar";
 
 class CarouselDay extends React.Component {
@@ -71,6 +71,5 @@ class CarouselDay extends React.Component {
     );
   }
 }
-
 
 export default CarouselDay;

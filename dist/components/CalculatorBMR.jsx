@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from "./footer";
+import Footer from "./components/footer";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 
