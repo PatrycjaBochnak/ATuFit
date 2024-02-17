@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
+import "../styles/CalculatorBMR.css";
 
 class CalculatorBMR extends Component {
   constructor() {
@@ -106,7 +106,7 @@ class CalculatorBMR extends Component {
     let result;
     if (this.state.bmr) {
       result = (
-        <div className="resultBMR">
+        <div className="result-BMR">
           Your basic metabolism is: {fixedResultBMR} calories
         </div>
       ); 
@@ -117,7 +117,7 @@ class CalculatorBMR extends Component {
     let resultAct;
     if (this.state.bmr && this.state.step === 2) {
       resultAct = (
-        <div className="resultTDEE">
+        <div className="result-TDEE">
           Your total metabolism is: {fixedResultNumber} calories
         </div> 
       );
@@ -131,8 +131,8 @@ class CalculatorBMR extends Component {
     }
     return (
       <>
-        <div className="calculatorBMR">
-          <div className="calculatorText">
+        <div className="calculator-BMR">
+          <div className="calculator-text">
             <span>
               Firstly, insert your details to check Your BMR and Total
               Metabolism
@@ -141,7 +141,7 @@ class CalculatorBMR extends Component {
           <div id="bmrcalc">
             <div className="form">
               {error}
-              <div className="inputGender">
+              <div className="input-gender">
                 <label className="label">Gender</label>
                 <label>
                   <input
@@ -166,7 +166,7 @@ class CalculatorBMR extends Component {
                   Male
                 </label>
               </div>
-              <div className="inputWeight">
+              <div className="input-weight">
                 <label className="label">Weight (Kg)</label>
                 <input
                   type="number"
@@ -178,7 +178,7 @@ class CalculatorBMR extends Component {
                   max="999"
                 />
               </div>
-              <div className="inputHeight">
+              <div className="input-height">
                 <label className="label">Height (Cm)</label>
                 <input
                   type="number"
@@ -190,7 +190,7 @@ class CalculatorBMR extends Component {
                   max="8"
                 />
               </div>
-              <div className="inputAge">
+              <div className="input-age">
                 <label className="label">Age</label>
                 <input
                   type="number"
@@ -213,7 +213,7 @@ class CalculatorBMR extends Component {
 
               {a == true && (
                 <div className="workout">
-                  <div className="inputWorkout">
+                  <div className="input-workout">
                     <label className="label">Workout in a Week</label>
                     <select
                       className="activity"
@@ -243,12 +243,6 @@ class CalculatorBMR extends Component {
                   {resultAct}
                 </div>
               )}
-              <Link
-                class="btn btn-outline-success font-weight-bold py-3 px-5 mt-2"
-                to="/caloriesCounter"
-              >
-                Click here to check your calories
-              </Link>
             </div>
           </div>
         </div>

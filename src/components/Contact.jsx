@@ -1,86 +1,44 @@
-import { Container } from "react-bootstrap";
-import React, { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import * as Icons from "react-bootstrap-icons";
+import React from "react";
+import "../styles/Contact.css";
 
-function Contact() {
-  const [inputValue, setInputValue] = useState("");
-  const [inputValue2, setInputValue2] = useState("");
-  const [inputValue3, setInputValue3] = useState("");
-
-  const handleButtonClick = () => {
-    setInputValue("");
-    setInputValue2("");
-    setInputValue3("");
-  };
-
+const Contact = () => {
   return (
-    <div className="contact">
-      <div className="simpleTextAboutMe">
-        <span>
-          I would be appreciate if you check my CV and social media accounts
-          below!
-        </span>
-      </div>{" "}
-      <Container fluid className="cont">
-        <div className="contactButtons">
-          <a className="CvButton">
-            <Button variant="outlined" disabled>
-              CV
-            </Button>
-          </a>
-          <a
-            className="LiButton"
-            href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
-            target="_blank"
-          >
-            <Button class="btn btn-outline-success">LinkedIn</Button>
-          </a>
-          <a
-            className="GhButton"
-            href="https://github.com/PatrycjaBochnak"
-            target="_blank"
-          >
-            <Button class="btn btn-outline-success">GitHub</Button>
-          </a>
-        </div>
-      </Container>
-      <div className="emailText">
-        <span>Questions? Text me!</span>
-      </div>
-      <div className="emailMessage">
-        <TextField
-          id="demo-helper-text-misaligned-no-helper"
-          label="Name"
-          value={inputValue}
-          required
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <TextField
-          id="demo-helper-text-misaligned-no-helper"
-          label="E-mail"
-          value={inputValue2}
-          required
-          onChange={(e) => setInputValue2(e.target.value)}
-        />
-        <TextField
-          id="demo-helper-text-misaligned-no-helper"
-          label="Your message"
-          value={inputValue3}
-          required
-          onChange={(e) => setInputValue3(e.target.value)}
-        />
-        <div className="contactButton">
-          <Button
-            variant="contained"
-            className="contactButton"
-            class="btn btn-outline-success  py-3 px-5 mt-2 font-weight-bold"
-            onClick={handleButtonClick}
-          >
-            Send message
-          </Button>
+    <>
+      <div className="contact">
+    <h1>Get in Touch</h1>
+        <p>Feel free to reach out! Whether you have a question, want to collaborate or just say hi, I'll be happy to chat.</p>
+        <div id="content" className="social-media-icons">
+          <div className="ig">
+            <a
+              href="https://www.instagram.com/patrycjabochnak/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icons.Instagram />
+            </a>
+          </div>
+          <div className="linkedin">
+            <a
+              href="https://www.linkedin.com/in/patrycja-bochnak-779a931a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icons.Linkedin />
+            </a>
+          </div>
+          <div className="portfolio">
+            <a
+              href="https://github.com/PatrycjaBochnak/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icons.Github />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

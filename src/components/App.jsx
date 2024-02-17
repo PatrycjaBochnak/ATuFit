@@ -1,12 +1,13 @@
 import React from "react";
 import { Layout } from "./Layout";
 import Pages from "./Pages";
+import "../styles/App.css";
 
-function App({ sr }) {
+function App() {
   return (
     <div className="App">
       <Layout>
-        <Pages sr={sr} />
+        <Pages/>
       </Layout>
     </div>
   );
