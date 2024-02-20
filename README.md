@@ -20,5 +20,4 @@ An application inspired by Fitatu
   
 ## Deployment 🚀
 
-You can find a live demo of this project here
 
