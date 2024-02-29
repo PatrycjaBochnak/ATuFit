@@ -1,7 +1,7 @@
 <h1 align="center"> A Tu Fit 🍎
 </h1>
 
-An application inspired by Fitatu where you can count calories and check your energy needs
+An application inspired by Fitatu 
 
 ## How to start 🚀
 
@@ -20,4 +20,4 @@ An application inspired by Fitatu where you can count calories and check your en
   
 ## Deployment 🚀
 
-You can find a live demo of this project here
+
