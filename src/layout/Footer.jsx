@@ -73,24 +73,7 @@ class Footer extends React.Component {
           </div>
         ) : (
           <div className="second-footer">
-              <span>THE MOST IMPORTANT FOR US IS</span>
-              <span>User satisfaction</span>
-              <span>
-                The current satisfaction rate with our application is over 100%
-              </span>
-              <span>Thank you for using and making our community A Tu Fit</span>
-              <span>WHY A TU FIT?</span>
-              <ul>
-                <li>
-                  <span>EASY TO USE</span>
-                </li>
-                <li>
-                  <span>ACCESSIABLE</span>
-                </li>
-                <li>
-                  <span>FREE</span>
-                </li>
-              </ul>
+              Footer
             </div>
         )}
       </>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/HomePage.css";
 
 function HomePage() {
@@ -58,12 +57,12 @@ function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Link
+                < p
                   class="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
                   to="/calculator"
                 >
                   Let's start
-                </Link>
+                  </p>
               </div>
             </div>
           </div>

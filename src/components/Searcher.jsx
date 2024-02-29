@@ -34,8 +34,8 @@ class Searcher extends React.Component {
 
   render() {
     return (
-      <div className={"searcher"}>
-        <div className={"searchField"}>
+      <div className="searcher">
+        <div className="search-field">
           <input
             type="text"
             placeholder="Search..."
@@ -47,8 +47,8 @@ class Searcher extends React.Component {
           </button>
         </div>
         {this.state.recipes ? (
-          <div className="searchResults">
-            <div className="calMacroNames">
+          <div className="search-results">
+            <div className="cal-macro-names">
               <div className="col-md-6">Name</div>
               <div className="col-md-1">Calories</div>
               <div className="col-md-1">Fats</div>
@@ -60,7 +60,7 @@ class Searcher extends React.Component {
               return (
                 <React.Fragment key={key}>
                   <div className="row">
-                    <hr className="separator" />
+                    <hr />
                     <div className="col-md-6">
                       {this.state.recipes[key].title}
                     </div>
@@ -91,7 +91,7 @@ class Searcher extends React.Component {
                       >
                         <option value={"choose part of day"}>Choose</option>
                         <option value={"breakfast"}>Breakfast</option>
-                        <option value={"secondBreakfast"}>
+                        <option value={"second-breakfast"}>
                           Second Breakfast
                         </option>
                         <option value={"dinner"}>Dinner</option>

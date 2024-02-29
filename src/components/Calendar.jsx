@@ -1,6 +1,7 @@
 import ListResult from "./ListResult";
 import React from "react";
 import Calendar from "react-calendar";
+import "../styles/Calendar.css";
 
 class CarouselDay extends React.Component {
   state = {
@@ -53,16 +54,16 @@ class CarouselDay extends React.Component {
   render() {
     return (
       <>
-        <div className="calendarCalories">
+        <div className="calendar-calories">
           <Calendar
             className="calendar"
             onChange={this.calendarValueOnChange}
             value={this.state.calendarValue}
           />
-          <h3 className="calendarDay">
+          <h3 className="calendar-day">
             Day: {this.state.calendarValue.toLocaleDateString()}
           </h3>
-          <hr className="separator" />
+          <hr />
           <ListResult list={this.state[this.state.calendarValue]} />
         </div>
       </>

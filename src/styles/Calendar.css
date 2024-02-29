@@ -1,0 +1,25 @@
+/* Add this CSS to your stylesheet or in the same file */
+
+.calendar-calories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .calendar {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-day {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }

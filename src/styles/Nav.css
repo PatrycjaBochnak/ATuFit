@@ -1,9 +1,64 @@
 .nav {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    z-index: 1000;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 100px;
+  padding-left: 90px !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo-text {
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.nav-items a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-items a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.nav-items a:hover::before {
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}
+.login-items a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.login-items a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.login-items a:hover::before {
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}

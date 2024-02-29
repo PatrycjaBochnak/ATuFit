@@ -3,7 +3,7 @@ import React from "react";
 function ListResult(props) {
   return (
     <>
-      <div className="breakfastResults">
+      <div className="breakfast-results">
         <span>Breakfast</span>
         {props.list && props.list.breakfast && props.list.breakfast.length > 0
           ? props.list.breakfast.map((product) => {
@@ -18,9 +18,9 @@ function ListResult(props) {
               );
             })
           : ""}
-        <hr className="separator" />
+        <hr />
       </div>
-      <div className="secondBreakfastResults">
+      <div className="second-breakfast-results">
         <span>Second Breakfast</span>
         {props.list &&
         props.list.secondBreakfast &&
@@ -37,9 +37,9 @@ function ListResult(props) {
               );
             })
           : ""}
-        <hr className="separator" />
+        <hr />
       </div>
-      <div className="dinnerResults">
+      <div className="dinner-results">
         <span>Dinner</span>
         {props.list && props.list.dinner && props.list.dinner.length > 0
           ? props.list.dinner.map((product) => {
@@ -54,9 +54,9 @@ function ListResult(props) {
               );
             })
           : ""}
-        <hr className="separator" />
+        <hr />
       </div>
-      <div className="supperResults">
+      <div className="supper-results">
         <span>Supper</span>
         {props.list && props.list.supper && props.list.supper.length > 0
           ? props.list.supper.map((product) => {
@@ -71,7 +71,7 @@ function ListResult(props) {
               );
             })
           : ""}
-        <hr className="separator" />
+        <hr />
       </div>
     </>
   );
