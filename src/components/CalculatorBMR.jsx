@@ -109,17 +109,17 @@ class CalculatorBMR extends Component {
         <div className="result-BMR">
           Your basic metabolism is: {fixedResultBMR} calories
         </div>
-      ); 
+      );
     }
     const finalResultNumber = parseFloat(this.state.finalResult);
     const fixedResultNumber = finalResultNumber.toFixed(0);
 
     let resultAct;
-    if (this.state.bmr && this.state.step === 2) {
+    if (this.state.bmr && this.state.flag === true) {
       resultAct = (
         <div className="result-TDEE">
           Your total metabolism is: {fixedResultNumber} calories
-        </div> 
+        </div>
       );
     }
 
@@ -132,17 +132,14 @@ class CalculatorBMR extends Component {
     return (
       <>
         <div className="calculator-BMR">
-          <div className="calculator-text">
-            <span>
+            <h1 className="d-flex justify-content-center col-md-4 mb-4 fs-3">
               Firstly, insert your details to check Your BMR and Total
               Metabolism
-            </span>
-          </div>
+            </h1>
           <div id="bmrcalc">
             <div className="form">
               {error}
-              <div className="input-gender">
-                <label className="label">Gender</label>
+                <label className="input-gender">Gender</label>
                 <label>
                   <input
                     type="radio"
@@ -165,7 +162,6 @@ class CalculatorBMR extends Component {
                   />
                   Male
                 </label>
-              </div>
               <div className="input-weight">
                 <label className="label">Weight (Kg)</label>
                 <input
@@ -204,11 +200,12 @@ class CalculatorBMR extends Component {
               </div>
               <button
                 type="button"
-                className="buttonBMR"
+                className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center buttonBMR"
                 onClick={() => this.calculateBMR()}
               >
                 Calculate BMR
               </button>
+
               {result}
 
               {a == true && (
@@ -234,12 +231,12 @@ class CalculatorBMR extends Component {
                     </select>
                   </div>
                   <button
-                    type="button"
-                    className="buttonTDEE"
+                    className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
                     onClick={() => this.calculateFinalResult()}
                   >
                     Calculate TDEE
                   </button>
+
                   {resultAct}
                 </div>
               )}

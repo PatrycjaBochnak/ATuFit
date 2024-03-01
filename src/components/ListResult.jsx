@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ListResult.css";
 
 function ListResult(props) {
   return (

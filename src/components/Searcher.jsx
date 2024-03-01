@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../styles/Searcher.css";
 
 class Searcher extends React.Component {
   state = {};
@@ -35,6 +36,9 @@ class Searcher extends React.Component {
   render() {
     return (
       <div className="searcher">
+            <h1 className="d-flex justify-content-center mb-4 fs-3">
+              Type name of product and check options
+            </h1>
         <div className="search-field">
           <input
             type="text"
@@ -42,7 +46,7 @@ class Searcher extends React.Component {
             name="search"
             onChange={this.onInputchange}
           />
-          <button className="clicker" type="submit" onClick={() => this.view()}>
+          <button className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center" type="submit" onClick={() => this.view()}>
             Click!<i className="fa fa-search"></i>
           </button>
         </div>
@@ -91,7 +95,7 @@ class Searcher extends React.Component {
                       >
                         <option value={"choose part of day"}>Choose</option>
                         <option value={"breakfast"}>Breakfast</option>
-                        <option value={"second-breakfast"}>
+                        <option value={"secondbreakfast"}>
                           Second Breakfast
                         </option>
                         <option value={"dinner"}>Dinner</option>

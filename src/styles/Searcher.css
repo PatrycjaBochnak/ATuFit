@@ -1,0 +1,65 @@
+/* search-results CSS */
+.search-results {
+    margin-top: 20px;
+  }
+  
+  .cal-macro-names {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .cal-macro-names > div {
+    flex-basis: calc(20% - 10px);
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 5px 0;
+  }
+  
+  /* search-field CSS */
+  .search-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .clicker {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .clicker i {
+    margin-left: 5px;
+  }
+  
+  /* searcher CSS */
+  .searcher {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
