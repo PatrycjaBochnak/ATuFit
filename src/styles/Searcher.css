@@ -1,4 +1,3 @@
-/* search-results CSS */
 .search-results {
     margin-top: 20px;
   }
@@ -56,8 +55,7 @@
   .clicker i {
     margin-left: 5px;
   }
-  
-  /* searcher CSS */
+
   .searcher {
     max-width: 600px;
     margin: 0 auto;
