@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/HomePage.css";
-import NavButtons from "../components/NavButtons";
+import NavButtons from "./NavButtons";
 
 function HomePage() {
   return (
