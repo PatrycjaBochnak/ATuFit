@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-scroll";
 
 const NavButtons = ({ source, linkName }) => (
-    <Link
+  <Link
     className="button"
     activeClass="active"
     to={source}
     spy={true}
     smooth={true}
-    offset={0}
+    offset={-100}
     duration={500}
->
+  >
     {linkName}
-</Link>
-); 
+  </Link>
+);
 
 export default NavButtons;

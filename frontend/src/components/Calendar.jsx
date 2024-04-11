@@ -32,8 +32,10 @@ class CarouselDay extends React.Component {
     console.log(this.props.product);
     console.log(this.state);
     console.log(this.props.product.partOfDay);
-    const productsOfPartOfDay =
-      this.state[this.state.calendarValue][this.props.product.partOfDay];
+    // const productsOfPartOfDay =
+    //   this.state[this.state.calendarValue][this.props.product.partOfDay];
+
+    const productsOfPartOfDay = [];
     productsOfPartOfDay.push(this.props.product);
     this.setState({
       ...this.state,

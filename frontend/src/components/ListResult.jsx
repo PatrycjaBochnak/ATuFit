@@ -27,6 +27,7 @@ function ListResult(props) {
         props.list.secondBreakfast &&
         props.list.secondBreakfast.length > 0
           ? props.list.secondBreakfast.map((product) => {
+              console.log(props.list.secondBreakfast);
               return (
                 <>
                   <ul>
@@ -37,7 +38,7 @@ function ListResult(props) {
                 </>
               );
             })
-          : ""}
+          : "12312"}
         <hr />
       </div>
       <div className="dinner-results">

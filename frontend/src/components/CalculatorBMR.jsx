@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Cookies from "js-cookie";
 import "../styles/CalculatorBMR.css";
+import { red } from "@mui/material/colors";
 
 class CalculatorBMR extends Component {
   constructor() {
@@ -130,38 +131,38 @@ class CalculatorBMR extends Component {
       let b = false;
     }
     return (
-      <>
-        <div className="calculator-BMR">
-            <h1 className="d-flex justify-content-center col-md-4 mb-4 fs-3">
-              Firstly, insert your details to check Your BMR and Total
-              Metabolism
-            </h1>
-          <div id="bmrcalc">
+      <div style={{ paddingTop: "10em", backgroundColor: "red" }} id="bmrcalc">
+        
+        <div className="calculator-BMR" style={{ display: "flex" }}>
+          <h1 className="">
+            Firstly, insert your details to check Your BMR and Total Metabolism
+          </h1>
+          <div>
             <div className="form">
               {error}
-                <label className="input-gender">Gender</label>
-                <label>
-                  <input
-                    type="radio"
-                    checked={this.state.gender === "1"}
-                    onChange={this.handleGenderChange}
-                    className="genderF"
-                    name="gender"
-                    value="1"
-                  />
-                  Female
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    checked={this.state.gender === "2"}
-                    onChange={this.handleGenderChange}
-                    className="genderM"
-                    name="gender"
-                    value="2"
-                  />
-                  Male
-                </label>
+              <label className="input-gender">Gender</label>
+              <label>
+                <input
+                  type="radio"
+                  checked={this.state.gender === "1"}
+                  onChange={this.handleGenderChange}
+                  className="genderF"
+                  name="gender"
+                  value="1"
+                />
+                Female
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  checked={this.state.gender === "2"}
+                  onChange={this.handleGenderChange}
+                  className="genderM"
+                  name="gender"
+                  value="2"
+                />
+                Male
+              </label>
               <div className="input-weight">
                 <label className="label">Weight (Kg)</label>
                 <input
@@ -243,7 +244,7 @@ class CalculatorBMR extends Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

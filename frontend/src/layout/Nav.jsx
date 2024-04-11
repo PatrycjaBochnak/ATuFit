@@ -21,8 +21,8 @@ function Nav() {
           <Link className="login-button" to="/login">
             SIGN IN
           </Link>
-          </div>
         </div>
+      </div>
     </>
   );
 }
