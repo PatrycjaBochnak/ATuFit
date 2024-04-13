@@ -1,9 +1,17 @@
-const {MongoClient, Db} = require('mongodb');
+const mongoose = require("mongoose");
 
-const url = ""
+const url = "mongodb://localhost:27017/";
+const dbName = "aTuFitUserProducts";
 
-const dbName = 'aTuFitUserProducts';
-
-async function connectToDatabase() {
-    
-}
+export async function connectToDatabase() {
+    try {
+      await mongoose.connect(url + dbName, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      });
+      console.log("Connected to database successfully!");
+    } catch (error) {
+      console.error("Error connecting to database:", error);
+    }
+  }
+  
