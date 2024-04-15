@@ -20,7 +20,7 @@ app.get("/", (req: any, res: any) => {
 // Polaczenie z baza danych mongodb i uruchomienie serwera
 const PORT = 30001;
 
-const server = app.listen(3001, async () => {
+const server = app.listen(PORT, async () => {
   try {
     await connectToDatabase();
     console.log(`Server listens at ${PORT} host`);
