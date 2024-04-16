@@ -13,13 +13,22 @@ const app = express();
 // Middleware do obslugi danych w JSON
 app.use(express.json());
 
-app.get("/", (req: any, res: any) => {
+// Dodanie endpointow API uzytkownikow
+app.use("/users", userRoutes);
+
+// Dodanie endpointow API produktow
+app.use("/products", productRoutes);
+
+// Dodanie endpointu hello world 
+app.get("/hello", (req: any, res: any) => {
   res.send("Hello World");
+});
+app.get("/", (req: any, res: any) => {
+  res.send(":-)");
 });
 
 // Polaczenie z baza danych mongodb i uruchomienie serwera
-const PORT = 30001;
-
+const PORT = 3001;
 const server = app.listen(PORT, async () => {
   try {
     await connectToDatabase();

@@ -16,10 +16,7 @@ const dbName = "aTuFitUserProducts";
 function connectToDatabase() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose.connect(url + dbName, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            });
+            yield mongoose.connect(url + dbName);
             console.log("Connected to database successfully!");
         }
         catch (error) {
