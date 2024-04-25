@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Cookies from "js-cookie";
 import "../styles/CalculatorBMR.css";
-import { red } from "@mui/material/colors";
 
 class CalculatorBMR extends Component {
   constructor() {
@@ -131,12 +130,11 @@ class CalculatorBMR extends Component {
       let b = false;
     }
     return (
-      <div style={{ paddingTop: "10em", backgroundColor: "red" }} id="bmrcalc">
-        
-        <div className="calculator-BMR" style={{ display: "flex" }}>
-          <h1 className="">
+      <div className="calculator-BMR">
+        <h1>
             Firstly, insert your details to check Your BMR and Total Metabolism
           </h1>
+        <div id="bmr-calc" style={{ display: "flex" }}>
           <div>
             <div className="form">
               {error}

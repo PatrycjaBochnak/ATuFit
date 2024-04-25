@@ -13,7 +13,9 @@ function CaloriesCounter() {
     <div className="counter">
       <Searcher setCurrentProduct={setCurrentProduct} />
       <CarouselDay product={state} />
-      <FetchData/>
+      <FetchData url="http://localhost:3001/hello" />
+      <FetchData url="http://localhost:3001/users" />
+      <FetchData url="http://localhost:3001/products" />
     </div>
   );
 }
