@@ -1,11 +1,11 @@
 import express from "express";
 import { User } from "../models/user";
+import { users } from "../utils/data";
 
 const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const users = await User.find();
     res.json(users);
   } catch (error) {
     console.error("Error fetching users:", error);
