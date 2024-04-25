@@ -1,0 +1,7 @@
+.add-product { 
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}

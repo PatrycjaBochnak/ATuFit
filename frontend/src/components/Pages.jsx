@@ -3,6 +3,7 @@ import CalculatorBMR from "./CalculatorBMR";
 import CaloriesCounter from "./CaloriesCounter";
 import Contact from "./Contact";
 import HomePage from "./HomePage";
+import AddProduct from "./AddProduct";
 
 const Pages = () => {
   return (
@@ -10,6 +11,7 @@ const Pages = () => {
       <HomePage />
       <CalculatorBMR />
       <CaloriesCounter />
+      <AddProduct />
       <Contact />
     </>
   );
