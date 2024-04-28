@@ -11,7 +11,7 @@ function Nav() {
         <div className="nav-items">
         <NavButtons source="home-page" linkName="Start" />
         <NavButtons source="calculator-BMR" linkName="Calculator" />
-        <NavButtons source="counter" linkName="Calories counter" />   <NavButtons source="fetch-data" linkName="Add product" />
+        <NavButtons source="counter" linkName="Calories counter" />   <NavButtons source="add-product" linkName="Add product" />
         <NavButtons source="contact" linkName="Contact" />
         </div>
         <div className="login-items">
