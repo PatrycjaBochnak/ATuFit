@@ -8,7 +8,6 @@ import cors from "cors";
 import { connectToDatabase } from "./connectWithMongo";
 import userRoutes from "./routes/userRoutes";
 import productRoutes from "./routes/productRoutes";
-
 const app = express();
 
 // Middleware do obslugi danych w JSON
@@ -22,10 +21,6 @@ app.use("/products", productRoutes);
 
 app.get("/hello", (req: any, res: any) => {
   res.send("Hello World");
-});
-
-app.get("/", (req: any, res: any) => {
-  res.send(":-)");
 });
 
 // Polaczenie z baza danych mongodb i uruchomienie serwera
