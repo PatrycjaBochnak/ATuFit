@@ -14,11 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const user_1 = require("../models/user");
+const data_1 = require("../utils/data");
 const router = express_1.default.Router();
 router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const users = yield user_1.User.find();
-        res.json(users);
+        res.json(data_1.users);
     }
     catch (error) {
         console.error("Error fetching users:", error);

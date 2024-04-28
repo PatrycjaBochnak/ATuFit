@@ -17,17 +17,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+const path_1 = __importDefault(require("path"));
 const connectWithMongo_1 = require("./connectWithMongo");
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const app = (0, express_1.default)();
 // Middleware do obslugi danych w JSON
 app.use(express_1.default.json());
-// Dodanie endpointow API uzytkownikow
+// Middleware CORS
+app.use((0, cors_1.default)());
 app.use("/users", userRoutes_1.default);
-// Dodanie endpointow API produktow
 app.use("/products", productRoutes_1.default);
-// Dodanie endpointu hello world 
 app.get("/hello", (req, res) => {
     res.send("Hello World");
 });
@@ -46,4 +47,5 @@ const server = app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function
         process.exit(1);
     }
 }));
+app.use(express_1.default.static(path_1.default.join(__dirname, "public")));
 module.exports = server;
