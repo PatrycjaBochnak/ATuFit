@@ -2,6 +2,7 @@ import React from "react";
 import Searcher from "./Searcher";
 import CarouselDay from "./Calendar";
 import { useState } from "react";
+import "../styles/CaloriesCounter.css";
 
 function CaloriesCounter() {
   const [state, setState] = useState(null);
