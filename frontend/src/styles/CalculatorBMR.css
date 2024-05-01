@@ -8,6 +8,7 @@
 .calculator-BMR h1 {
   max-width: 600px;
   font-size: 30px;
+  margin-bottom: 24px
 }
 #bmr-calc {
   max-width: 400px;
