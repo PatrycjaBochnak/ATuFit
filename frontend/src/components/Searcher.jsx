@@ -73,16 +73,16 @@ class Searcher extends React.Component {
                       {this.state.recipes[key].title}
                     </div>
                     <div className="col-md-1">
-                      {this.state.recipes[key].nutrition.calories}
+                      {Math.round(this.state.recipes[key].nutrition.calories)}
                     </div>
                     <div className="col-md-1">
-                      {this.state.recipes[key].nutrition.fat}
+                    {this.state.recipes[key].nutrition.fat}
                     </div>
                     <div className="col-md-1">
-                      {this.state.recipes[key].nutrition.carbs}
+                      {Math.round(this.state.recipes[key].nutrition.carbs)}
                     </div>
                     <div className="col-md-1">
-                      {this.state.recipes[key].nutrition.protein}
+                      {Math.round(this.state.recipes[key].nutrition.protein)}
                     </div>
                     <div className="col-md-2">
                       <select

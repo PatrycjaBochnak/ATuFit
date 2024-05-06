@@ -4,77 +4,76 @@ import "../styles/ListResult.css";
 function ListResult(props) {
   return (
     <>
-      <div className="breakfast-results">
-        <span>Breakfast</span>
-        {props.list && props.list.breakfast && props.list.breakfast.length > 0
-          ? props.list.breakfast.map((product) => {
-              return (
-                <>
+      <table className="meal-table">
+        <thead>
+          <tr>
+            <th>Breakfast</th>
+            <th>Second breakfast</th>
+            <th>Dinner</th>
+            <th>Supper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div className="breakfast-results">
+                {props.list &&
+                props.list.breakfast &&
+                props.list.breakfast.length > 0 ? (
                   <ul>
-                    <li>
-                      <span>{product.title}</span>
-                    </li>
+                    {props.list.breakfast.map((product, index) => (
+                      <li key={index}>{product.title}</li>
+                    ))}
                   </ul>
-                </>
-              );
-            })
-          : ""}
-        <hr />
-      </div>
-      <div className="second-breakfast-results">
-        <span>Second Breakfast</span>
-        {props.list &&
-        props.list.secondBreakfast &&
-        props.list.secondBreakfast.length > 0
-          ? props.list.secondBreakfast.map((product) => {
-              console.log(props.list.secondBreakfast);
-              return (
-                <>
+                ) : (
+                  <span> - </span>
+                )}
+              </div>
+            </td>
+            <td>
+              <div className="second-breakfast-results">
+                {props.list &&
+                props.list.secondBreakfast &&
+                props.list.secondBreakfast.length > 0 ? (
                   <ul>
-                    <li>
-                      <span>{product.title}</span>
-                    </li>
+                    {props.list.secondBreakfast.map((product, index) => (
+                      <li key={index}>{product.title}</li>
+                    ))}
                   </ul>
-                </>
-              );
-            })
-          : "12312"}
-        <hr />
-      </div>
-      <div className="dinner-results">
-        <span>Dinner</span>
-        {props.list && props.list.dinner && props.list.dinner.length > 0
-          ? props.list.dinner.map((product) => {
-              return (
-                <>
+                ) : (
+                  <span> - </span>
+                )}
+              </div>
+            </td>
+            <td>
+              <div className="dinner-results">
+                {props.list && props.list.dinner && props.list.dinner.length > 0 ? (
                   <ul>
-                    <li>
-                      <span>{product.title}</span>
-                    </li>
+                    {props.list.dinner.map((product, index) => (
+                      <li key={index}>{product.title}</li>
+                    ))}
                   </ul>
-                </>
-              );
-            })
-          : ""}
-        <hr />
-      </div>
-      <div className="supper-results">
-        <span>Supper</span>
-        {props.list && props.list.supper && props.list.supper.length > 0
-          ? props.list.supper.map((product) => {
-              return (
-                <>
+                ) : (
+                  <span> - </span>
+                )}
+              </div>
+            </td>
+            <td>
+              <div className="supper-results">
+                {props.list && props.list.supper && props.list.supper.length > 0 ? (
                   <ul>
-                    <li>
-                      <span>{product.title}</span>
-                    </li>
+                    {props.list.supper.map((product, index) => (
+                      <li key={index}>{product.title}</li>
+                    ))}
                   </ul>
-                </>
-              );
-            })
-          : ""}
-        <hr />
-      </div>
+                ) : (
+                  <span> - </span>
+                )}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </>
   );
 }
