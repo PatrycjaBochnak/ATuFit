@@ -1,4 +1,5 @@
 .contact {
+  border-collapse: collapse;
   min-height: 100vh;
   display: flex;
   flex-flow: column;

@@ -60,49 +60,54 @@ function TableExpansion() {
       </button>
       {expanded && (
         <form id="form">
-          <label>
+          <label className="label">
             Name:
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
+              className="name"
             />
           </label>
-          <label>
+          <label className="label">
             Calories:
             <input
               type="text"
               name="calories"
               value={formData.calories}
               onChange={handleChange}
+              className="calories"
             />
           </label>
-          <label>
+          <label className="label">
             Fats:
             <input
               type="text"
               name="fats"
               value={formData.fats}
               onChange={handleChange}
+              className="fats"
             />
           </label>
-          <label>
-            Carbohydrates:
+          <label className="label">
+            Carbs:
             <input
               type="text"
               name="carbohydrates"
               value={formData.carbohydrates}
               onChange={handleChange}
+              className="carbohydrates"
             />
           </label>
-          <label>
+          <label className="label">
             Proteins:
             <input
               type="text"
               name="proteins"
               value={formData.proteins}
               onChange={handleChange}
+              className="proteins"
             />
           </label>
           <button

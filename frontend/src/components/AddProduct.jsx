@@ -23,7 +23,7 @@ const AddProduct = () => {
     <>
       <div className="add-product">
         <div id="#add-product">
-          <h3>Not enough? Add your own product</h3>
+          <h3>Not enough? Add missing products :)</h3>
           <div className="api">{data}</div>
           <TableExpansion/>
         </div>

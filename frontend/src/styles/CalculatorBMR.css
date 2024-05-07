@@ -1,4 +1,5 @@
 .calculator-BMR {
+  border-collapse: collapse;
   min-height: 100vh;
   display: flex;
   flex-flow: column;
@@ -17,6 +18,8 @@
   margin-bottom: 24px
 }
 #bmr-calc {
+  height: 620px;
+  width: 400px;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -29,7 +32,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  background-color: #c0392b;
   align-items: center;
 }
 
@@ -41,6 +43,7 @@
   display: flex;
   justify-content: center;
   flex-flow: column;
+  font-weight: bold;
 }
 .input-gender label {
   display: flex;
