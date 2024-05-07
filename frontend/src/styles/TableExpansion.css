@@ -1,4 +1,6 @@
 .table-expansion {
+  display: flex;
+  flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -11,7 +13,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  background-color: greenyellow;
+  background-color: rgb(208, 208, 208);
   align-items: center;
 }
 .label {

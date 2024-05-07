@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/TableExpansion.css";
 
 function TableExpansion() {
   const [expanded, setExpanded] = useState(false);
   const [formData, setFormData] = useState({
+    id: "",
     name: "",
     calories: "",
-    fat: "",
+    fats: "",
     carbohydrates: "",
     proteins: "",
   });
@@ -19,21 +21,45 @@ function TableExpansion() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/api/submitData",
+        formData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Błąd:", error);
+    }
   };
 
+  useEffect(() => {
+    const form = document.getElementById("form");
+    if (form) {
+      form.addEventListener("submit", handleSubmit);
+
+      return () => {
+        form.removeEventListener("submit", handleSubmit);
+      };
+    }
+  }, [handleSubmit]);
+  
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
 
   return (
     <div className="table-expansion">
-        <button
-            className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center" onClick={toggleExpand}>Add your own product</button>
+      <button
+        className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center align-content-center align-items-center"
+        onClick={toggleExpand}
+      >
+        Add your own product
+      </button>
       {expanded && (
-        <form className="form" onSubmit={handleSubmit}>
+        <form id="form">
           <label>
             Name:
             <input
@@ -41,7 +67,6 @@ function TableExpansion() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="name"
             />
           </label>
           <label>
@@ -57,8 +82,8 @@ function TableExpansion() {
             Fats:
             <input
               type="text"
-              name="fat"
-              value={formData.fat}
+              name="fats"
+              value={formData.fats}
               onChange={handleChange}
             />
           </label>

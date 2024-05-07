@@ -57,11 +57,11 @@ class Searcher extends React.Component {
         {this.state.recipes ? (
           <div className="search-results">
             <div className="cal-macro-names">
-              <div className="col-md-6">Name</div>
-              <div className="col-md-1">Calories</div>
-              <div className="col-md-1">Fats</div>
-              <div className="col-md-1">Carbs</div>
-              <div className="col-md-1">Proteins</div>
+              <div className="col">Name</div>
+              <div className="col">Calories</div>
+              <div className="col">Fats</div>
+              <div className="col">Carbs</div>
+              <div className="col">Proteins</div>
             </div>
 
             {Object.keys(this.state.recipes).map((key) => {
@@ -69,19 +69,19 @@ class Searcher extends React.Component {
                 <React.Fragment key={key}>
                   <div className="row">
                     <hr />
-                    <div className="col-md-6">
+                    <div className="col">
                       {this.state.recipes[key].title}
                     </div>
-                    <div className="col-md-1">
+                    <div className="col">
                       {Math.round(this.state.recipes[key].nutrition.calories)}
                     </div>
-                    <div className="col-md-1">
+                    <div className="col">
                     {this.state.recipes[key].nutrition.fat}
                     </div>
-                    <div className="col-md-1">
+                    <div className="col">
                       {Math.round(this.state.recipes[key].nutrition.carbs)}
                     </div>
-                    <div className="col-md-1">
+                    <div className="col">
                       {Math.round(this.state.recipes[key].nutrition.protein)}
                     </div>
                     <div className="col-md-2">

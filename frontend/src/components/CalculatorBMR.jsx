@@ -135,7 +135,6 @@ class CalculatorBMR extends Component {
             Firstly, insert your details to check Your BMR and Total Metabolism
           </h1>
         <div id="bmr-calc">
-          <div>
             <div className="form">
               {error}
               <label className="input-gender">Gender</label>
@@ -241,7 +240,6 @@ class CalculatorBMR extends Component {
               )}
             </div>
           </div>
-        </div>
       </div>
     );
   }

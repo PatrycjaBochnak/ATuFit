@@ -3,6 +3,12 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2c6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
 }
 .add-product h3 {

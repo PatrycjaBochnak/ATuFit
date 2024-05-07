@@ -8,6 +8,7 @@
 .cal-macro-names {
   display: flex;
   flex-flow: 1;
+  flex-direction: row;
 }
 .search-results .cal-macro-names {
   background-color: #f2f2f2;
