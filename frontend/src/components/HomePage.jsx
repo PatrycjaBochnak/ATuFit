@@ -51,13 +51,13 @@ function HomePage() {
                     </div>
                   </div>
                 </div>
-                <p
+                <button
                   className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
                   to="/calculator"
                 >
                   {" "}
                   <NavButtons source="calculator-BMR" linkName="Let's start" />
-                </p>
+                </button>
               </div>
             </div>
           </div>

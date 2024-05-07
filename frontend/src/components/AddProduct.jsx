@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/AddProduct.css";
 import { useEffect } from "react";
+import TableExpansion from "../modules/TableExpansion";
 
 const AddProduct = () => {
   const [data, setData] = useState("");
@@ -24,6 +25,7 @@ const AddProduct = () => {
         <div id="#add-product">
           <h3>Not enough? Add your own product</h3>
           <div className="api">{data}</div>
+          <TableExpansion/>
         </div>
       </div>
     </>
