@@ -13,27 +13,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const product_1 = require("../models/product");
+const product_js_1 = __importDefault(require("../models/product.js"));
 const router = express_1.default.Router();
-router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.post('/api/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const products = yield product_1.Product.find();
-        res.json(products);
+        const { id, name, calories, fats, carbohydrates, proteins } = req.body;
+        const product = new product_js_1.default({
+            name,
+            calories,
+            fats,
+            carbohydrates,
+            proteins
+        });
+        yield product.save();
+        res.status(201).json({ message: 'Product saved successfully' });
     }
     catch (error) {
-        console.error("Error fetching products:", error);
-        res.status(500).json({ error: "Internal server error" });
-    }
-}));
-router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const newProduct = new product_1.Product(req.body);
-        yield newProduct.save();
-        res.status(201).json(newProduct);
-    }
-    catch (error) {
-        console.error("Error creating product:", error);
-        res.status(500).json({ error: "Internal server error" });
+        console.error('Error saving product:', error);
+        res.status(500).json({ message: 'Internal server error' });
     }
 }));
 exports.default = router;

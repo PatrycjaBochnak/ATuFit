@@ -1,27 +1,26 @@
 import express from "express";
-import { Product } from "../models/product";
-import { products } from "../utils/data";
+import Product from "../models/product.js";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.post('/api/submitData', async (req, res) => {
   try {
-    const products = await Product.find();
-    res.json(products);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
+    const { name, calories, fats, carbohydrates, proteins } = req.body;
 
-router.post("/", async (req, res) => {
-  try {
-    const newProduct = new Product(req.body);
-    await newProduct.save();
-    res.status(201).json(newProduct);
+    const product = new Product({
+      name,
+      calories,
+      fats,
+      carbohydrates,
+      proteins
+    });
+
+    await product.save();
+
+    res.status(201).json({ message: 'Product saved successfully' });
   } catch (error) {
-    console.error("Error creating product:", error);
-    res.status(500).json({ error: "Internal server error" });
+    console.error('Error saving product:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 });
 
