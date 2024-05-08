@@ -26,7 +26,7 @@ function TableExpansion() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/submitData",
+        "http://localhost:3001/api/submit-data",
         formData
       );
       console.log(response.data);
@@ -65,6 +65,7 @@ function TableExpansion() {
             <input
               type="text"
               name="name"
+              placeholder="Type product name..."
               value={formData.name}
               onChange={handleChange}
               className="name"
@@ -75,6 +76,7 @@ function TableExpansion() {
             <input
               type="text"
               name="calories"
+              placeholder="Calories..."
               value={formData.calories}
               onChange={handleChange}
               className="calories"
@@ -85,6 +87,7 @@ function TableExpansion() {
             <input
               type="text"
               name="fats"
+              placeholder="Fats..."
               value={formData.fats}
               onChange={handleChange}
               className="fats"
@@ -95,6 +98,7 @@ function TableExpansion() {
             <input
               type="text"
               name="carbohydrates"
+              placeholder="Carbs..."
               value={formData.carbohydrates}
               onChange={handleChange}
               className="carbohydrates"
@@ -105,6 +109,7 @@ function TableExpansion() {
             <input
               type="text"
               name="proteins"
+              placeholder="Proteins..."
               value={formData.proteins}
               onChange={handleChange}
               className="proteins"
