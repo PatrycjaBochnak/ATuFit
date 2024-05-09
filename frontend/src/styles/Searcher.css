@@ -2,7 +2,7 @@
   width: 600px;
   margin-bottom: 20px;
 }
-.search-results {
+/* .search-results {
   max-width: 700px;
   margin: 0 auto;
   align-items: center;
@@ -30,4 +30,33 @@
 
 .search-results .row:nth-child(even) {
   background-color: #f2f2f2;
+} */
+.search-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc; /* Dodaje linie oddzielające wiersze */
+}
+
+.col {
+  flex: 1; /* Rozciąga kolumny, aby zajmować równą przestrzeń */
+  padding: 0 10px;
+  text-align: center;
+}
+
+.cal-macro-names {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border-bottom: 2px solid #333;
+}
+
+.col:first-child {
+  text-align: left;
 }

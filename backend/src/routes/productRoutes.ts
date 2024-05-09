@@ -3,7 +3,7 @@ import Product from "../models/product.js";
 
 const router = express.Router();
 
-router.post('/api/submitData', async (req, res) => {
+router.post('/submitData', async (req, res) => {
   try {
     const { name, calories, fats, carbohydrates, proteins } = req.body;
 

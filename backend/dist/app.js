@@ -20,6 +20,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((req, res, next) => {
+    res.set('Content-Type', 'text/javascript');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     next();
 });

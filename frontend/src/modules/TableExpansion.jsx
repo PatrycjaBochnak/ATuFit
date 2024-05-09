@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../styles/TableExpansion.css";
 
@@ -24,32 +24,18 @@ function TableExpansion() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post(
-        "http://localhost:3001/api/submit-data",
-        formData
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.error("Błąd:", error);
-    }
+    await axios
+      .post("http://localhost:3001/api/submitData", formData)
+      .then((res) => {
+        alert(res.data.message);
+      })
+      .catch((error) => {
+        console.log("Error:", error.message);
+      }, [handleSubmit]);
   };
-
-  useEffect(() => {
-    const form = document.getElementById("form");
-    if (form) {
-      form.addEventListener("submit", handleSubmit);
-
-      return () => {
-        form.removeEventListener("submit", handleSubmit);
-      };
-    }
-  }, [handleSubmit]);
-  
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
-
   return (
     <div className="table-expansion">
       <button
@@ -59,7 +45,8 @@ function TableExpansion() {
         Add your own product
       </button>
       {expanded && (
-        <form id="form">
+        <form id="form"
+        onSubmit={handleSubmit}>
           <label className="label">
             Name:
             <input

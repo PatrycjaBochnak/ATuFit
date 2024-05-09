@@ -62,13 +62,13 @@ class Searcher extends React.Component {
               <div className="col">Fats</div>
               <div className="col">Carbs</div>
               <div className="col">Proteins</div>
+              <div className="col">Day part</div>
             </div>
 
             {Object.keys(this.state.recipes).map((key) => {
               return (
                 <React.Fragment key={key}>
                   <div className="row">
-                    <hr />
                     <div className="col">
                       {this.state.recipes[key].title}
                     </div>
@@ -76,7 +76,7 @@ class Searcher extends React.Component {
                       {Math.round(this.state.recipes[key].nutrition.calories)}
                     </div>
                     <div className="col">
-                    {this.state.recipes[key].nutrition.fat}
+                    {Math.round(this.state.recipes[key].nutrition.fat)}
                     </div>
                     <div className="col">
                       {Math.round(this.state.recipes[key].nutrition.carbs)}

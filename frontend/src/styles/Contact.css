@@ -12,6 +12,11 @@
   margin-right: 15%;
   text-align: center;
   }
+  .contact-things { 
+    display: flex;
+    flex-flow: column;
+    margin-top: 150px;
+  }
   .social-media-icons {
     text-decoration: none;
     color: white;

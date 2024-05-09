@@ -6,9 +6,8 @@ const Contact = () => {
   return (
     <>
       <div className="contact">
-      <h1 className="d-flex justify-content-center mb-4 fs-3">
-              Get in touch
-            </h1>
+        <div className="contact-things">
+      <h1>Get in touch</h1>
         <p>Feel free to reach out! Whether you have a question, want to collaborate or just say hi, I'll be happy to chat.</p>
         <div id="content" className="social-media-icons">
           <div className="ig">
@@ -37,6 +36,7 @@ const Contact = () => {
             >
               <Icons.Github />
             </a>
+            </div>
           </div>
         </div>
       </div>

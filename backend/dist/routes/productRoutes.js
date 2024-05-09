@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const product_js_1 = __importDefault(require("../models/product.js"));
 const router = express_1.default.Router();
-router.post('/api/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { id, name, calories, fats, carbohydrates, proteins } = req.body;
+        const { name, calories, fats, carbohydrates, proteins } = req.body;
         const product = new product_js_1.default({
             name,
             calories,
