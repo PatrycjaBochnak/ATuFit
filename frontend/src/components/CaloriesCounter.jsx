@@ -1,5 +1,5 @@
 import React from "react";
-import Searcher from "./Searcher";
+import Searcher from "../modules/Searcher";
 import CarouselDay from "../modules/Calendar";
 import { useState } from "react";
 import "../styles/CaloriesCounter.css";

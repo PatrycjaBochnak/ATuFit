@@ -29,9 +29,12 @@ function TableExpansion() {
       .then((res) => {
         alert(res.data.message);
       })
-      .catch((error) => {
-        console.log("Error:", error.message);
-      }, [handleSubmit]);
+      .catch(
+        (error) => {
+          console.log("Error:", error.message);
+        },
+        [handleSubmit]
+      );
   };
   const toggleExpand = () => {
     setExpanded(!expanded);
@@ -45,8 +48,7 @@ function TableExpansion() {
         Add your own product
       </button>
       {expanded && (
-        <form id="form"
-        onSubmit={handleSubmit}>
+        <form id="form" onSubmit={handleSubmit}>
           <label className="label">
             Name:
             <input
