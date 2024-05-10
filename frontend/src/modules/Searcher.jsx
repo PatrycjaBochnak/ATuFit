@@ -2,19 +2,6 @@ import React from "react";
 import axios from "axios";
 import "../styles/Searcher.css";
 
-function isPrime(num) {
-  if (num <= 1) return false;
-  if (num <= 3) return true;
-
-  if (num % 2 === 0 || num % 3 === 0) return false;
-
-  for (let i = 5; i * i <= num; i += 6) {
-    if (num % i === 0 || num % (i + 2) === 0) return false;
-  }
-
-  return true;
-}
-
 class Searcher extends React.Component {
   state = {};
   constructor() {
@@ -33,7 +20,7 @@ class Searcher extends React.Component {
             this.state.products +
             "&addProductInformation=true&apiKey=6d0d470152d74ee2aa61eaa38e37af8d"
         ),
-        axios.get("http://localhost:3001/api/submitData" + this.state.products),
+        axios.get("http://localhost:3001/api/submitData/" + this.state.products),
       ])
       .then(
         axios.spread((response1, response2) => {
