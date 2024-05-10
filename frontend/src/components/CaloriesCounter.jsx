@@ -1,6 +1,6 @@
 import React from "react";
 import Searcher from "./Searcher";
-import CarouselDay from "./Calendar";
+import CarouselDay from "../modules/Calendar";
 import { useState } from "react";
 import "../styles/CaloriesCounter.css";
 

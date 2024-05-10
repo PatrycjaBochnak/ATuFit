@@ -2,6 +2,19 @@ import React from "react";
 import axios from "axios";
 import "../styles/Searcher.css";
 
+function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    
+    if (num % 2 === 0 || num % 3 === 0) return false;
+    
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+    }
+    
+    return true;
+}
+
 class Searcher extends React.Component {
   state = {};
   constructor() {
@@ -36,9 +49,7 @@ class Searcher extends React.Component {
   render() {
     return (
       <div className="searcher">
-        <h1 className="d-flex justify-content-center mb-4 fs-3">
           Type name of product and check options
-        </h1>
         <div className="search-field">
           <input
             type="text"
@@ -51,7 +62,7 @@ class Searcher extends React.Component {
             type="submit"
             onClick={() => this.view()}
           >
-            Click!<i className="fa fa-search"></i>
+            Click!
           </button>
         </div>
         {this.state.recipes ? (
@@ -73,16 +84,16 @@ class Searcher extends React.Component {
                       {this.state.recipes[key].title}
                     </div>
                     <div className="col">
-                      {Math.round(this.state.recipes[key].nutrition.calories)}
+                      {this.roundToNearestPrime(parseFloat(this.state.recipes[key].nutrition.calories))}
                     </div>
                     <div className="col">
-                    {Math.round(this.state.recipes[key].nutrition.fat)}
+                      {this.roundToNearestPrime(parseFloat(this.state.recipes[key].nutrition.fat))}
                     </div>
                     <div className="col">
-                      {Math.round(this.state.recipes[key].nutrition.carbs)}
+                      {this.roundToNearestPrime(parseFloat(this.state.recipes[key].nutrition.carbs))}
                     </div>
                     <div className="col">
-                      {Math.round(this.state.recipes[key].nutrition.protein)}
+                      {this.roundToNearestPrime(parseFloat(this.state.recipes[key].nutrition.protein))}
                     </div>
                     <div className="col-md-2">
                       <select
@@ -116,6 +127,17 @@ class Searcher extends React.Component {
         )}
       </div>
     );
+  }
+
+  roundToNearestPrime(num) {
+    let roundedNumber = Math.round(num);
+    while (!isPrime(roundedNumber)) {
+        roundedNumber++;
+    }
+    if (roundedNumber === 0) {
+        return 0;
+    }
+    return roundedNumber;
   }
 }
 
