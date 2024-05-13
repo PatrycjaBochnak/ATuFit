@@ -13,12 +13,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const product_js_1 = __importDefault(require("../models/product.js"));
+const product_1 = __importDefault(require("../models/product"));
 const router = express_1.default.Router();
-router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.use(express_1.default.json());
+router.get('/data', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, calories, fats, carbohydrates, proteins } = req.body;
-        const product = new product_js_1.default({
+        const product = new product_1.default({
             name,
             calories,
             fats,
@@ -33,4 +34,38 @@ router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, funct
         res.status(500).json({ message: 'Internal server error' });
     }
 }));
+router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { name, calories, fats, carbohydrates, proteins } = req.body;
+        const product = new product_1.default({
+            name,
+            calories,
+            fats,
+            carbohydrates,
+            proteins
+        });
+        yield product.save();
+        res.status(201).json({ message: 'Product saved successfully' });
+    }
+    catch (error) {
+        console.error('Error saving product:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+}));
+function fetchProducts() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const documents = yield product_1.default.find({}).exec();
+            if (!documents || documents.length === 0) {
+                console.log('Can`t found any products');
+                return;
+            }
+            console.log('Found products:', documents);
+        }
+        catch (error) {
+            console.error('Error:', error);
+        }
+    });
+}
+fetchProducts();
 exports.default = router;
