@@ -13,8 +13,8 @@
   margin-bottom: 60px;
   text-align: center;
 }
-.calculator-BMR h1 {
-  max-width: 600px;
+.calculator-BMR h2 {
+  margin-top: 24px;
   margin-bottom: 24px
 }
 #bmr-calc {

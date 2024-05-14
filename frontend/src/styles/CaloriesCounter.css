@@ -12,6 +12,10 @@
     margin-bottom: 60px;
     text-align: center;
 }
+.counter h2 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
 .search-field {
     max-width: 600px;
     margin: 0 auto;

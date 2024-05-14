@@ -15,9 +15,9 @@
   .contact-things { 
     display: flex;
     flex-flow: column;
-    margin-top: 150px;
   }
   .contact-things h2 {
+    margin-top: 24px;
     margin-bottom: 24px
   }
   .social-media-icons {
