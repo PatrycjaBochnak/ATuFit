@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/HomePage.css";
 import NavButtons from "./NavButtons";
-import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -27,9 +26,7 @@ function HomePage() {
         </div>
       </div>
       <button className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center">
-        <Link to="/calculator" className="nav-link">
           <NavButtons source="calculator-BMR" linkName="Let's start" />
-        </Link>
       </button>
     </div>
   );

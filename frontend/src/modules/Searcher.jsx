@@ -20,7 +20,7 @@ class Searcher extends React.Component {
             this.state.products +
             "&addProductInformation=true&apiKey=6d0d470152d74ee2aa61eaa38e37af8d"
         ),
-        axios.get("http://localhost:3001/api/submitData/" + this.state.products),
+        axios.get("http://localhost:3001/api/getProducts/" + this.state.products),
       ])
       .then(
         axios.spread((response1, response2) => {

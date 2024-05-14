@@ -11,7 +11,9 @@ function CaloriesCounter() {
   };
   return (
     <div className="counter">
+      <h2>Type products and search it</h2>
       <Searcher setCurrentProduct={setCurrentProduct} />
+      <h2>Add chosen product to right part of day</h2>
       <CarouselDay product={state} />
     </div>
   );

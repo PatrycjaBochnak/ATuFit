@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       <div className="contact">
         <div className="contact-things">
-      <h1>Get in touch</h1>
+      <h2>Get in touch</h2>
         <p>Feel free to reach out! Whether you have a question, want to collaborate or just say hi, I'll be happy to chat.</p>
         <div id="content" className="social-media-icons">
           <div className="ig">

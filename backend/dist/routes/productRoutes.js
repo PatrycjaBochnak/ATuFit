@@ -16,25 +16,17 @@ const express_1 = __importDefault(require("express"));
 const product_1 = __importDefault(require("../models/product"));
 const router = express_1.default.Router();
 router.use(express_1.default.json());
-router.get('/data', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.get("/getProducts", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name, calories, fats, carbohydrates, proteins } = req.body;
-        const product = new product_1.default({
-            name,
-            calories,
-            fats,
-            carbohydrates,
-            proteins
-        });
-        yield product.save();
-        res.status(201).json({ message: 'Product saved successfully' });
+        const products = yield product_1.default.find({}).exec();
+        res.status(200).json(products);
     }
     catch (error) {
-        console.error('Error saving product:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error("Error fetching products:", error);
+        res.status(500).json({ message: "Internal server error" });
     }
 }));
-router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.post("/submitData", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, calories, fats, carbohydrates, proteins } = req.body;
         const product = new product_1.default({
@@ -42,14 +34,14 @@ router.post('/submitData', (req, res) => __awaiter(void 0, void 0, void 0, funct
             calories,
             fats,
             carbohydrates,
-            proteins
+            proteins,
         });
         yield product.save();
-        res.status(201).json({ message: 'Product saved successfully' });
+        res.status(201).json({ message: "Product saved successfully" });
     }
     catch (error) {
-        console.error('Error saving product:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error("Error saving product:", error);
+        res.status(500).json({ message: "Internal server error" });
     }
 }));
 function fetchProducts() {
@@ -57,13 +49,15 @@ function fetchProducts() {
         try {
             const documents = yield product_1.default.find({}).exec();
             if (!documents || documents.length === 0) {
-                console.log('Can`t found any products');
+                console.log("Can`t found any products");
                 return;
             }
-            console.log('Found products:', documents);
+            console.log("Found products:", JSON.stringify(documents));
+            const productsArray = JSON.parse(JSON.stringify(documents));
+            console.log("Products Array:", productsArray);
         }
         catch (error) {
-            console.error('Error:', error);
+            console.error("Error:", error);
         }
     });
 }
