@@ -18,7 +18,7 @@ const router = express_1.default.Router();
 router.use(express_1.default.json());
 router.get("/getProducts", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const products = yield product_1.default.find({}).exec();
+        const products = yield product_1.default.find({ "name": req.params.name }).exec();
         res.status(200).json(products);
     }
     catch (error) {

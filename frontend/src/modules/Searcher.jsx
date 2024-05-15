@@ -135,21 +135,24 @@ class Searcher extends React.Component {
             {Object.keys(this.state.recipes2).map((key) => (
               <React.Fragment key={key}>
                 <div className="row">
-                  <div className="col">{this.state.recipes[key].name}</div>
-                  <div className="col">{this.state.recipes[key].calories}</div>
-                  <div className="col">{this.state.recipes[key].fats}</div>
+                  <div className="col">{this.state.recipes2[key].name}</div>
+                  <div className="col">{this.state.recipes2[key].calories}</div>
+                  <div className="col">{this.state.recipes2[key].fats}</div>
                   <div className="col">
-                    {this.state.recipes[key].carbohydrates}
+                    {this.state.recipes2[key].carbohydrates}
                   </div>
-                  <div className="col">{this.state.recipes[key].proteins}</div>
+                  <div className="col">{this.state.recipes2[key].proteins}</div>
                   <div className="col-md-2">
                     <select
                       name="day"
                       onChange={(e) => {
                         console.log(e.target);
                         this.props.setCurrentProduct({
-                          title: this.state.recipes[key].title,
-                          nutrition: this.state.recipes[key].nutrition,
+                          name: this.state.recipes2[key].name,
+                          calories: this.state.recipes2[key].calories,
+                          fats: this.state.recipes2[key].fats,
+                          carbohydrates: this.state.recipes2[key].carbohydrates,
+                          proteins: this.state.recipes2[key].proteins,
                           partOfDay: e.target.value,
                         });
                       }}

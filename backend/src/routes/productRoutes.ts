@@ -6,9 +6,9 @@ const router = express.Router();
 
 router.use(express.json());
 
-router.get("/getProducts", async (req, res) => {
+router.get("/getProducts", async (req: any, res: any) => {
   try {
-    const products = await Product.find({}).exec();
+    const products = await Product.find({ "name":req.params.name }).exec();
     res.status(200).json(products);
   } catch (error) {
     console.error("Error fetching products:", error);
