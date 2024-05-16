@@ -3,53 +3,57 @@ import axios from "axios";
 import "../styles/Searcher.css";
 
 class Searcher extends React.Component {
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      products: "",
-    };
-    this.onInputchange = this.onInputchange.bind(this);
-  }
+  state = {
+    products: "",
+    recipes: null,
+    recipes2: null,
+  };
 
-  view() {
-    axios
-      .all([
-        axios.get(
-          "https://api.spoonacular.com/food/products/search?query=" +
-            this.state.products +
-            "&addProductInformation=true&apiKey=6d0d470152d74ee2aa61eaa38e37af8d"
-        ),
-        axios.get("http://localhost:3001/api/getProducts/", {
-          params: {
-            product: this.state.product,
-          },
-        }),
-      ])
-      .then(
-        axios.spread((response1, response2) => {
-          let recipes1 = response1.data.products;
-          let recipes2 = response2.data.products;
-
-          if (recipes1.length === 0) {
-            this.setState({
-              recipes: recipes2,
-            });
-          } else {
-            this.setState({
-              recipes: recipes1,
-              recipes2: recipes2,
-            });
-          }
-        })
-      )
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-  onInputchange(event) {
+  onInputchange = (event) => {
     this.setState({ products: event.target.value });
-  }
+  };
+
+  view = () => {
+    axios
+      .get(
+        "https://api.spoonacular.com/food/products/search?query=" +
+          this.state.products +
+          "&addProductInformation=true&apiKey=6d0d470152d74ee2aa61eaa38e37af8d"
+      )
+      .then((response1) => {
+        let recipes1 = response1.data.products;
+
+        if (recipes1.length === 0) {
+          console.log("No data found in the first endpoint");
+          axios
+            .get("http://localhost:3001/api/getProducts/", {
+              params: {
+                name: this.state.products,
+              },
+            })
+            .then((response2) => {
+              let recipes2 = response2.data;
+              if (recipes2.length === 0) {
+                console.log("No data found in the second endpoint");
+              } else {
+                this.setState({
+                  recipes2: recipes2,
+                });
+              }
+            })
+            .catch((error) => {
+              console.error("Error fetching data from the second endpoint:", error);
+            });
+        } else {
+          this.setState({
+            recipes: recipes1,
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data from the first endpoint:", error);
+      });
+  };
 
   render() {
     return (
@@ -178,3 +182,4 @@ class Searcher extends React.Component {
 }
 
 export default Searcher;
+

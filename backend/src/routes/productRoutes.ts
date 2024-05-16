@@ -8,8 +8,8 @@ router.use(express.json());
 
 router.get("/getProducts", async (req: any, res: any) => {
   try {
-    const products = await Product.find({ "name":req.params.name }).exec();
-    res.status(200).json(products);
+    const products = await Product.find({ "name":req.query.product }).exec();
+    res.status(200).json({ products: products });
   } catch (error) {
     console.error("Error fetching products:", error);
     res.status(500).json({ message: "Internal server error" });
