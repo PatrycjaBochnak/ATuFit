@@ -136,27 +136,27 @@ class Searcher extends React.Component {
               <div className="col">Proteins</div>
               <div className="col">Day part</div>
             </div>
-            {Object.keys(this.state.recipes2).map((key) => (
-              <React.Fragment key={key}>
+            {this.state.recipes2.map((recipe, index) => (
+              <React.Fragment key={index}>
                 <div className="row">
-                  <div className="col">{this.state.recipes2[key].name}</div>
-                  <div className="col">{this.state.recipes2[key].calories}</div>
-                  <div className="col">{this.state.recipes2[key].fats}</div>
+                  <div className="col">{recipe.name}</div>
+                  <div className="col">{recipe.calories}</div>
+                  <div className="col">{recipe.fats}</div>
                   <div className="col">
-                    {this.state.recipes2[key].carbohydrates}
+                    {recipe.carbohydrates}
                   </div>
-                  <div className="col">{this.state.recipes2[key].proteins}</div>
+                  <div className="col">{recipe.proteins}</div>
                   <div className="col-md-2">
                     <select
                       name="day"
                       onChange={(e) => {
                         console.log(e.target);
                         this.props.setCurrentProduct({
-                          name: this.state.recipes2[key].name,
-                          calories: this.state.recipes2[key].calories,
-                          fats: this.state.recipes2[key].fats,
-                          carbohydrates: this.state.recipes2[key].carbohydrates,
-                          proteins: this.state.recipes2[key].proteins,
+                          name: recipe.name,
+                          calories: recipe.calories,
+                          fats: recipe.fats,
+                          carbohydrates: recipe.carbohydrates,
+                          proteins: recipe.proteins,
                           partOfDay: e.target.value,
                         });
                       }}
@@ -182,4 +182,3 @@ class Searcher extends React.Component {
 }
 
 export default Searcher;
-
