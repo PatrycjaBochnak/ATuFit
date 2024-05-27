@@ -33,6 +33,13 @@ class Searcher extends React.Component {
             })
             .then((response2) => {
               let recipes2 = response2.data;
+              console.log("Data from the second endpoint:", recipes2);
+              
+              // Ensure recipes2 is an array
+              if (!Array.isArray(recipes2)) {
+                recipes2 = Object.values(recipes2);
+              }
+
               if (recipes2.length === 0) {
                 console.log("No data found in the second endpoint");
               } else {
@@ -87,18 +94,10 @@ class Searcher extends React.Component {
               <React.Fragment key={index}>
                 <div className="row">
                   <div className="col">{recipe.title}</div>
-                  <div className="col">
-                    {recipe.nutrition.calories}
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition.fat}
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition.carbs}
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition.protein}
-                  </div>
+                  <div className="col">{recipe.nutrition.calories}</div>
+                  <div className="col">{recipe.nutrition.fat}</div>
+                  <div className="col">{recipe.nutrition.carbs}</div>
+                  <div className="col">{recipe.nutrition.protein}</div>
                   <div className="col-md-2">
                     <select
                       name="day"
@@ -114,9 +113,7 @@ class Searcher extends React.Component {
                     >
                       <option value={"choose part of day"}>Choose</option>
                       <option value={"breakfast"}>Breakfast</option>
-                      <option value={"secondBreakfast"}>
-                        Second Breakfast
-                      </option>
+                      <option value={"secondBreakfast"}>Second Breakfast</option>
                       <option value={"dinner"}>Dinner</option>
                       <option value={"supper"}>Supper</option>
                     </select>
@@ -142,9 +139,7 @@ class Searcher extends React.Component {
                   <div className="col">{recipe.name}</div>
                   <div className="col">{recipe.calories}</div>
                   <div className="col">{recipe.fats}</div>
-                  <div className="col">
-                    {recipe.carbohydrates}
-                  </div>
+                  <div className="col">{recipe.carbohydrates}</div>
                   <div className="col">{recipe.proteins}</div>
                   <div className="col-md-2">
                     <select
@@ -164,9 +159,7 @@ class Searcher extends React.Component {
                     >
                       <option value={"choose part of day"}>Choose</option>
                       <option value={"breakfast"}>Breakfast</option>
-                      <option value={"secondBreakfast"}>
-                        Second Breakfast
-                      </option>
+                      <option value={"secondBreakfast"}>Second Breakfast</option>
                       <option value={"dinner"}>Dinner</option>
                       <option value={"supper"}>Supper</option>
                     </select>
