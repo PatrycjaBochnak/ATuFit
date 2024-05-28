@@ -22,9 +22,11 @@ class Searcher extends React.Component {
       )
       .then((response1) => {
         let recipes1 = response1.data.products;
-
+  
         if (recipes1.length === 0) {
           console.log("No data found in the first endpoint");
+  
+          // Przeszukiwanie drugiego endpointu, jeśli pierwszy jest pusty
           axios
             .get("http://localhost:3001/api/getProducts/", {
               params: {
@@ -32,17 +34,16 @@ class Searcher extends React.Component {
               },
             })
             .then((response2) => {
-              let recipes2 = response2.data;
-              console.log("Data from the second endpoint:", recipes2);
-              
-              // Ensure recipes2 is an array
+              let recipes2 = response2.data.products;
+  
               if (!Array.isArray(recipes2)) {
                 recipes2 = Object.values(recipes2);
               }
-
+  
               if (recipes2.length === 0) {
                 console.log("No data found in the second endpoint");
               } else {
+                console.log("Data from the second endpoint:", recipes2);
                 this.setState({
                   recipes2: recipes2,
                 });
@@ -61,7 +62,8 @@ class Searcher extends React.Component {
         console.error("Error fetching data from the first endpoint:", error);
       });
   };
-
+  
+  
   render() {
     return (
       <div className="searcher">
