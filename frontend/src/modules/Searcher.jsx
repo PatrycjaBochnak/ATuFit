@@ -26,7 +26,6 @@ class Searcher extends React.Component {
         if (recipes1.length === 0) {
           console.log("No data found in the first endpoint");
   
-          // Przeszukiwanie drugiego endpointu, jeśli pierwszy jest pusty
           axios
             .get("http://localhost:3001/api/getProducts/", {
               params: {
