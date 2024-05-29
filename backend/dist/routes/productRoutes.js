@@ -18,8 +18,8 @@ const router = express_1.default.Router();
 router.use(express_1.default.json());
 router.get("/getProducts", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const products = yield product_1.default.find({ "name": req.query.product }).exec();
-        res.status(200).json({ products: products });
+        const products = yield product_1.default.find({ "name": req.query.name }).exec();
+        res.status(200).json(products);
     }
     catch (error) {
         console.error("Error fetching products:", error);
