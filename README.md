@@ -21,3 +21,4 @@ An application inspired by Fitatu
 ## Used tools
   
 ## Deployment 🚀
+
