@@ -1,7 +1,7 @@
 import ListResult from "./ListResult";
 import React from "react";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import Calendar from "react-calendar"
+
 import "../styles/Calendar.css";
 
 class CarouselDay extends React.Component {

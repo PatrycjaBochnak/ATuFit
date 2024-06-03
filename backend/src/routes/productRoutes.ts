@@ -8,7 +8,12 @@ router.use(express.json());
 
 router.get("/getProducts", async (req: any, res: any) => {
   try {
-    const products = await Product.find({ "name":req.query.product }).exec();
+    let products;
+    if (!req.query.name) {
+      products = await Product.find({});
+    } else {
+      products = await Product.find({ name: req.query.name });
+    }
     res.status(200).json({ products: products });
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -39,21 +44,22 @@ router.post("/submitData", async (req, res) => {
 
 async function fetchProducts() {
   try {
-    const documents = await Product.find({}).exec();
+    const documents = await Product.find({}); //.exec();
 
     if (!documents || documents.length === 0) {
       console.log("Can`t found any products");
       return;
     }
 
-    console.log("Found products:", JSON.stringify(documents));
+    // console.log("Found products:", JSON.stringify(documents));
     const productsArray = JSON.parse(JSON.stringify(documents));
-    console.log("Products Array:", productsArray);
+    return productsArray;
+    // console.log("Products Array:", productsArray);
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-fetchProducts();
+// fetchProducts();
 
 export default router;

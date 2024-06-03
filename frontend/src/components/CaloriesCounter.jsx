@@ -1,22 +1,24 @@
 import React from "react";
 import Searcher from "../modules/Searcher";
-import CarouselDay from "../modules/Calendar";
+import ListResult from "../modules/ListResult";
 import { useState } from "react";
 import "../styles/CaloriesCounter.css";
 
-function CaloriesCounter() {
-  const [state, setState] = useState(null);
+export const CaloriesCounter = () => {
+
+  const [state, setState] = useState([]);
   const setCurrentProduct = (data) => {
-    setState(data);
+    // setState({data});
+    setState([...state, data]);
+
+    console.log(state);
   };
   return (
     <div className="counter">
       <h2>Type products and search it</h2>
       <Searcher setCurrentProduct={setCurrentProduct} />
-      <h2>Add chosen product to right part of day</h2>
-      <CarouselDay product={state} />
+      <h2>lll</h2>
+      <ListResult props={state} />
     </div>
   );
 }
-
-export default CaloriesCounter;

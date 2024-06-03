@@ -18,8 +18,14 @@ const router = express_1.default.Router();
 router.use(express_1.default.json());
 router.get("/getProducts", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const products = yield product_1.default.find({ "name": req.query.name }).exec();
-        res.status(200).json(products);
+        let products;
+        if (!req.query.name) {
+            products = yield product_1.default.find({});
+        }
+        else {
+            products = yield product_1.default.find({ name: req.query.name });
+        }
+        res.status(200).json({ products: products });
     }
     catch (error) {
         console.error("Error fetching products:", error);
@@ -47,19 +53,20 @@ router.post("/submitData", (req, res) => __awaiter(void 0, void 0, void 0, funct
 function fetchProducts() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const documents = yield product_1.default.find({}).exec();
+            const documents = yield product_1.default.find({}); //.exec();
             if (!documents || documents.length === 0) {
                 console.log("Can`t found any products");
                 return;
             }
-            console.log("Found products:", JSON.stringify(documents));
+            // console.log("Found products:", JSON.stringify(documents));
             const productsArray = JSON.parse(JSON.stringify(documents));
-            console.log("Products Array:", productsArray);
+            return productsArray;
+            // console.log("Products Array:", productsArray);
         }
         catch (error) {
             console.error("Error:", error);
         }
     });
 }
-fetchProducts();
+// fetchProducts();
 exports.default = router;

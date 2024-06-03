@@ -1,10 +1,39 @@
 import React from "react";
 import "../styles/ListResult.css";
 
-function ListResult(props) {
+const ListResult = ({props}) => {
+  console.log(props);
   return (
     <>
-      <table className="meal-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Object</th>
+          </tr>
+        </thead>
+        <tbody>
+          { props.map( (p) => {
+            return(
+            <tr style={{display: "flex", gap: '2em'}}>
+              <td> { p.name } </td>
+              <td> { p.calories } kcal</td>
+              <td> { p.carbohydrates } g</td>
+              <td> { p.fats } g</td>
+              <td> { p.proteins } g</td>
+            </tr>
+          ) })}
+
+          <tr style={{display: "flex", gap: '2em'}}>
+            <td style={{fontWeight: "bold"}}>suma</td>
+            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {calories}) => n + calories, 0)} kcal</td>
+            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {carbohydrates}) => n + carbohydrates, 0)} g</td>
+            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {fats}) => n + fats, 0)} g</td>
+            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {proteins}) => n + proteins, 0)} g</td>
+          </tr>
+        </tbody>
+      </table>
+<>
+      {/* <table className="meal-table">
         <thead>
           <tr>
             <th>Breakfast</th>
@@ -73,7 +102,8 @@ function ListResult(props) {
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+</>
     </>
   );
 }

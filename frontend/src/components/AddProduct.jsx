@@ -6,7 +6,6 @@ import TableExpansion from "../modules/TableExpansion";
 
 const AddProduct = () => {
   const [data, setData] = useState("");
-
   const fetchData = async () => {
     try {
       const response = await axios.get("http://localhost:3001/hello");
@@ -25,7 +24,7 @@ const AddProduct = () => {
         <div id="#add-product">
           <h2>Not enough? Add missing products :)</h2>
           <div className="api">{data}</div>
-          <TableExpansion/>
+          <TableExpansion />
         </div>
       </div>
     </>

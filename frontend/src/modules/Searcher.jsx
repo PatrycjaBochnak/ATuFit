@@ -5,8 +5,8 @@ import "../styles/Searcher.css";
 class Searcher extends React.Component {
   state = {
     products: "",
-    recipes: null,
-    recipes2: null,
+    recipes: [],
+    recipes2: [],
   };
 
   onInputchange = (event) => {
@@ -15,6 +15,31 @@ class Searcher extends React.Component {
 
   view = () => {
     axios
+          .get("http://localhost:3001/api/getProducts/", {
+            params: {
+              name: this.state.products,
+            },
+          })
+          .then((response2) => {
+            let recipes2 = response2.data.products;
+
+            if (recipes2.length === 0) {
+              console.log("No data found in the second endpoint");
+            } else {
+              console.log("Data from the second endpoint:", recipes2);
+              this.setState({
+                recipes2: recipes2,
+              });
+            }
+          })
+          .catch((error) => {
+            console.error(
+              "Error fetching data from the second endpoint:",
+              error
+            );
+          });
+
+    axios
       .get(
         "https://api.spoonacular.com/food/products/search?query=" +
           this.state.products +
@@ -22,36 +47,10 @@ class Searcher extends React.Component {
       )
       .then((response1) => {
         let recipes1 = response1.data.products;
-  
         if (recipes1.length === 0) {
           console.log("No data found in the first endpoint");
-  
-          axios
-            .get("http://localhost:3001/api/getProducts/", {
-              params: {
-                name: this.state.products,
-              },
-            })
-            .then((response2) => {
-              let recipes2 = response2.data.products;
-  
-              if (!Array.isArray(recipes2)) {
-                recipes2 = Object.values(recipes2);
-              }
-  
-              if (recipes2.length === 0) {
-                console.log("No data found in the second endpoint");
-              } else {
-                console.log("Data from the second endpoint:", recipes2);
-                this.setState({
-                  recipes2: recipes2,
-                });
-              }
-            })
-            .catch((error) => {
-              console.error("Error fetching data from the second endpoint:", error);
-            });
         } else {
+          console.log("Data from the first endpoint:", recipes1);
           this.setState({
             recipes: recipes1,
           });
@@ -61,8 +60,7 @@ class Searcher extends React.Component {
         console.error("Error fetching data from the first endpoint:", error);
       });
   };
-  
-  
+
   render() {
     return (
       <div className="searcher">
@@ -81,7 +79,7 @@ class Searcher extends React.Component {
             Click!
           </button>
         </div>
-        {this.state.recipes && (
+        {this.state.recipes != 0 && (
           <div className="search-results">
             <div className="cal-macro-names">
               <div className="col">Name</div>
@@ -96,9 +94,9 @@ class Searcher extends React.Component {
                 <div className="row">
                   <div className="col">{recipe.title}</div>
                   <div className="col">{recipe.nutrition.calories}</div>
-                  <div className="col">{recipe.nutrition.fat}</div>
-                  <div className="col">{recipe.nutrition.carbs}</div>
-                  <div className="col">{recipe.nutrition.protein}</div>
+                  <div className="col">{recipe.nutrition.fat ? (recipe.nutrition.fat).slice(0, 4) : ""}</div>
+                  <div className="col">{recipe.nutrition.carbs ? (recipe.nutrition.carbs).slice(0, 4) : ""} g</div>
+                  <div className="col">{recipe.nutrition.protein ? (recipe.nutrition.protein).slice(0, 4) : ""}</div>
                   <div className="col-md-2">
                     <select
                       name="day"
@@ -112,11 +110,7 @@ class Searcher extends React.Component {
                       }}
                       style={{ width: "90%" }}
                     >
-                      <option value={"choose part of day"}>Choose</option>
-                      <option value={"breakfast"}>Breakfast</option>
-                      <option value={"secondBreakfast"}>Second Breakfast</option>
-                      <option value={"dinner"}>Dinner</option>
-                      <option value={"supper"}>Supper</option>
+                      <option value={"add product"}>Add</option>
                     </select>
                   </div>
                 </div>
@@ -124,7 +118,7 @@ class Searcher extends React.Component {
             ))}
           </div>
         )}
-        {this.state.recipes2 && (
+        {this.state.recipes2 != 0 && (
           <div className="search-results2">
             <div className="cal-macro-names">
               <div className="col">Name</div>
@@ -143,27 +137,15 @@ class Searcher extends React.Component {
                   <div className="col">{recipe.carbohydrates}</div>
                   <div className="col">{recipe.proteins}</div>
                   <div className="col-md-2">
-                    <select
-                      name="day"
-                      onChange={(e) => {
-                        console.log(e.target);
-                        this.props.setCurrentProduct({
+                      <button onClick={()=>{
+                         this.props.setCurrentProduct({
                           name: recipe.name,
                           calories: recipe.calories,
                           fats: recipe.fats,
                           carbohydrates: recipe.carbohydrates,
-                          proteins: recipe.proteins,
-                          partOfDay: e.target.value,
+                          proteins: recipe.proteins
                         });
-                      }}
-                      style={{ width: "90%" }}
-                    >
-                      <option value={"choose part of day"}>Choose</option>
-                      <option value={"breakfast"}>Breakfast</option>
-                      <option value={"secondBreakfast"}>Second Breakfast</option>
-                      <option value={"dinner"}>Dinner</option>
-                      <option value={"supper"}>Supper</option>
-                    </select>
+                      }}>Add</button>
                   </div>
                 </div>
               </React.Fragment>

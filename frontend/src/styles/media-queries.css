@@ -7,11 +7,17 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .przykladowaKlasa{
+        background-color: red;
+    }
     /* Domyślne style dla mniejszych ekranów (smartfony w orientacji poziomej lub mniejsze tablety) */
     /* Dodaj style dla ekranów o szerokości od 481px do 767px */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .przykladowaKlasa{
+        background-color: blue;
+    }
     /* Domyślne style dla większych tablety w orientacji poziomej */
     /* Dodaj style dla ekranów o szerokości od 768px do 1024px */
 }
