@@ -98,20 +98,15 @@ class Searcher extends React.Component {
                   <div className="col">{recipe.nutrition.carbs ? (recipe.nutrition.carbs).slice(0, 4) : ""} g</div>
                   <div className="col">{recipe.nutrition.protein ? (recipe.nutrition.protein).slice(0, 4) : ""}</div>
                   <div className="col-md-2">
-                    <select
-                      name="day"
-                      onChange={(e) => {
-                        console.log(e.target);
-                        this.props.setCurrentProduct({
-                          title: recipe.title,
-                          nutrition: recipe.nutrition,
-                          partOfDay: e.target.value,
+                  <button onClick={()=>{
+                         this.props.setCurrentProduct({
+                          name: recipe.name,
+                          calories: recipe.calories,
+                          fats: recipe.fats,
+                          carbohydrates: recipe.carbohydrates,
+                          proteins: recipe.proteins
                         });
-                      }}
-                      style={{ width: "90%" }}
-                    >
-                      <option value={"add product"}>Add</option>
-                    </select>
+                      }}>Add</button>
                   </div>
                 </div>
               </React.Fragment>

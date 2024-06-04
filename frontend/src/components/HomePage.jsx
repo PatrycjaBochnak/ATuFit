@@ -26,7 +26,7 @@ function HomePage() {
         </div>
       </div>
       <button className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center">
-          <NavButtons source="calculator-BMR" linkName="Let's start" />
+        <NavButtons source="calculator-BMR" linkName="Let's start" />
       </button>
     </div>
   );

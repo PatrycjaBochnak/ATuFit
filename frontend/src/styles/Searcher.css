@@ -1,36 +1,8 @@
 .searcher {
-  width: 600px;
+  width: 400px;
   margin-bottom: 20px;
 }
-/* .search-results {
-  max-width: 700px;
-  margin: 0 auto;
-  align-items: center;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-.cal-macro-names {
-  display: flex;
-  flex-flow: 1;
-  flex-direction: row;
-}
-.search-results .cal-macro-names {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
 
-.search-results .cal-macro-names .col-md-6,
-.search-results .cal-macro-names .col-md-1 {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.search-results .row:nth-child(even) {
-  background-color: #f2f2f2;
-} */
 .search-results {
   display: flex;
   flex-direction: column;

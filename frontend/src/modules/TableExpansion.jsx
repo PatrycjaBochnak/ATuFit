@@ -28,17 +28,27 @@ function TableExpansion() {
       .post("http://localhost:3001/api/submitData", formData)
       .then((res) => {
         alert(res.data.message);
+        handleClearForm();
       })
-      .catch(
-        (error) => {
-          console.log("Error:", error.message);
-        },
-        [handleSubmit]
-      );
+      .catch((error) => {
+        console.log("Error:", error.message);
+      });
   };
+
+  const handleClearForm = () => {
+    setFormData({
+      name: "",
+      calories: "",
+      fats: "",
+      carbohydrates: "",
+      proteins: "",
+    });
+  };
+
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
+
   return (
     <div className="table-expansion">
       <button

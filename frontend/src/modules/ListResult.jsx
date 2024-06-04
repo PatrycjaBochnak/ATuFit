@@ -24,8 +24,8 @@ const ListResult = ({props}) => {
           ) })}
 
           <tr style={{display: "flex", gap: '2em'}}>
-            <td style={{fontWeight: "bold"}}>suma</td>
-            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {calories}) => n + calories, 0)} kcal</td>
+            <td style={{fontWeight: "bold"}}>Total</td>
+            <td style={{fontWeight: "bold"}}>{ props.reduce((n, {calories}) => n + calories, 0)} cal</td>
             <td style={{fontWeight: "bold"}}>{ props.reduce((n, {carbohydrates}) => n + carbohydrates, 0)} g</td>
             <td style={{fontWeight: "bold"}}>{ props.reduce((n, {fats}) => n + fats, 0)} g</td>
             <td style={{fontWeight: "bold"}}>{ props.reduce((n, {proteins}) => n + proteins, 0)} g</td>

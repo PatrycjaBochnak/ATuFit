@@ -5,10 +5,8 @@ import { useState } from "react";
 import "../styles/CaloriesCounter.css";
 
 export const CaloriesCounter = () => {
-
   const [state, setState] = useState([]);
   const setCurrentProduct = (data) => {
-    // setState({data});
     setState([...state, data]);
 
     console.log(state);
@@ -17,8 +15,7 @@ export const CaloriesCounter = () => {
     <div className="counter">
       <h2>Type products and search it</h2>
       <Searcher setCurrentProduct={setCurrentProduct} />
-      <h2>lll</h2>
       <ListResult props={state} />
     </div>
   );
-}
+};
