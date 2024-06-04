@@ -5,13 +5,13 @@ const ListResult = ({props}) => {
   console.log(props);
   return (
     <>
+    <div className="daily-results">
+    <h2>Your daily calories result</h2>
       <table>
         <thead>
-          <tr>
-            <th>Object</th>
-          </tr>
+          
         </thead>
-        <tbody>
+        <tbody className="table-results">
           { props.map( (p) => {
             return(
             <tr style={{display: "flex", gap: '2em'}}>
@@ -32,6 +32,7 @@ const ListResult = ({props}) => {
           </tr>
         </tbody>
       </table>
+      </div>
 <>
       {/* <table className="meal-table">
         <thead>

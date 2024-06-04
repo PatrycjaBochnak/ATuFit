@@ -1,6 +1,6 @@
 .contact {
   border-collapse: collapse;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-flow: column;
   align-items: center;

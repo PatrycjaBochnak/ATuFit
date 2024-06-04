@@ -2,29 +2,24 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 100px;
-  padding-left: 90px !important;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 100;
 }
 .logo-text {
   font-size: 22px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: 700;
 }
+
 .nav-items a {
   cursor: pointer;
-  justify-content: space-between;
   position: relative;
   font-size: 18px;
   color: #fff;
   font-weight: 500;
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 .nav-items a::before {
   content: "";

@@ -1,6 +1,5 @@
 import React from "react";
-import Searcher from "../modules/Searcher";
-import ListResult from "../modules/ListResult";
+import Searcher from "./Searcher";
 import { useState } from "react";
 import "../styles/CaloriesCounter.css";
 
@@ -15,7 +14,6 @@ export const CaloriesCounter = () => {
     <div className="counter">
       <h2>Type products and search it</h2>
       <Searcher setCurrentProduct={setCurrentProduct} />
-      <ListResult props={state} />
     </div>
   );
 };

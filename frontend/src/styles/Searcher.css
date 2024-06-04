@@ -12,11 +12,11 @@
   display: flex;
   align-items: center;
   padding: 5px 0;
-  border-bottom: 1px solid #ccc; /* Dodaje linie oddzielające wiersze */
+  border-bottom: 1px solid #ccc;
 }
 
 .col {
-  flex: 1; /* Rozciąga kolumny, aby zajmować równą przestrzeń */
+  flex: 1;
   padding: 0 10px;
   text-align: center;
 }

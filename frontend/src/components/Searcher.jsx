@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import axios, { all } from "axios";
 import "../styles/Searcher.css";
 
 class Searcher extends React.Component {
@@ -62,6 +62,9 @@ class Searcher extends React.Component {
   };
 
   render() {
+    const { recipes, recipes2 } = this.state;
+    const allRecipes = [...recipes, ...recipes2];
+
     return (
       <div className="searcher">
         <div className="search-field">
@@ -79,7 +82,7 @@ class Searcher extends React.Component {
             Click!
           </button>
         </div>
-        {this.state.recipes != 0 && (
+        {allRecipes.length != 0 && (
           <div className="search-results">
             <div className="cal-macro-names">
               <div className="col">Name</div>
@@ -94,17 +97,17 @@ class Searcher extends React.Component {
                 <div className="row">
                   <div className="col">{recipe.title}</div>
                   <div className="col">{recipe.nutrition.calories}</div>
-                  <div className="col">{recipe.nutrition.fat ? (recipe.nutrition.fat).slice(0, 4) : ""}</div>
-                  <div className="col">{recipe.nutrition.carbs ? (recipe.nutrition.carbs).slice(0, 4) : ""} g</div>
-                  <div className="col">{recipe.nutrition.protein ? (recipe.nutrition.protein).slice(0, 4) : ""}</div>
+                  <div className="col">{recipe.nutrition.fat ? (recipe.nutrition.fat).slice(0, 3) : ""} g</div>
+                  <div className="col">{recipe.nutrition.carbs ? (recipe.nutrition.carbs).slice(0, 3) : ""} g</div>
+                  <div className="col">{recipe.nutrition.protein ? (recipe.nutrition.protein).slice(0, 3) : ""} g</div>
                   <div className="col-md-2">
                   <button onClick={()=>{
                          this.props.setCurrentProduct({
-                          name: recipe.name,
-                          calories: recipe.calories,
-                          fats: recipe.fats,
-                          carbohydrates: recipe.carbohydrates,
-                          proteins: recipe.proteins
+                          name: recipe.title,
+                          calories: recipe.nutrition.calories,
+                          fats: recipe.nutrition.fat,
+                          carbohydrates: recipe.nutrition.carbs,
+                          proteins: recipe.nutrition.protein
                         });
                       }}>Add</button>
                   </div>
@@ -128,9 +131,9 @@ class Searcher extends React.Component {
                 <div className="row">
                   <div className="col">{recipe.name}</div>
                   <div className="col">{recipe.calories}</div>
-                  <div className="col">{recipe.fats}</div>
-                  <div className="col">{recipe.carbohydrates}</div>
-                  <div className="col">{recipe.proteins}</div>
+                  <div className="col">{recipe.fats} g</div>
+                  <div className="col">{recipe.carbohydrates} g</div>
+                  <div className="col">{recipe.proteins} g</div>
                   <div className="col-md-2">
                       <button onClick={()=>{
                          this.props.setCurrentProduct({
