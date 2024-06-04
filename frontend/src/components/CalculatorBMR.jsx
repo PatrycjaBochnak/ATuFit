@@ -85,14 +85,29 @@ class CalculatorBMR extends Component {
     } else if (this.state.activity == "1.9") {
       ActCalc = this.state.bmr * 1.9;
     }
-    this.setState({ finalResult: ActCalc });
+    this.setState({ finalResult: parseInt(ActCalc.toFixed(0)) });
     this.ActCalc = ActCalc;
     this.setCookie();
   }
 
   setCookie = () => {
-    Cookies.set("finalResult", this.ActCalc, { expires: 7 });
+    Cookies.set("finalResult", this.ActCalc, { expires: null });
   };
+
+  calculateMacronutrients = (totalCalories) => {
+    const proteinPercent = 20; 
+    const carbohydratePercent = 50; 
+    const fatPercent = 30; 
+
+    const protein = (totalCalories * proteinPercent) / 100;
+    const carbohydrates = (totalCalories * carbohydratePercent) / 100;
+    const fats = (totalCalories * fatPercent) / 100;
+    console.log(protein, carbohydrates, fats)
+
+    return { protein, carbohydrates, fats };
+  };
+
+
 
   render() {
     let error;
