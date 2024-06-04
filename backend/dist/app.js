@@ -25,9 +25,6 @@ app.use((req, res, next) => {
     next();
 });
 app.use("/api", productRoutes_1.default);
-app.get("/hello", (req, res) => {
-    res.send("Hello World");
-});
 const PORT = 3001;
 const server = app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     try {

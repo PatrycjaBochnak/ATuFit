@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./connectWithMongo";
 import productRoutes from "./routes/productRoutes";
-import fs from "fs"; 
 
 const app = express();
 
@@ -16,10 +15,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", productRoutes);
-
-app.get("/hello", (req: any, res: any) => {
-  res.send("Hello World");
-});
 
 const PORT = 3001;
 const server = app.listen(PORT, async () => {
