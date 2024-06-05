@@ -3,20 +3,22 @@ import "../styles/ListResult.css";
 import Cookies from "js-cookie";
 
 const ListResult = ({ props }) => {
-  const calCookie = Cookies.get("finalResult")
-  console.log(props);
+  const calories = Cookies.get("finalResult");
+  const protein = Cookies.get("protein");
+  const carbohydrates = Cookies.get("carbohydrates");
+  const fats = Cookies.get("fats");
   return (
     <>
       <div className="daily-results">
         <div className="search-results2">
           <h2>Your daily calories result</h2>
           <div className="table-results">
-              <div className="row">
-                <div className="col">Name</div>
-                <div className="col">Calories</div>
-                <div className="col">Fats</div>
-                <div className="col">Carbs</div>
-                <div className="col">Proteins</div>
+            <div className="row">
+              <div className="col">Name</div>
+              <div className="col">Calories</div>
+              <div className="col">Fats</div>
+              <div className="col">Carbs</div>
+              <div className="col">Proteins</div>
             </div>
             {props.map((p, index) => (
               <React.Fragment key={index}>
@@ -60,10 +62,11 @@ const ListResult = ({ props }) => {
                     .toFixed(1)}{" "}
                   g
                 </div>
-                <div className="row">Result Cookie calories: {calCookie}</div>
-                <div className="row">Fats</div>
-                <div className="row">Carbs</div>
-                <div className="row">Proteins</div>
+                <div className="row">Results</div>
+                <div className="row">Calories: {calories} cal</div>
+                <div className="row">Fats: {fats} g</div>
+                <div className="row">Carbs: {carbohydrates} g</div>
+                <div className="row">Proteins: {protein} g</div>
               </div>
             </div>
           </div>
