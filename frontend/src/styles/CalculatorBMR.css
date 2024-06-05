@@ -15,12 +15,10 @@
 }
 .calculator-BMR h2 {
   margin-top: 24px;
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 #bmr-calc {
   height: 620px;
-  width: 400px;
-  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
