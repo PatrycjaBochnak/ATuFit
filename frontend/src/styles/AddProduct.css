@@ -16,3 +16,48 @@
     margin-top: 24px;
     margin-bottom: 24px;
 }
+.table-expansion {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .label { 
+    font-weight: bold;
+  }
+  #form {
+    padding: 20px;
+  }
+  
+  .name,
+  .calories,
+  .fats,
+  .carbohydrates,
+  .proteins {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .input-name,
+  .input-calories,
+  .input-fats,
+  .input-carbohydrates,
+  .input.proteins {
+    margin-bottom: 20px;
+  }
+  
+  .input-name,
+  .input-calories,
+  .input-fats,
+  .input-carbs,
+  .input.proteins {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  

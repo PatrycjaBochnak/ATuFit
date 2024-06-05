@@ -1,3 +1,41 @@
+.counter { 
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2c6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.counter h2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.search-field {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.calendar-calories { 
+  gap: 1em;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .searcher {
   width: 400px;
   margin-bottom: 20px;

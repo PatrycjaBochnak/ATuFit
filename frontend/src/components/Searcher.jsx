@@ -54,6 +54,8 @@ class Searcher extends React.Component {
     const allRecipes = [...recipes, ...recipes2];
 
     return (
+      <div className="counter">
+      <h2>Type products and search it</h2>
       <div className="searcher">
         <div className="search-field">
           <input
@@ -135,6 +137,7 @@ class Searcher extends React.Component {
             ))}
           </div>
         )}
+      </div>
       </div>
     );
   }

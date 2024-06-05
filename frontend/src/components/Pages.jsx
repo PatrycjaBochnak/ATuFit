@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import CalculatorBMR from "./CalculatorBMR";
-import { CaloriesCounter } from "./CaloriesCounter";
 import Contact from "./Contact";
 import HomePage from "./HomePage";
 import AddProduct from "./AddProduct";
+import Searcher from "./Searcher";
 import ListResult from "./ListResult";
 
 const Pages = () => {
@@ -17,7 +17,7 @@ const Pages = () => {
     <>
       <HomePage />
       <CalculatorBMR />
-      <CaloriesCounter setCurrentProduct={setCurrentProduct} />
+      <Searcher setCurrentProduct={setCurrentProduct} />
       <AddProduct />
       <ListResult props={state} />
       <Contact />
