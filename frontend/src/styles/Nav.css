@@ -21,6 +21,9 @@
   text-decoration: none;
   margin-left: 80px;
 }
+.nav-items a:hover {
+  color: white;
+}
 .nav-items a::before {
   content: "";
   position: absolute;
