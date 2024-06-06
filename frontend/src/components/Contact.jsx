@@ -4,7 +4,6 @@ import "../styles/Contact.css";
 
 const Contact = () => {
   return (
-    <>
       <div className="contact">
         <div className="contact-things">
           <h2>Get in touch</h2>
@@ -43,7 +42,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

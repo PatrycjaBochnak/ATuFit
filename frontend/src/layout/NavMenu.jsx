@@ -3,16 +3,22 @@ import NavButtons from "../components/NavButtons";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import "../styles/Nav.css"
+import "../styles/Nav.css";
 
 const NavMenu = () => {
   return (
-<Navbar expand="lg" className="bg-body-tertiary nav" style={{ position: 'fixed' }}>
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary nav"
+      style={{ position: "fixed" }}
+    >
       <Container>
-        <Navbar.Brand className="logo-text" style={{ color: "white"}}>ATuFit</Navbar.Brand>
+        <Navbar.Brand className="logo-text" style={{ color: "white" }}>
+          ATuFit
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto nav-items" style={{textDecoration: "none"}}>
+          <Nav className="me-auto nav-items" style={{ textDecoration: "none" }}>
             <NavButtons source="home-page" linkName="Start" />
             <NavButtons source="calculator-BMR" linkName="Calculator" />
             <NavButtons source="counter" linkName="Calories counter" />{" "}
@@ -24,6 +30,6 @@ const NavMenu = () => {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavMenu;

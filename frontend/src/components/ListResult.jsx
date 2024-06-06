@@ -8,7 +8,6 @@ const ListResult = ({ props }) => {
   const carbohydrates = Cookies.get("carbohydrates");
   const fats = Cookies.get("fats");
   return (
-    <>
       <div className="daily-results">
         <div className="search-results2">
           <h2>Your daily calories result</h2>
@@ -72,7 +71,6 @@ const ListResult = ({ props }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
