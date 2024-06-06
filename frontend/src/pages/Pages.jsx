@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import CalculatorBMR from "./CalculatorBMR";
-import Contact from "./Contact";
-import HomePage from "./HomePage";
-import AddProduct from "./AddProduct";
-import Searcher from "./Searcher";
-import ListResult from "./ListResult";
+import CalculatorBMR from "../components/CalculatorBMR";
+import Contact from "../components/Contact";
+import HomePage from "../components/HomePage";
+import AddProduct from "../components/AddProduct";
+import Searcher from "../components/Searcher";
+import ListResult from "../components/ListResult.jsx"
 
 const Pages = () => {
   const [state, setState] = useState([]);

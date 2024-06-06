@@ -1,10 +1,14 @@
 .contact {
+  min-height: 100vh;
+}
+
+.contact-things {
+  height: 50vh;
   border-collapse: collapse;
-  min-height: 25vh;
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   background-color: #f2f2f2c6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
