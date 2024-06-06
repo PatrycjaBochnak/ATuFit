@@ -13,11 +13,13 @@
   margin-bottom: 60px;
   text-align: center;
 }
-.search-results2 { 
+
+.search-results2 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
+
 .table-results {
   display: flex;
   flex-direction: column;
@@ -30,7 +32,53 @@
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .total-score {
   margin-top: auto;
   font-weight: bold;
+}
+
+/* Media Queries */
+
+@media (max-width: 599px) {
+  .daily-results {
+    margin: 60px 0px 60px 0px;
+  }
+
+  .search-results2 h2 {
+    font-size: 1.2rem;
+  }
+
+  .table-results {
+    padding: 10px;
+  }
+
+  .col {
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .daily-results {
+    margin: 50px;
+  }
+
+  .table-results {
+    padding: 20px;
+  }
+
+  .col {
+    flex-basis: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .table-results {
+    padding: 30px;
+  }
+
+  .col {
+    flex-basis: 15%;
+  }
 }

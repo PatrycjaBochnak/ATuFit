@@ -75,3 +75,24 @@
 .col:first-child {
   text-align: left;
 }
+
+/* Media Queries */
+
+@media (max-width: 599px) {
+  .counter {
+    margin: 10px;
+  }
+  .counter h2 { 
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .counter {
+    margin: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,8 +1,4 @@
 .contact {
-  min-height: 100vh;
-}
-
-.contact-things {
   height: 50vh;
   border-collapse: collapse;
   display: flex;
@@ -121,4 +117,49 @@
 .linkedin:hover,
 .portfolio:hover {
   cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (max-width: 599px) {
+  .contact-things {
+    margin: 60px 0px 60px 0px;
+  }
+
+  .contact h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact p {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .contact {
+    margin: 60px 0px 60px 0px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact {
+    margin: 15%;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+  }
 }

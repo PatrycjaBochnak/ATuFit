@@ -5,7 +5,6 @@ import "../styles/Contact.css";
 const Contact = () => {
   return (
       <div className="contact">
-        <div className="contact-things">
           <h2>Get in touch</h2>
           <p>
             Feel free to reach out! Whether you have a question, want to
@@ -41,7 +40,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
   );
 };
 

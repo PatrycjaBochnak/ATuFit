@@ -37,6 +37,7 @@ const AddProduct = () => {
 
   const handleClearForm = () => {
     setFormData({
+      id: "",
       name: "",
       calories: "",
       fats: "",
@@ -51,85 +52,92 @@ const AddProduct = () => {
 
   return (
     <div className="add-product">
-      <div id="#add-product">
-        <h2>Not enough? Add missing products</h2>
-        <div className="table-expansion">
-      <button
-        className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center align-content-center align-items-center"
-        onClick={toggleExpand}
-      >
-        Add your own product
-      </button>
-      {expanded && (
-        <form id="form" onSubmit={handleSubmit}>
-          <label className="label">
-            Name:
-            <input
-              type="text"
-              name="name"
-              placeholder="Type product name..."
-              value={formData.name}
-              onChange={handleChange}
-              className="name"
-            />
-          </label>
-          <label className="label">
-            Calories:
-            <input
-              type="text"
-              name="calories"
-              placeholder="Calories..."
-              value={formData.calories}
-              onChange={handleChange}
-              className="calories"
-            />
-          </label>
-          <label className="label">
-            Fats:
-            <input
-              type="text"
-              name="fats"
-              placeholder="Fats..."
-              value={formData.fats}
-              onChange={handleChange}
-              className="fats"
-            />
-          </label>
-          <label className="label">
-            Carbs:
-            <input
-              type="text"
-              name="carbohydrates"
-              placeholder="Carbs..."
-              value={formData.carbohydrates}
-              onChange={handleChange}
-              className="carbohydrates"
-            />
-          </label>
-          <label className="label">
-            Proteins:
-            <input
-              type="text"
-              name="proteins"
-              placeholder="Proteins..."
-              value={formData.proteins}
-              onChange={handleChange}
-              className="proteins"
-            />
-          </label>
-          <button
-            className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      )}
-      </div>
+      <h2>Not enough? Add missing products</h2>
+      <div className="table-expansion">
+        <button
+          className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center align-items-center align-content-center btn-same-width"
+          onClick={toggleExpand}
+        >
+          Add your own product
+        </button>
+        {expanded && (
+          <form id="form" onSubmit={handleSubmit}>
+            <label className="label">
+              Name:
+              <input
+                type="text"
+                name="name"
+                placeholder="Type product name..."
+                value={formData.name}
+                onChange={handleChange}
+                className="input"
+              />
+            </label>
+            <label className="label">
+              Calories:
+              <input
+                type="text"
+                name="calories"
+                placeholder="Calories..."
+                value={formData.calories}
+                onChange={handleChange}
+                className="input"
+                min="0"
+                max="999"
+              />
+            </label>
+            <label className="label">
+              Fats:
+              <input
+                type="text"
+                name="fats"
+                placeholder="Fats..."
+                value={formData.fats}
+                onChange={handleChange}
+                className="input"
+                min="0"
+                max="999"
+              />
+            </label>
+            <label className="label">
+              Carbs:
+              <input
+                type="text"
+                name="carbohydrates"
+                placeholder="Carbs..."
+                value={formData.carbohydrates}
+                onChange={handleChange}
+                className="input"
+                min="0"
+                max="999"
+              />
+            </label>
+            <label className="label">
+              Proteins:
+              <input
+                type="text"
+                name="proteins"
+                placeholder="Proteins..."
+                value={formData.proteins}
+                onChange={handleChange}
+                className="input"
+                min="0"
+                max="999"
+              />
+            </label>
+            <div className="submit-container">
+              <button
+                className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center align-items-center align-content-center btn-same-width"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );
-}
-
+};
 
 export default AddProduct;
