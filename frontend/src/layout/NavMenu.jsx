@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../styles/Nav.css"
 
-function NavMenu() {
+const NavMenu = () => {
   return (
 <Navbar expand="lg" className="bg-body-tertiary nav" style={{ position: 'fixed' }}>
       <Container>

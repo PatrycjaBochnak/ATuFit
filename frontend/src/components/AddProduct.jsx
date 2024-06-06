@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/AddProduct.css";
 
-function AddProduct() {
+const AddProduct = () => {
   const [expanded, setExpanded] = useState(false);
   const [formData, setFormData] = useState({
     id: "",

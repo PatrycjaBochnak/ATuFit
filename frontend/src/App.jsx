@@ -3,7 +3,7 @@ import { Layout } from "./layout/Layout";
 import Pages from "./pages/Pages";
 import "./styles/App.css"
 
-function App() {
+const App = () => {
   return (
     <>
       <Layout>

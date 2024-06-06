@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/HomePage.css";
 import NavButtons from "./NavButtons";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div className="home-page">
       <div className="welcome">
