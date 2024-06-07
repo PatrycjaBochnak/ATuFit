@@ -7,27 +7,18 @@
   background-color: #f2f2f2c6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-top: 60px;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 60px;
-  border-collapse: collapse;
-}
-
-.welcome,
-.welcome-opinions,
-button {
-  margin-top: 20px;
+  margin: 60px 15%;
+  text-align: center;
 }
 
 .welcome {
   padding: 30px;
+  margin-top: 20px;
 }
 
-.welcome h5,
-.welcome h1,
-.welcome p {
-  margin: 0;
+.welcome h5 {
+  font-size: 1.2rem;
+  color: #444;
 }
 
 .welcome h1 {
@@ -45,20 +36,29 @@ button {
 .welcome-opinions {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin: 30px 0;
   width: 100%;
 }
 
-.first-op,
-.second-op {
-  width: 50%;
+.first-op, .second-op {
+  width: 45%;
   box-sizing: border-box;
   border: 1px solid #ccc;
   padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .second-op {
-  margin-left: 20px;
+  margin-left: 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Media Queries */
@@ -68,6 +68,9 @@ button {
     margin: 60px 0px 60px 0px;
   }
 
+  .welcome {
+    margin-top: 0px;
+  }
   .welcome h1 {
     font-size: 1.5rem;
   }
@@ -80,7 +83,7 @@ button {
     flex-direction: row;
     gap: 2em;
     align-items: center;
-    padding: 30px;
+    margin: 0;
   }
 
   .first-op,
@@ -97,19 +100,31 @@ button {
 
 @media (min-width: 600px) and (max-width: 1199px) {
   .home-page {
-    margin: 50px;
+    margin: 60px 0;
   }
 
-  .welcome h5 {
-    font-size: 1.5rem;
-  }
+ .welcome {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-top: 130px;
+ }
 
   .welcome h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .welcome p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .welcome-opinions {
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    margin: 0;
+    width: 70%;
+    margin-bottom: 100px;
   }
 
   .first-op,
@@ -118,8 +133,8 @@ button {
     margin: 10px 0;
     padding: 20px;
   }
-}
 
-@media (min-width: 1200px) {
-
+  .second-op {
+    margin-left: 0;
+  }
 }
