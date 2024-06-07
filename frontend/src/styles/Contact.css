@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.contact p { 
+  color: #444;
+}
+
 .social-media-icons {
   color: gray;
   display: flex;
@@ -122,7 +126,7 @@
 /* Media Queries */
 
 @media (max-width: 599px) {
-  .contact-things {
+  .contact {
     margin: 60px 0px 60px 0px;
   }
 
@@ -131,35 +135,28 @@
   }
 
   .contact p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
-}
-@media (max-width: 599px) {
-  .contact {
-    margin: 60px 0px 60px 0px;
+  .ig,
+  .portfolio,
+  .linkedin {
+    width: 20%;
+    height: 20%;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
   .contact {
-    margin: 15%;
+    margin: 50px;
   }
 
   .contact h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .contact h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
   }
 
   .contact p {
     font-size: 1.2rem;
+    margin-bottom: 40px;
   }
 }

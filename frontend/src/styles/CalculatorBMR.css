@@ -1,25 +1,22 @@
 .calculator-BMR {
-  border-collapse: collapse;
-  min-height: 100vh;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   padding: 20px;
   background-color: #f2f2f2c6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 60px;
+  margin: 60px 15%;
   text-align: center;
 }
+
 .calculator-BMR h2 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin: 24px 0;
+  font-size: 2rem;
 }
+
 #bmr-calc {
-  height: 620px;
-  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -35,17 +32,18 @@
 
 .label {
   font-weight: bold;
+  font-size: 1em;
 }
 
 .input-gender {
   display: flex;
   justify-content: center;
-  flex-flow: column;
-  font-weight: bold;
+  margin-bottom: 15px;
 }
+
 .input-gender label {
-  display: flex;
-  justify-content: flex-start;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
 .genderF,
@@ -57,13 +55,15 @@
 .input-height,
 .input-age {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .weight,
 .height,
 .age {
-  width: 100%;
+  width: calc(100% - 16px);
   padding: 8px;
+  margin: 0 8px;
   box-sizing: border-box;
 }
 
@@ -87,11 +87,13 @@
 
 .input-workout {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .activity {
-  width: 100%;
+  width: calc(100% - 16px);
   padding: 8px;
+  margin: 0 8px;
   box-sizing: border-box;
 }
 
@@ -110,7 +112,4 @@
   .calculator-BMR {
     margin: 50px;
   }
-}
-
-@media (min-width: 1200px) {
 }

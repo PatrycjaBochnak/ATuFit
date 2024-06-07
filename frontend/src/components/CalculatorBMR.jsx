@@ -48,6 +48,10 @@ class CalculatorBMR extends Component {
     const { bmr, activity } = this.state;
     let ActCalc = 0;
 
+    if (!bmr || !activity) {
+      this.setState({ error: "All fields are required" });
+      return;
+    }
     if (activity) {
       ActCalc = bmr * parseFloat(activity);
       const fixedResultNumber = parseInt(ActCalc.toFixed(0));
@@ -94,13 +98,17 @@ class CalculatorBMR extends Component {
 
     return (
       <div className="calculator-BMR">
-        <h2>Firstly, insert your details to check Your BMR and Total Metabolism</h2>
+        <h2>
+          Firstly, insert your details to check Your BMR and Total Metabolism
+        </h2>
         <div id="bmr-calc">
           <div className="form">
             {error && <div className="error">{error}</div>}
 
-            <label className="input-gender">Gender</label>
-            <label>
+            <label className="input-gender" style={{ fontWeight: "bold", fontSize: "1em"}}>
+              Gender
+            </label>
+            <label style={{ marginBottom: "10px" }}>
               <input
                 type="radio"
                 checked={gender === "1"}
@@ -111,7 +119,7 @@ class CalculatorBMR extends Component {
               />
               Female
             </label>
-            <label>
+            <label style={{ marginBottom: "20px" }}>
               <input
                 type="radio"
                 checked={gender === "2"}
@@ -189,7 +197,9 @@ class CalculatorBMR extends Component {
                     <option value="">Select your Activity</option>
                     <option value="1.2">No exercise</option>
                     <option value="1.375">Light (1-3 times per week)</option>
-                    <option value="1.55">Moderately (3-5 times per week)</option>
+                    <option value="1.55">
+                      Moderately (3-5 times per week)
+                    </option>
                     <option value="1.725">Heavy (6-7 times per week)</option>
                     <option value="1.9">Very Heavy (6-7 times per week)</option>
                   </select>
