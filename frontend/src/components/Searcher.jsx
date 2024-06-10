@@ -109,8 +109,7 @@ class Searcher extends React.Component {
                       : recipe.proteins}{" "}
                     g
                   </div>
-                  <div className="col-md-2">
-                    <button
+                    <button className="col-xl-1"
                       onClick={() => {
                         this.props.setCurrentProduct({
                           name: recipe.title || recipe.name,
@@ -132,7 +131,6 @@ class Searcher extends React.Component {
                       Add
                     </button>
                   </div>
-                </div>
               </React.Fragment>
             ))}
           </div>

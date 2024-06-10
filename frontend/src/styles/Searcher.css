@@ -17,7 +17,6 @@
   margin-bottom: 24px;
 }
 .search-field {
-  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -41,7 +40,6 @@
 }
 
 .search-results {
-  max-width: 600px;
   margin: 0 auto;
   margin-top: 60px;
   padding: 20px;
@@ -82,8 +80,28 @@
   .counter {
     margin: 10px;
   }
-  .counter h2 { 
+
+  .counter h2 {
     font-size: 1.2rem;
+  }
+
+  .search-results, .calendar-calories, .search-field {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .col {
+    padding: 5px 0;
+  }
+
+  .cal-macro-names {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -91,8 +109,23 @@
   .counter {
     margin: 50px;
   }
-}
 
-@media (min-width: 1200px) {
+  .search-results, .calendar-calories, .search-field {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
+  .row {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .col {
+    padding: 5px 10px;
+  }
+
+  .cal-macro-names {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
