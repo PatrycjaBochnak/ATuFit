@@ -55,87 +55,85 @@ class Searcher extends React.Component {
 
     return (
       <div className="counter">
-      <h2>Type products and search it</h2>
-      <div className="searcher">
-        <div className="search-field">
-          <input
-            type="text"
-            placeholder="Search..."
-            name="search"
-            onChange={this.onInputchange}
-          />
-          <button
-            className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
-            type="submit"
-            onClick={this.view}
-          >
-            Click!
-          </button>
-        </div>
-        {allRecipes.length !== 0 && (
-          <div className="search-results">
-            <div className="cal-macro-names">
-              <div className="col">Name</div>
-              <div className="col">Calories</div>
-              <div className="col">Fats</div>
-              <div className="col">Carbs</div>
-              <div className="col">Proteins</div>
-              <div className="col">Add</div>
-            </div>
-            {allRecipes.map((recipe, index) => (
-              <React.Fragment key={index}>
-                <div className="row">
-                  <div className="col">{recipe.title || recipe.name}</div>
-                  <div className="col">
-                    {recipe.nutrition
-                      ? recipe.nutrition.calories
-                      : recipe.calories}
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition
-                      ? recipe.nutrition.fat.slice(0, 3)
-                      : recipe.fats}{" "}
-                    g
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition
-                      ? recipe.nutrition.carbs.slice(0, 3)
-                      : recipe.carbohydrates}{" "}
-                    g
-                  </div>
-                  <div className="col">
-                    {recipe.nutrition
-                      ? recipe.nutrition.protein.slice(0, 3)
-                      : recipe.proteins}{" "}
-                    g
-                  </div>
-                    <button className="col-xl-1"
-                      onClick={() => {
-                        this.props.setCurrentProduct({
-                          name: recipe.title || recipe.name,
-                          calories: recipe.nutrition
-                            ? recipe.nutrition.calories
-                            : recipe.calories,
-                          fats: recipe.nutrition
-                            ? recipe.nutrition.fat
-                            : recipe.fats,
-                          carbohydrates: recipe.nutrition
-                            ? recipe.nutrition.carbs
-                            : recipe.carbohydrates,
-                          proteins: recipe.nutrition
-                            ? recipe.nutrition.protein
-                            : recipe.proteins,
-                        });
-                      }}
-                    >
-                      Add
-                    </button>
-                  </div>
-              </React.Fragment>
-            ))}
+        <h2>Type products and search it</h2>
+        <div className="searcher">
+          <div className="search-field">
+            <input
+              type="text"
+              placeholder="Search..."
+              name="search"
+              onChange={this.onInputchange}
+            />
+            <button
+              className="btn btn-outline-success py-3 px-5 mt-2 font-weight-bold d-flex justify-content-center"
+              type="submit"
+              onClick={this.view}
+            >
+              Click!
+            </button>
           </div>
-        )}
-      </div>
+          {allRecipes.length !== 0 && (
+            <div className="search-results">
+              <div className="cal-macro-names">
+                <div className="col">Name</div>
+                <div className="col">Calories</div>
+                <div className="col">Fats</div>
+                <div className="col">Carbs</div>
+                <div className="col">Proteins</div>
+                <div className="col">Add</div>
+              </div>
+              {allRecipes.map((recipe, index) => (
+                <React.Fragment key={index}>
+                  <div className="row">
+                    <div className="col" style={{ textAlign: "center", fontWeight: "bold" }}>
+                      {recipe.title || recipe.name}
+                    </div>
+                    <div className="col">
+                      {recipe.nutrition
+                        ? recipe.nutrition.calories
+                        : recipe.calories}{" "}
+                      cal
+                    </div>
+                    <div className="col">
+                      {recipe.nutrition
+                        ? recipe.nutrition.fat.slice(0, 3)
+                        : recipe.fats}{" "}
+                      g
+                    </div>
+                    <div className="col">
+                      {recipe.nutrition
+                        ? recipe.nutrition.carbs.slice(0, 3)
+                        : recipe.carbohydrates}{" "}
+                      g
+                    </div>
+                    <div className="col">
+                      {recipe.nutrition
+                        ? recipe.nutrition.protein.slice(0, 3)
+                        : recipe.proteins}{" "}
+                      g
+                    </div>
+                    <div className="col">
+                      <button
+                        className="btn btn-outline-success btn-add"
+                        onClick={() => {
+                          this.props.setCurrentProduct({
+                            name: recipe.title || recipe.name,
+                            calories: recipe.nutrition ? recipe.nutrition.calories : recipe.calories,
+                            fats: recipe.nutrition ? recipe.nutrition.fat : recipe.fats,
+                            carbohydrates: recipe.nutrition ? recipe.nutrition.carbs : recipe.carbohydrates,
+                            proteins: recipe.nutrition ? recipe.nutrition.protein : recipe.proteins,
+                          });
+                        }}
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     );
   }
