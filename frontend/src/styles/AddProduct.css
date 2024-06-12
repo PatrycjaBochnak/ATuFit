@@ -84,7 +84,9 @@
   .add-product h2 {
     font-size: 1.5rem
   }
-
+  .table-expansion {
+    width: 355px;
+  }
   .label {
     margin-bottom: 15px;
   }

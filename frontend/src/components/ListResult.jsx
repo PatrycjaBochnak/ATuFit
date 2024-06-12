@@ -12,8 +12,8 @@ const ListResult = ({ props }) => {
         <div className="search-results2">
           <h2>Your daily calories result</h2>
           <div className="table-results">
-            <div className="row">
-              <div className="col">Name</div>
+            <div className="row" style={{ fontWeight: "bold" }}>
+              <div className="col" style={{ textAlign: "center"}}>Name</div>
               <div className="col">Calories</div>
               <div className="col">Fats</div>
               <div className="col">Carbs</div>
@@ -22,8 +22,8 @@ const ListResult = ({ props }) => {
             {props.map((p, index) => (
               <React.Fragment key={index}>
                 <div className="row">
-                  <div className="col">{p.name}</div>
-                  <div className="col">{p.calories} </div>
+                  <div className="col" style={{ fontWeight: "bold"}}>{p.name}</div>
+                  <div className="col">{p.calories} cal</div>
                   <div className="col">
                     {parseFloat(p.carbohydrates).toFixed(1)} g
                   </div>
@@ -36,7 +36,7 @@ const ListResult = ({ props }) => {
             ))}
             <div className="total-score">
               <div className="row">
-                <div className="col">Total</div>
+                <div className="col" style={{textAlign: "center"}}>Total</div>
                 <div className="col">
                   {props.reduce((n, { calories }) => n + calories, 0)} cal
                 </div>
@@ -65,7 +65,7 @@ const ListResult = ({ props }) => {
                 <div className="row">Calories: {calories} cal</div>
                 <div className="row">Fats: {fats} g</div>
                 <div className="row">Carbs: {carbohydrates} g</div>
-                <div className="row">Proteins: {protein} g</div>
+                <div className="row" style={{ borderBottom: "none"}}>Proteins: {protein} g</div>
               </div>
             </div>
           </div>

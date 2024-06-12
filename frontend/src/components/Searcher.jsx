@@ -85,7 +85,10 @@ class Searcher extends React.Component {
               {allRecipes.map((recipe, index) => (
                 <React.Fragment key={index}>
                   <div className="row">
-                    <div className="col" style={{ textAlign: "center", fontWeight: "bold" }}>
+                    <div
+                      className="col"
+                      style={{ textAlign: "center", fontWeight: "bold" }}
+                    >
                       {recipe.title || recipe.name}
                     </div>
                     <div className="col">
@@ -118,10 +121,18 @@ class Searcher extends React.Component {
                         onClick={() => {
                           this.props.setCurrentProduct({
                             name: recipe.title || recipe.name,
-                            calories: recipe.nutrition ? recipe.nutrition.calories : recipe.calories,
-                            fats: recipe.nutrition ? recipe.nutrition.fat : recipe.fats,
-                            carbohydrates: recipe.nutrition ? recipe.nutrition.carbs : recipe.carbohydrates,
-                            proteins: recipe.nutrition ? recipe.nutrition.protein : recipe.proteins,
+                            calories: recipe.nutrition
+                              ? recipe.nutrition.calories
+                              : recipe.calories,
+                            fats: recipe.nutrition
+                              ? recipe.nutrition.fat
+                              : recipe.fats,
+                            carbohydrates: recipe.nutrition
+                              ? recipe.nutrition.carbs
+                              : recipe.carbohydrates,
+                            proteins: recipe.nutrition
+                              ? recipe.nutrition.protein
+                              : recipe.proteins,
                           });
                         }}
                       >
