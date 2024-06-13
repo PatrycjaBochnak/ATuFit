@@ -17,6 +17,7 @@ An application inspired by Fitatu
 - Parts of the day you can use: 'breakfast', '2nd breakfast', 'dinner', 'supper'
 - If you can't find product what you want you can add your own product by pressing button "add product". Then type 'name of product', 'calories', 'carbohydrates', 'fats' and 'proteins'
 - Please provide the average product weight
+- 
 
 ## Used tools
   
