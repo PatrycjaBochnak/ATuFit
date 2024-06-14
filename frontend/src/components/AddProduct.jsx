@@ -76,7 +76,7 @@ const AddProduct = () => {
             <label className="label">
               Calories:
               <input
-                type="text"
+                type="number"
                 name="calories"
                 placeholder="Calories..."
                 value={formData.calories}
@@ -89,7 +89,7 @@ const AddProduct = () => {
             <label className="label">
               Fats:
               <input
-                type="text"
+                type="number"
                 name="fats"
                 placeholder="Fats..."
                 value={formData.fats}
@@ -102,7 +102,7 @@ const AddProduct = () => {
             <label className="label">
               Carbs:
               <input
-                type="text"
+                type="number"
                 name="carbohydrates"
                 placeholder="Carbs..."
                 value={formData.carbohydrates}
@@ -115,7 +115,7 @@ const AddProduct = () => {
             <label className="label">
               Proteins:
               <input
-                type="text"
+                type="number"
                 name="proteins"
                 placeholder="Proteins..."
                 value={formData.proteins}

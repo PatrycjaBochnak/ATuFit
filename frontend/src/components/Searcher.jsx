@@ -100,19 +100,19 @@ class Searcher extends React.Component {
                     <div className="col">
                       {recipe.nutrition && recipe.nutrition.fat
                         ? recipe.nutrition.fat.slice(0, 3)
-                        : recipe.fats}{" "}
+                        : recipe.fats}{" - "}
                       g
                     </div>
                     <div className="col">
                       {recipe.nutrition && recipe.nutrition.carbs
                         ? recipe.nutrition.carbs.slice(0, 3)
-                        : recipe.carbohydrates}{" "}
+                        : recipe.carbohydrates}{" - "}
                       g
                     </div>
                     <div className="col">
                       {recipe.nutrition && recipe.nutrition.protein
                         ? recipe.nutrition.protein.slice(0, 3)
-                        : recipe.proteins}{" "}
+                        : recipe.proteins}{" - "}
                       g
                     </div>
                     <div className="col">
