@@ -94,7 +94,7 @@ class Searcher extends React.Component {
                     <div className="col">
                       {recipe.nutrition
                         ? recipe.nutrition.calories
-                        : recipe.calories}{" "}
+                        : recipe.calories}{" - "}
                       cal
                     </div>
                     <div className="col">
