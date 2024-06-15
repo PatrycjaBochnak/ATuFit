@@ -3,6 +3,8 @@
 
 An application inspired by Fitatu mobile application where you can counter your daily calories. 
 
+---
+
 ## How to start 🚀
 
 1. Install dependiences with `npm install`
