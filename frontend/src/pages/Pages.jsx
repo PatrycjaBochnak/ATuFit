@@ -10,7 +10,6 @@ const Pages = () => {
   const [state, setState] = useState([]);
   const setCurrentProduct = (data) => {
     setState([...state, data]);
-    console.log(state)
   };
 
   return (
