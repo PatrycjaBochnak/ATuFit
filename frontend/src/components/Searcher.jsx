@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import "../styles/Searcher.css";
 
 class Searcher extends React.Component {
   state = {

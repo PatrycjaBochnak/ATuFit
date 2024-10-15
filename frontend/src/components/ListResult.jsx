@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/ListResult.css";
 import Cookies from "js-cookie";
 
 const ListResult = ({ props }) => {

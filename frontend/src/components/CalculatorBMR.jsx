@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Cookies from "js-cookie";
-import "../styles/CalculatorBMR.css";
 
 class CalculatorBMR extends Component {
   constructor() {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/AddProduct.css";
 
 const AddProduct = () => {
   const [expanded, setExpanded] = useState(false);

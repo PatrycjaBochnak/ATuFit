@@ -1,6 +1,5 @@
 import * as Icons from "react-bootstrap-icons";
 import React from "react";
-import "../styles/Contact.css";
 
 const Contact = () => {
   return (
