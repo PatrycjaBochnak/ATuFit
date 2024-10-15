@@ -10,14 +10,13 @@ An application inspired by Fitatu mobile application where you can counter your 
 To get a local copy up and running, follow these simple steps:
 
 ### Prerequisites
-- Node.js (version X.X.X or higher)
-- npm (version X.X.X or higher)
-
+- Node.js v18.13.0
+- npm v9.8.1
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/a-tu-fit.git
+   git clone https://github.com/PatrycjaBochnak/atufit.git
 
 ## Key Features 📝
 - Calculate BMR (Basal Metabolic Rate) based on user data.
@@ -34,7 +33,9 @@ To get a local copy up and running, follow these simple steps:
 ## Technologies Used 🛠️
 - React 
 - Tailwind CSS 
-- Node.js 
-- External APIs (e.g., [API Name])
+- Node.js
+- Express.js
+- MongoDB
+- External APIs (Spoonacular API)
 
 ## Screenshots 📸 
