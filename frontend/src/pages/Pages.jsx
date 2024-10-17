@@ -6,7 +6,7 @@ import AddProduct from "../components/AddProduct";
 import Searcher from "../components/Searcher";
 import ListResult from "../components/ListResult.jsx"
 
-const Pages = () => {
+const Pages = ({sr}) => {
   const [state, setState] = useState([]);
   const setCurrentProduct = (data) => {
     setState([...state, data]);
@@ -14,12 +14,12 @@ const Pages = () => {
 
   return (
     <>
-      <HomePage />
-      <CalculatorBMR />
-      <Searcher setCurrentProduct={setCurrentProduct} />
-      <AddProduct />
-      <ListResult props={state} />
-      <Contact />
+      <HomePage sr={sr}/>
+      <CalculatorBMR sr={sr}/>
+      <Searcher setCurrentProduct={setCurrentProduct} sr={sr}/>
+      <AddProduct sr={sr}/>
+      <ListResult props={state} sr={sr}/>
+      <Contact sr={sr}/>
     </>
   );
 };
