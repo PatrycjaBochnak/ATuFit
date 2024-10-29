@@ -5,21 +5,37 @@ An application inspired by Fitatu mobile application where you can counter your 
 
 ---
 
-## How to start 🚀
+## Getting Started 🚀
 
-1. Install dependiences with `npm install`
-2. Run `npm start` to start developing
+To get a local copy up and running, follow these simple steps:
 
-## 📝 Project requirements 
+### Prerequisites
+- Node.js v18.13.0
+- npm v9.8.1
+### Installation
 
-- User can add their data to check BMR and type their activity level to know their own TDEE,
-- Then TDEE is provided to list of results,
-- Then You can search products and add chosen by pressing `add`,
-- Every product is downloaded by external and internal API with macroelements,
-- If you can't find product what you want you can add your own product by pressing button `add product`. Then type *name of product*, *calories*, *carbohydrates*, *fats* and *proteins*,
-- Please provide the average product weight,
-- At the bottom line of the list of results you can compare the calories consumed with your needs.
-  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PatrycjaBochnak/atufit.git
+
+## Key Features 📝
+- Calculate BMR (Basal Metabolic Rate) based on user data.
+- Determine TDEE (Total Daily Energy Expenditure) by selecting activity level.
+- Search for food products and add them to your daily intake.
+- Products are fetched from both external and internal APIs, including detailed macro elements (calories, carbohydrates, fats, and proteins).
+- Ability to add custom products if not found in the database:
+- Provide product name, calories, carbohydrates, fats, proteins, and average weight.
+- Compare your consumed calories with your daily TDEE at the bottom of the list.
+
 ## Deployment 🚀
+ You can find a live demo of this project [here](https://your-live-demo-link.com). The application is deployed using [hosting service], with CI/CD pipeline configured through [tool/service].
 
-You can find a live demo of this project here
+## Technologies Used 🛠️
+- React 
+- Tailwind CSS 
+- Node.js
+- Express.js
+- MongoDB
+- External APIs (Spoonacular API)
+
+## Screenshots 📸 
