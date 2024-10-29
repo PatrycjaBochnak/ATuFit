@@ -3,13 +3,16 @@ import { useCalculator } from "./CalculatorContext";
 
 const ListResult = ({ props }) => {
   const { result } = useCalculator();
-  const { fixedResultNumber, protein, carbohydrates, fats } = result || {};
+  const { fixedResultNumber = 0, protein = 0, carbohydrates = 0, fats = 0 } = result || {};
+  
+  console.log('Fixed Result Number:', fixedResultNumber);
 
   const totalCalories = props.reduce((acc, item) => acc + item.calories, 0);
   const totalProteins = props.reduce((acc, item) => acc + item.proteins, 0);
   const totalCarbohydrates = props.reduce((acc, item) => acc + item.carbohydrates, 0);
   const totalFats = props.reduce((acc, item) => acc + item.fats, 0);
 
+  console.log(fixedResultNumber)
   return (
     <div className="daily-results h-screen overflow-y-auto p-8 bg-[#081325] text-white rounded-lg shadow-md flex flex-col items-center">
       <h2 className="text-4xl font-bold mb-6 border-b-4 border-pink-600 text-center">
