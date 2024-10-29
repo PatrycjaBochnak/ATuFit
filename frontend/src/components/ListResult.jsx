@@ -1,11 +1,14 @@
 import React from "react";
-import Cookies from "js-cookie";
+import { useCalculator } from "./CalculatorContext";
 
 const ListResult = ({ props }) => {
-  const calories = Cookies.get("finalResult");
-  const protein = Cookies.get("protein");
-  const carbohydrates = Cookies.get("carbohydrates");
-  const fats = Cookies.get("fats");
+  const { result } = useCalculator();
+  const { fixedResultNumber, protein, carbohydrates, fats } = result || {};
+
+  const totalCalories = props.reduce((acc, item) => acc + item.calories, 0);
+  const totalProteins = props.reduce((acc, item) => acc + item.proteins, 0);
+  const totalCarbohydrates = props.reduce((acc, item) => acc + item.carbohydrates, 0);
+  const totalFats = props.reduce((acc, item) => acc + item.fats, 0);
 
   return (
     <div className="daily-results h-screen overflow-y-auto p-8 bg-[#081325] text-white rounded-lg shadow-md flex flex-col items-center">
@@ -41,18 +44,18 @@ const ListResult = ({ props }) => {
       </div>
       <div className="total-score mt-6 border-t border-gray-600 pt-4">
         <h3 className="text-xl font-bold text-center">Results Summary</h3>
-        <div className="flex justify-around mt-2">
+        <div className="flex flex-col items-center mt-2">
           <div className="text-lg font-semibold">
-            Total Calories: {props.reduce((n, { calories }) => n + calories, 0)} cal
+            Total Calories: {totalCalories} cal / {fixedResultNumber || "TDEE not set"} cal
           </div>
           <div className="text-lg font-semibold">
-            Total Fats: {props.reduce((n, { fats }) => n + parseFloat(fats), 0).toFixed(1)} g
+            Total Proteins: {totalProteins.toFixed(1)} g / {protein ? protein.toFixed(1) : "Protein goal not set"} g
           </div>
           <div className="text-lg font-semibold">
-            Total Carbs: {props.reduce((n, { carbohydrates }) => n + parseFloat(carbohydrates), 0).toFixed(1)} g
+            Total Carbohydrates: {totalCarbohydrates.toFixed(1)} g / {carbohydrates ? carbohydrates.toFixed(1) : "Carbs goal not set"} g
           </div>
           <div className="text-lg font-semibold">
-            Total Proteins: {props.reduce((n, { proteins }) => n + parseFloat(proteins), 0).toFixed(1)} g
+            Total Fats: {totalFats.toFixed(1)} g / {fats ? fats.toFixed(1) : "Fats goal not set"} g
           </div>
         </div>
       </div>
