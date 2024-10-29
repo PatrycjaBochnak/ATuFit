@@ -17,7 +17,7 @@ const Contact = ({ sr }) => {
         >
           Contact
         </h2>
-        <p id="content" className="mt-4 mb-8 text-lg max-w-prose mx-auto">
+        <p id="content" className="mt-4 mb-3 text-lg max-w-prose mx-auto">
           Feel free to reach out! Whether you have a question, want to
           collaborate, or just say hi, I'll be happy to chat.
         </p>

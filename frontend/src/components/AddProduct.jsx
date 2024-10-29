@@ -63,7 +63,7 @@ const AddProduct = ({ sr }) => {
         <h2 id="text" className="text-4xl font-bold inline border-b-4 border-pink-600">
           Add Product
         </h2>
-        <p id="text-2" className="mt-4 mb-8 text-lg max-w-prose mx-auto">
+        <p id="text-2" className="mt-4 mb-2 text-lg max-w-prose mx-auto">
           Not enough? Add missing products
         </p>
       </div>
