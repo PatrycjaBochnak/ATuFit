@@ -65,15 +65,8 @@ class CalculatorBMR extends Component {
       console.log("Fixed Result Number:", fixedResultNumber);
 
       this.setState({ finalResult: fixedResultNumber });
-
-      const { protein, carbohydrates, fats } =
-        this.calculateMacronutrients(fixedResultNumber);
-
-      if (setResult) {
-        setResult({ result: fixedResultNumber, protein, carbohydrates, fats });
-      } else {
-        console.warn("setResult is not defined");
-      }
+      const { protein, carbohydrates, fats } = this.calculateMacronutrients(fixedResultNumber);
+      setResult({ fixedResultNumber, protein, carbohydrates, fats });
 
       this.setState({ error: "", flag: true });
     } catch (error) {

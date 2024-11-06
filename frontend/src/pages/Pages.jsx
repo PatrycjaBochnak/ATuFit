@@ -9,7 +9,6 @@ import { CalculatorProvider } from "../components/CalculatorContext";
 
 const Pages = ({ sr }) => {
   const [state, setState] = useState([]);
-
   const setCurrentProduct = (data) => {
     setState([...state, data]);
   };
@@ -18,10 +17,10 @@ const Pages = ({ sr }) => {
     <CalculatorProvider>
       <>
         <HomePage sr={sr} />
-        <CalculatorBMR setCurrentProduct={setCurrentProduct} sr={sr} />
+        <CalculatorBMR sr={sr}/>
         <Searcher setCurrentProduct={setCurrentProduct} sr={sr} />
         <AddProduct sr={sr} />
-        <ListResult props={state} sr={sr} /> 
+        <ListResult props={state} sr={sr}/> 
         <Contact sr={sr} />
       </>
     </CalculatorProvider>
