@@ -49,7 +49,7 @@ To get a local copy up and running, follow these simple steps:
 <img width="1430" alt="Screenshot 2024-11-13 at 11 22 35" src="https://github.com/user-attachments/assets/bd0b27f5-0e09-41ac-a6f0-24758d4e881f">
 
 ### Adding your own product
-]<img width="1432" alt="Screenshot 2024-11-13 at 11 23 03" src="https://github.com/user-attachments/assets/d8750f54-2ca1-4ecf-9ad6-089dd58fb4b8">
+<img width="1432" alt="Screenshot 2024-11-13 at 11 23 03" src="https://github.com/user-attachments/assets/d8750f54-2ca1-4ecf-9ad6-089dd58fb4b8">
 
 ### Table with chosen products and comparison about calories and macros 
 <img width="1427" alt="Screenshot 2024-11-13 at 11 23 18" src="https://github.com/user-attachments/assets/229020d3-18b7-4fea-93cf-95434354b9a1">
