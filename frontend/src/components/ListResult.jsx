@@ -4,13 +4,14 @@ import { useCalculator } from "./CalculatorContext";
 const ListResult = ({ props }) => {
   const { result } = useCalculator();
   const { fixedResultNumber = 0, protein = 0, carbohydrates = 0, fats = 0 } = result || {};
-  
+
   console.log('Fixed Result Number:', fixedResultNumber);
 
-  const totalCalories = props.reduce((acc, item) => acc + item.calories, 0);
-  const totalProteins = props.reduce((acc, item) => acc + item.proteins, 0);
-  const totalCarbohydrates = props.reduce((acc, item) => acc + item.carbohydrates, 0);
-  const totalFats = props.reduce((acc, item) => acc + item.fats, 0);
+  const totalCalories = props.reduce((acc, item) => acc + (parseFloat(item.calories) || 0), 0);
+  const totalProteins = props.reduce((acc, item) => acc + (parseFloat(item.proteins) || 0), 0);
+  const totalCarbohydrates = props.reduce((acc, item) => acc + (parseFloat(item.carbohydrates) || 0), 0);
+  const totalFats = props.reduce((acc, item) => acc + (parseFloat(item.fats) || 0), 0);
+
   return (
     <div className="daily-results h-screen overflow-y-auto p-8 bg-[#081325] text-white rounded-lg shadow-md flex flex-col items-center">
       <h2 className="text-4xl font-bold mb-6 border-b-4 border-pink-600 text-center">
@@ -34,10 +35,10 @@ const ListResult = ({ props }) => {
                 className="border-b border-gray-600 hover:bg-gray-700 transition duration-300"
               >
                 <td className="py-4 text-center font-semibold">{p.name}</td>
-                <td className="py-4 text-center">{p.calories} cal</td>
-                <td className="py-4 text-center">{parseFloat(p.fats).toFixed(1)} g</td>
-                <td className="py-4 text-center">{parseFloat(p.carbohydrates).toFixed(1)} g</td>
-                <td className="py-4 text-center">{parseFloat(p.proteins).toFixed(1)} g</td>
+                <td className="py-4 text-center">{parseFloat(p.calories || 0).toFixed(1)} cal</td>
+                <td className="py-4 text-center">{parseFloat(p.fats || 0).toFixed(1)} g</td>
+                <td className="py-4 text-center">{parseFloat(p.carbohydrates || 0).toFixed(1)} g</td>
+                <td className="py-4 text-center">{parseFloat(p.proteins || 0).toFixed(1)} g</td>
               </tr>
             ))}
           </tbody>
@@ -47,7 +48,7 @@ const ListResult = ({ props }) => {
         <h3 className="text-xl font-bold text-center">Results Summary</h3>
         <div className="flex flex-col items-center mt-2">
           <div className="text-lg font-semibold">
-            Total Calories: {totalCalories} cal / {fixedResultNumber || "TDEE not set"} cal
+            Total Calories: {totalCalories.toFixed(1)} cal / {fixedResultNumber || "TDEE not set"} cal
           </div>
           <div className="text-lg font-semibold">
             Total Proteins: {totalProteins.toFixed(1)} g / {protein ? protein.toFixed(1) : "Protein goal not set"} g
