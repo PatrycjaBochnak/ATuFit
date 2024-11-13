@@ -39,3 +39,11 @@ To get a local copy up and running, follow these simple steps:
 - External APIs (Spoonacular API)
 
 ## Screenshots 📸 
+### Main 
+<img width="1436" alt="Screenshot 2024-11-13 at 11 21 36" src="https://github.com/user-attachments/assets/57c6081f-edc1-4301-aa86-91118ea7a2c8">
+
+### Calculator
+### Products searcher 
+### Adding your own product
+### Table with chosen products and comparison about calories and macros 
+### Contact
