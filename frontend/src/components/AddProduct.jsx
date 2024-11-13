@@ -10,7 +10,6 @@ const AddProduct = ({ sr }) => {
     sr.reveal("#button", { delay: 3000, origin: "bottom" });
   }, [sr]);
 
-  const [expanded, setExpanded] = useState(false);
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -53,35 +52,20 @@ const AddProduct = ({ sr }) => {
     });
   };
 
-  const toggleExpand = () => {
-    setExpanded(!expanded);
-  };
-
   return (
     <div className="add-product flex flex-col items-center h-screen bg-[#081325] text-gray-300 p-6">
       <div className="text-center mb-8">
         <h2 id="text" className="text-4xl font-bold inline border-b-4 border-pink-600">
           Add Product
         </h2>
-        <p id="text-2" className="mt-4 mb-2 text-lg max-w-prose mx-auto">
+        <p id="text-2" className="mt-4 text-lg max-w-prose mx-auto">
           Not enough? Add missing products
         </p>
       </div>
-
       <div className="table-expansion text-center">
-        <button
-          id="button"
-          onClick={toggleExpand}
-          className="py-3 px-6 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 mb-4"
-        >
-          {expanded ? "Hide Form" : "Add Your Own Product"}
-        </button>
-
-        {expanded && (
           <form
             id="form"
-            onSubmit={handleSubmit}
-            className="mt-8 bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg"
+            className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg"
           >
             <div className="grid grid-cols-1 gap-6">
               <label className="block text-left">
@@ -167,7 +151,6 @@ const AddProduct = ({ sr }) => {
               </button>
             </div>
           </form>
-        )}
       </div>
     </div>
   );
