@@ -36,6 +36,8 @@ To get a local copy up and running, follow these simple steps:
 - Node.js
 - Express.js
 - MongoDB
+- REST API
+- Fetch API
 - External APIs (Spoonacular API)
 
 ## Screenshots 📸 
