@@ -54,7 +54,7 @@
   },
   "scripts": {
     "start": "react-scripts start --publicPath=/ATuFit/frontend/public",
-    "build": "react-scripts build --publicPath=/ATuFit/frontend/public",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
