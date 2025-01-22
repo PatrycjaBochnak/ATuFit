@@ -1,13 +1,16 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const url = "mongodb://localhost:27017/";
-const dbName = "aTuFitUserProducts";
+dotenv.config();
+
+const mongoURI = process.env.DB || "mongodb://localhost:27017/aTuFitUserProducts";
 
 export async function connectToDatabase() {
   try {
-    await mongoose.connect(url + dbName)
-      console.log("Connected to database successfully!");
-    } catch (error) {
-      console.error("Error connecting to database:", error);
-    }
+    await mongoose.connect(mongoURI); 
+    console.log("Connected to database successfully!");
+  } catch (error) {
+    console.error("Error connecting to database:", error);
+    process.exit(1); 
   }
+}

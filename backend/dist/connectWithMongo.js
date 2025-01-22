@@ -8,19 +8,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectToDatabase = void 0;
-const mongoose = require("mongoose");
-const url = "mongodb://localhost:27017/";
-const dbName = "aTuFitUserProducts";
+const mongoose_1 = __importDefault(require("mongoose"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const mongoURI = process.env.DB || "mongodb://localhost:27017/aTuFitUserProducts";
 function connectToDatabase() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose.connect(url + dbName);
+            yield mongoose_1.default.connect(mongoURI);
             console.log("Connected to database successfully!");
         }
         catch (error) {
             console.error("Error connecting to database:", error);
+            process.exit(1);
         }
     });
 }
