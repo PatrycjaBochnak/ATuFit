@@ -8,7 +8,7 @@ class Searcher extends React.Component {
     recipes2: [],
   };
 
-  onInputchange = (event) => {
+  onInputChange = (event) => {
     this.setState({ products: event.target.value });
   };
 
@@ -17,13 +17,13 @@ class Searcher extends React.Component {
       .get("http://localhost:3001/api/getProducts/", {
         params: { name: this.state.products },
       })
-      .then((response2) => {
-        let recipes2 = response2.data.products;
+      .then((response) => {
+        const recipes2 = response.data.products;
         if (recipes2.length === 0) {
           console.log("No data found in the second endpoint");
         } else {
           console.log("Data from the second endpoint:", recipes2);
-          this.setState({ recipes2: recipes2 });
+          this.setState({ recipes2 });
         }
       })
       .catch((error) => {
@@ -34,8 +34,8 @@ class Searcher extends React.Component {
       .get(
         `https://api.spoonacular.com/food/products/search?query=${this.state.products}&addProductInformation=true&apiKey=6d0d470152d74ee2aa61eaa38e37af8d`
       )
-      .then((response1) => {
-        let recipes1 = response1.data.products;
+      .then((response) => {
+        const recipes1 = response.data.products;
         if (recipes1.length === 0) {
           console.log("No data found in the first endpoint");
         } else {
@@ -55,10 +55,15 @@ class Searcher extends React.Component {
     return (
       <div className="counter flex flex-col items-center h-screen bg-[#081325] text-gray-300 p-6">
         <div className="text-center mb-8">
-          <h2 id="text" className="text-4xl font-bold inline border-b-4 border-pink-600">
+          <h2
+            id="text"
+            className="text-4xl font-bold inline border-b-4 border-pink-600"
+          >
             Search Products
           </h2>
-          <p id="text-2" className="mt-4 text-gray-400">Type products and search it</p>
+          <p id="text-2" className="mt-4 text-gray-400">
+            Type products and search it
+          </p>
         </div>
 
         <div id="button" className="search-field flex items-center space-x-4">
@@ -66,7 +71,7 @@ class Searcher extends React.Component {
             type="text"
             placeholder="Search..."
             name="search"
-            onChange={this.onInputchange}
+            onChange={this.onInputChange}
             className="bg-[#0A1D37] text-gray-300 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 w-full max-w-md"
           />
           <button
@@ -81,7 +86,7 @@ class Searcher extends React.Component {
         {allRecipes.length !== 0 && (
           <div
             className="search-results mt-8 w-full max-w-4xl bg-[#0A1D37] p-8 rounded-lg shadow-lg"
-            style={{ maxHeight: "70vh", overflowY: "auto" }} 
+            style={{ maxHeight: "70vh", overflowY: "auto" }}
           >
             <div className="cal-macro-names grid grid-cols-6 gap-4 text-center text-gray-300 font-bold">
               <div className="col">Name</div>
