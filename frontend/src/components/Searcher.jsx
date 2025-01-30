@@ -53,7 +53,7 @@ class Searcher extends React.Component {
     const allRecipes = [...recipes, ...recipes2];
 
     return (
-      <div className="searcher flex flex-col items-center min-h-screen bg-[#081325] text-gray-300 p-4">
+      <div className="counter flex flex-col items-center min-h-screen bg-[#081325] text-gray-300 p-4">
         <div className="text-center mb-6">
           <h2 className="text-2xl md:text-3xl font-bold inline border-b-4 border-pink-600">
             Search Products
@@ -82,7 +82,7 @@ class Searcher extends React.Component {
 
         {allRecipes.length !== 0 && (
           <div
-            className="search-results mt-6 w-full max-w-4xl bg-[#0A1D37] rounded-lg shadow-lg"
+            className="search-results mt-6 w-full max-w-4xl bg-[#0A1D37] rounded-lg shadow-lg mx-4 md:mx-auto overflow-x-hidden"
             style={{ maxHeight: "70vh", overflowY: "auto" }}
           >
             <div className="cal-macro-names grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center text-sm md:text-base text-gray-300 font-bold sticky top-0 bg-[#0A1D37] z-10 border-b border-gray-600 p-2">
@@ -96,7 +96,7 @@ class Searcher extends React.Component {
             {allRecipes.map((recipe, index) => (
               <div
                 key={index}
-                className="row grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center mt-4 items-center"
+                className="row grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center mt-4 mr-2 ml-2 mb-4 items-center"
               >
                 <div className="col font-bold text-white text-sm md:text-base">
                   {recipe.title || recipe.name}
