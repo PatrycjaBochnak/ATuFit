@@ -17,8 +17,19 @@ const cors_1 = __importDefault(require("cors"));
 const connectWithMongo_1 = require("./connectWithMongo");
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const app = (0, express_1.default)();
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://twoja-domena-frontend.herokuapp.com' // Dla wersji produkcyjnej
+];
 app.use((0, cors_1.default)({
-    origin: process.env.FRONTEND_URL || 'https://twoja-domena-frontend.herokuapp.com',
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));

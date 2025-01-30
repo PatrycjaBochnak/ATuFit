@@ -82,10 +82,10 @@ class Searcher extends React.Component {
 
         {allRecipes.length !== 0 && (
           <div
-            className="search-results mt-6 w-full max-w-4xl bg-[#0A1D37] p-4 md:p-8 rounded-lg shadow-lg"
+            className="search-results mt-6 w-full max-w-4xl bg-[#0A1D37] rounded-lg shadow-lg"
             style={{ maxHeight: "70vh", overflowY: "auto" }}
           >
-            <div className="cal-macro-names grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center text-sm md:text-base text-gray-300 font-bold">
+            <div className="cal-macro-names grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center text-sm md:text-base text-gray-300 font-bold sticky top-0 bg-[#0A1D37] z-10 border-b border-gray-600 p-2">
               <div className="col">Name</div>
               <div className="col">Calories</div>
               <div className="hidden md:block col">Fats</div>

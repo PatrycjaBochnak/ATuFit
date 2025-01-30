@@ -5,8 +5,19 @@ import productRoutes from "./routes/productRoutes";
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:3000', // Dla lokalnego środowiska
+  'https://twoja-domena-frontend.herokuapp.com' // Dla wersji produkcyjnej
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://twoja-domena-frontend.herokuapp.com', // Użyj zmiennej środowiskowej
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
