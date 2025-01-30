@@ -6,7 +6,7 @@ import productRoutes from "./routes/productRoutes";
 const app = express();
 
 app.use(cors({
-  origin: 'https://twoja-domena-frontend.herokuapp.com', // front URL
+  origin: process.env.FRONTEND_URL || 'https://twoja-domena-frontend.herokuapp.com', // Użyj zmiennej środowiskowej
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -20,6 +20,11 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", productRoutes);
+
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
+});
 
 const PORT = process.env.PORT || 3001; 
 const server = app.listen(PORT, async () => {

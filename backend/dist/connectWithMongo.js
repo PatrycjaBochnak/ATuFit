@@ -16,17 +16,18 @@ exports.connectToDatabase = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const mongoURI = process.env.DB || "mongodb://localhost:27017/aTuFitUserProducts";
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/aTuFitUserProducts";
 function connectToDatabase() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield mongoose_1.default.connect(mongoURI);
-            console.log("Connected to database successfully!");
+            console.log("✅ Connected to database successfully!");
         }
         catch (error) {
-            console.error("Error connecting to database:", error);
+            console.error("❌ Error connecting to database:", error);
             process.exit(1);
         }
     });
 }
 exports.connectToDatabase = connectToDatabase;
+connectToDatabase();

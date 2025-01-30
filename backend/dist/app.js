@@ -17,15 +17,23 @@ const cors_1 = __importDefault(require("cors"));
 const connectWithMongo_1 = require("./connectWithMongo");
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const app = (0, express_1.default)();
+app.use((0, cors_1.default)({
+    origin: process.env.FRONTEND_URL || 'https://twoja-domena-frontend.herokuapp.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express_1.default.json());
-app.use((0, cors_1.default)());
 app.use((req, res, next) => {
     res.set('Content-Type', 'text/javascript');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     next();
 });
 app.use("/api", productRoutes_1.default);
-const PORT = 3001;
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ message: 'Something went wrong!' });
+});
+const PORT = process.env.PORT || 3001;
 const server = app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield (0, connectWithMongo_1.connectToDatabase)();
