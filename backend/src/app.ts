@@ -5,8 +5,13 @@ import productRoutes from "./routes/productRoutes";
 
 const app = express();
 
+app.use(cors({
+  origin: 'https://twoja-domena-frontend.herokuapp.com', // front URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
-app.use(cors());
 
 app.use((req, res, next) => {
   res.set('Content-Type', 'text/javascript');
@@ -16,7 +21,7 @@ app.use((req, res, next) => {
 
 app.use("/api", productRoutes);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001; 
 const server = app.listen(PORT, async () => {
   try {
     await connectToDatabase();

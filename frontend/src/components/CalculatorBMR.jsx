@@ -91,29 +91,24 @@ class CalculatorBMR extends Component {
       this.state;
 
     return (
-      <div className="calculator-BMR flex flex-col items-center justify-center h-screen bg-[#081325] text-white p-6">
+      <div className="calculator-BMR flex flex-col items-center justify-center min-h-screen bg-[#081325] text-white p-4">
         <div
-          className="w-full max-w-2xl p-6 overflow-y-auto"
-          style={{ maxHeight: "80vh" }}
+          className="w-full max-w-md p-4 bg-gray-800 rounded-lg shadow-lg overflow-y-auto"
+          style={{ maxHeight: "90vh" }}
         >
-          <h3
-            id="text"
-            className="text-4xl font-bold inline border-b-4 border-pink-600"
-          >
+          <h3 className="text-2xl md:text-3xl font-bold inline border-b-4 border-pink-600">
             Calculate BMR and TDEE
           </h3>
-          <p id="text-2" className="mt-4 mb-8 text-lg">
+          <p className="mt-3 mb-6 text-sm md:text-base">
             Firstly, insert your details to check Your BMR and Total Metabolism
           </p>
-          <div id="button">
-            <div className="form p-4 bg-gray-800 rounded-lg shadow-lg">
-              {error && <div className="error text-red-400 mb-4">{error}</div>}
+          <div className="form space-y-4">
+            {error && <div className="error text-red-400 text-sm">{error}</div>}
 
-              <label className="input-gender block text-lg font-semibold mb-2">
-                Gender
-              </label>
-              <div className="flex mb-4">
-                <label className="mr-4">
+            <div>
+              <label className="block text-sm font-semibold mb-1">Gender</label>
+              <div className="flex space-x-4">
+                <label className="flex items-center">
                   <input
                     type="radio"
                     checked={gender === "1"}
@@ -124,7 +119,7 @@ class CalculatorBMR extends Component {
                   />
                   Female
                 </label>
-                <label>
+                <label className="flex items-center">
                   <input
                     type="radio"
                     checked={gender === "2"}
@@ -136,101 +131,95 @@ class CalculatorBMR extends Component {
                   Male
                 </label>
               </div>
-
-              <div className="input-weight mb-4">
-                <label className="label block font-semibold">Weight (Kg)</label>
-                <input
-                  type="number"
-                  value={weight}
-                  onChange={this.handleChange}
-                  name="weight"
-                  className="mt-1 p-2 border border-gray-300 rounded w-full bg-gray-900 text-white"
-                  min="0"
-                  max="999"
-                />
-              </div>
-
-              <div className="input-height mb-4">
-                <label className="label block font-semibold">Height (Cm)</label>
-                <input
-                  type="number"
-                  value={height}
-                  onChange={this.handleChange}
-                  name="height"
-                  className="mt-1 p-2 border border-gray-300 rounded w-full bg-gray-900 text-white"
-                  min="0"
-                  max="300"
-                />
-              </div>
-
-              <div className="input-age mb-4">
-                <label className="label block font-semibold">Age</label>
-                <input
-                  type="number"
-                  value={age}
-                  onChange={this.handleChange}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full bg-gray-900 text-white"
-                  name="age"
-                  min="0"
-                  max="120"
-                />
-              </div>
-
-              <button
-                type="button"
-                className="btn bg-blue-600 text-white py-3 px-5 rounded-md hover:bg-blue-700 transition duration-300 mb-4 w-full"
-                onClick={this.calculateBMR}
-              >
-                Calculate BMR
-              </button>
-
-              {bmr && (
-                <div className="result-BMR text-lg font-semibold mb-4">
-                  Your basic metabolism is: {parseFloat(bmr).toFixed(0)}{" "}
-                  calories
-                </div>
-              )}
-
-              {flag && (
-                <div className="workout">
-                  <div className="input-workout mb-4">
-                    <label className="label block font-semibold">
-                      Workout in a Week
-                    </label>
-                    <select
-                      className="activity mt-1 p-2 border border-gray-300 rounded w-full bg-gray-900 text-white"
-                      value={activity}
-                      onChange={this.handleChange}
-                      name="activity"
-                    >
-                      <option value="">Select your Activity</option>
-                      <option value="1.2">No exercise</option>
-                      <option value="1.375">Light (1-3 times per week)</option>
-                      <option value="1.55">
-                        Moderately (3-5 times per week)
-                      </option>
-                      <option value="1.725">Heavy (6-7 times per week)</option>
-                      <option value="1.9">
-                        Very Heavy (6-7 times per week)
-                      </option>
-                    </select>
-                  </div>
-                  <button
-                    className="btn bg-blue-600 text-white py-3 px-5 rounded-md hover:bg-blue-700 transition duration-300 w-full"
-                    onClick={this.calculateFinalResult}
-                  >
-                    Calculate TDEE
-                  </button>
-
-                  {this.state.finalResult !== "" && (
-                    <div className="result-TDEE text-lg font-semibold mt-4">
-                      Your total metabolism is: {this.state.finalResult}{" "}
-                      calories
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
+
+            <div>
+              <label className="block text-sm font-semibold mb-1">Weight (Kg)</label>
+              <input
+                type="number"
+                value={weight}
+                onChange={this.handleChange}
+                name="weight"
+                className="w-full p-2 border border-gray-300 rounded bg-gray-900 text-white"
+                min="0"
+                max="999"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold mb-1">Height (Cm)</label>
+              <input
+                type="number"
+                value={height}
+                onChange={this.handleChange}
+                name="height"
+                className="w-full p-2 border border-gray-300 rounded bg-gray-900 text-white"
+                min="0"
+                max="300"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold mb-1">Age</label>
+              <input
+                type="number"
+                value={age}
+                onChange={this.handleChange}
+                className="w-full p-2 border border-gray-300 rounded bg-gray-900 text-white"
+                name="age"
+                min="0"
+                max="120"
+              />
+            </div>
+
+            <button
+              type="button"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+              onClick={this.calculateBMR}
+            >
+              Calculate BMR
+            </button>
+
+            {bmr && (
+              <div className="text-sm font-semibold mt-4">
+                Your basic metabolism is: {parseFloat(bmr).toFixed(0)} calories
+              </div>
+            )}
+
+            {flag && (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold mb-1">
+                    Workout in a Week
+                  </label>
+                  <select
+                    className="w-full p-2 border border-gray-300 rounded bg-gray-900 text-white"
+                    value={activity}
+                    onChange={this.handleChange}
+                    name="activity"
+                  >
+                    <option value="">Select your Activity</option>
+                    <option value="1.2">No exercise</option>
+                    <option value="1.375">Light (1-3 times per week)</option>
+                    <option value="1.55">Moderately (3-5 times per week)</option>
+                    <option value="1.725">Heavy (6-7 times per week)</option>
+                    <option value="1.9">Very Heavy (6-7 times per week)</option>
+                  </select>
+                </div>
+                <button
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+                  onClick={this.calculateFinalResult}
+                >
+                  Calculate TDEE
+                </button>
+
+                {this.state.finalResult !== "" && (
+                  <div className="text-sm font-semibold mt-4">
+                    Your total metabolism is: {this.state.finalResult} calories
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

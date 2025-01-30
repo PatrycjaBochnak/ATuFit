@@ -53,29 +53,26 @@ class Searcher extends React.Component {
     const allRecipes = [...recipes, ...recipes2];
 
     return (
-      <div className="counter flex flex-col items-center h-screen bg-[#081325] text-gray-300 p-6">
-        <div className="text-center mb-8">
-          <h2
-            id="text"
-            className="text-4xl font-bold inline border-b-4 border-pink-600"
-          >
+      <div className="searcher flex flex-col items-center min-h-screen bg-[#081325] text-gray-300 p-4">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold inline border-b-4 border-pink-600">
             Search Products
           </h2>
-          <p id="text-2" className="mt-4 text-gray-400">
+          <p className="mt-2 text-sm md:text-base text-gray-400">
             Type products and search it
           </p>
         </div>
 
-        <div id="button" className="search-field flex items-center space-x-4">
+        <div className="search-field flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 w-full max-w-md">
           <input
             type="text"
             placeholder="Search..."
             name="search"
             onChange={this.onInputChange}
-            className="bg-[#0A1D37] text-gray-300 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 w-full max-w-md"
+            className="bg-[#0A1D37] text-gray-300 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 w-full"
           />
           <button
-            className="py-3 px-6 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 transition-all duration-300 transform hover:scale-105"
+            className="w-full md:w-auto py-2 px-6 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 transition-all duration-300 transform hover:scale-105"
             type="submit"
             onClick={this.view}
           >
@@ -85,41 +82,44 @@ class Searcher extends React.Component {
 
         {allRecipes.length !== 0 && (
           <div
-            className="search-results mt-8 w-full max-w-4xl bg-[#0A1D37] p-8 rounded-lg shadow-lg"
+            className="search-results mt-6 w-full max-w-4xl bg-[#0A1D37] p-4 md:p-8 rounded-lg shadow-lg"
             style={{ maxHeight: "70vh", overflowY: "auto" }}
           >
-            <div className="cal-macro-names grid grid-cols-6 gap-4 text-center text-gray-300 font-bold">
+            <div className="cal-macro-names grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center text-sm md:text-base text-gray-300 font-bold">
               <div className="col">Name</div>
               <div className="col">Calories</div>
-              <div className="col">Fats</div>
-              <div className="col">Carbs</div>
-              <div className="col">Proteins</div>
+              <div className="hidden md:block col">Fats</div>
+              <div className="hidden md:block col">Carbs</div>
+              <div className="hidden md:block col">Proteins</div>
               <div className="col">Add</div>
             </div>
             {allRecipes.map((recipe, index) => (
-              <div key={index} className="row grid grid-cols-6 gap-4 text-center mt-4">
-                <div className="col font-bold text-white">
+              <div
+                key={index}
+                className="row grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 text-center mt-4 items-center"
+              >
+                <div className="col font-bold text-white text-sm md:text-base">
                   {recipe.title || recipe.name}
                 </div>
-                <div className="col text-gray-300">
+                <div className="col text-gray-300 text-sm md:text-base">
                   {recipe.nutrition
                     ? recipe.nutrition.calories
                     : recipe.calories}{" "}
                   cal
                 </div>
-                <div className="col text-gray-300">
+                <div className="hidden md:block col text-gray-300 text-sm md:text-base">
                   {recipe.nutrition && recipe.nutrition.fat
                     ? recipe.nutrition.fat.slice(0, 3)
                     : recipe.fats}{" "}
                   g
                 </div>
-                <div className="col text-gray-300">
+                <div className="hidden md:block col text-gray-300 text-sm md:text-base">
                   {recipe.nutrition && recipe.nutrition.carbs
                     ? recipe.nutrition.carbs.slice(0, 3)
                     : recipe.carbohydrates}{" "}
                   g
                 </div>
-                <div className="col text-gray-300">
+                <div className="hidden md:block col text-gray-300 text-sm md:text-base">
                   {recipe.nutrition && recipe.nutrition.protein
                     ? recipe.nutrition.protein.slice(0, 3)
                     : recipe.proteins}{" "}
@@ -127,7 +127,7 @@ class Searcher extends React.Component {
                 </div>
                 <div className="col">
                   <button
-                    className="py-3 px-6 bg-gradient-to-r from-pink-500 to-pink-700 text-white font-bold rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform hover:scale-105"
+                    className="w-full py-2 px-4 bg-gradient-to-r from-pink-500 to-pink-700 text-white font-bold rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform hover:scale-105"
                     onClick={() => {
                       this.props.setCurrentProduct({
                         name: recipe.title || recipe.name,
