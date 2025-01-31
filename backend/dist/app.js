@@ -19,7 +19,7 @@ const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const app = (0, express_1.default)();
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://twoja-domena-frontend.herokuapp.com' // Dla wersji produkcyjnej
+    'https://atufit-frontend-6bf4b5f39d4a.herokuapp.com' // Dla wersji produkcyjnej
 ];
 app.use((0, cors_1.default)({
     origin: (origin, callback) => {

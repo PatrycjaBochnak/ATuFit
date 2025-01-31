@@ -7,7 +7,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000', // Dla lokalnego środowiska
-  'https://twoja-domena-frontend.herokuapp.com' // Dla wersji produkcyjnej
+  'https://atufit-frontend-6bf4b5f39d4a.herokuapp.com' // Dla wersji produkcyjnej
 ];
 
 app.use(cors({
