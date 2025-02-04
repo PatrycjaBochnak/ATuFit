@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./connectWithMongo";
 import productRoutes from "./routes/productRoutes";
+import "dotenv/config";
 
 const app = express();
 

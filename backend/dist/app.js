@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const connectWithMongo_1 = require("./connectWithMongo");
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+require("dotenv/config");
 const app = (0, express_1.default)();
 const allowedOrigins = [
     "http://localhost:3000",

@@ -10,8 +10,7 @@
     "express": "^4.19.2",
     "mongo": "^0.1.0",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.3.2",
-    "serve": "^14.2.4"
+    "mongoose": "^8.3.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -26,7 +25,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node -r dotenv/config dist/app.js"
+    "start": "node -r dotenv/config dist/app.js", 
+    "heroku-postbuild": "npm run build"
   },
   "main": "dist/app.js",
   "description": "Backend for A-Tu-Fit app.",
