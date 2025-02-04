@@ -18,8 +18,8 @@ const connectWithMongo_1 = require("./connectWithMongo");
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const app = (0, express_1.default)();
 const allowedOrigins = [
-    'http://localhost:3000',
-    'https://atufit-frontend-6bf4b5f39d4a.herokuapp.com' // Dla wersji produkcyjnej
+    "http://localhost:3000",
+    "https://atufit-frontend-6bf4b5f39d4a.herokuapp.com", // Dla wersji produkcyjnej
 ];
 app.use((0, cors_1.default)({
     origin: (origin, callback) => {
@@ -27,22 +27,22 @@ app.use((0, cors_1.default)({
             callback(null, true);
         }
         else {
-            callback(new Error('Not allowed by CORS'));
+            callback(new Error("Not allowed by CORS"));
         }
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
 }));
 app.use(express_1.default.json());
 app.use((req, res, next) => {
-    res.set('Content-Type', 'text/javascript');
-    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.set("Content-Type", "text/javascript");
+    res.setHeader("X-Content-Type-Options", "nosniff");
     next();
 });
 app.use("/api", productRoutes_1.default);
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).json({ message: 'Something went wrong!' });
+    res.status(500).json({ message: "Something went wrong!" });
 });
 const PORT = process.env.PORT || 3001;
 const server = app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
