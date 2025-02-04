@@ -8,7 +8,6 @@
     "debug": "^4.3.4",
     "dotenv": "^16.4.7",
     "express": "^4.19.2",
-    "mongo": "^0.1.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2"
   },
@@ -25,7 +24,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node -r dotenv/config dist/app.js", 
+    "start": "node -r dotenv/config dist/app.js",
+    "start:dev": "nodemon -r dotenv/config dist/app.js",
     "heroku-postbuild": "npm run build"
   },
   "main": "dist/app.js",
