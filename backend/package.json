@@ -24,8 +24,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node -r dotenv/config dist/app.js",
-    "start:dev": "nodemon -r dotenv/config dist/app.js",
+    "start": "node dist/app.js",
+    "start:dev": "nodemon dist/app.js",
     "heroku-postbuild": "npm run build"
   },
   "main": "dist/app.js",
