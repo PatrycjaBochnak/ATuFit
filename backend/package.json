@@ -23,10 +23,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "build": "tsc",
     "start": "node dist/app.js",
-    "start:dev": "nodemon dist/app.js",
-    "heroku-postbuild": "npm run build"
+    "build": "tsc",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "main": "dist/app.js",
   "description": "Backend for A-Tu-Fit app.",
