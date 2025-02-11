@@ -26,7 +26,7 @@
     "prestart": "npm run build",
     "start": "node dist/app.js",
     "build": "tsc",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm install --production && npm run build"
   },
   "main": "dist/app.js",
   "description": "Backend for A-Tu-Fit app.",
