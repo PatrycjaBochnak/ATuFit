@@ -1,0 +1,3 @@
+MONGO_URI = mongodb+srv://bochnakpatrycja:LRbw4P9VCLbsdsgr@cluster0.3eei7.mongodb.net/aTuFitUserProducts
+
+MONGO_URI=mongodb://127.0.0.1:27017/aTuFitUserProducts
